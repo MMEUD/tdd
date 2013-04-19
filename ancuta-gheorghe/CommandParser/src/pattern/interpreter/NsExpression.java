@@ -1,5 +1,7 @@
 package pattern.interpreter;
 
+import pattern.singleton.Console;
+
 /**
  * 
  */
@@ -9,14 +11,25 @@ package pattern.interpreter;
  *
  */
 public class NsExpression extends Expression {
-	String namespace;
+	
+	private String namespace;
 	
 	public NsExpression(String namespace){
-		this.namespace = namespace;
+		this.setNamespace(namespace);
 	}
 	
+	public String getNamespace() {
+		return namespace;
+	}
+
+	public void setNamespace(String namespace) {
+		this.namespace = namespace;
+	}
+
 	public String interpret(){
-		return "Current namespace: " + this.namespace;
+		Console console = Console.getInstance();
+		console.setNamespace(this.getNamespace());
+		return "Current namespace: " + this.getNamespace();
 	}
 
 }

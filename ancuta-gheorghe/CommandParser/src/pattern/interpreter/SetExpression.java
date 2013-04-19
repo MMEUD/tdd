@@ -1,4 +1,5 @@
 package pattern.interpreter;
+import pattern.singleton.Console;
 import pattern.utils.Parameter;
 
 /**
@@ -18,7 +19,8 @@ public class SetExpression extends Expression {
 	}
 	
 	public String interpret(){
-		return "Namespace: " + this.parameter.getName() + " = " + this.parameter.getValue();
+		Console console = Console.getInstance();
+		return "Namespace " + console.getNamespace() + ": " + this.parameter.getName() + " = " + this.parameter.getValue();
 	}
 
 }

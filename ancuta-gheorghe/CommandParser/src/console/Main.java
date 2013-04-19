@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import pattern.interpreter.Evaluator;
+import pattern.singleton.Console;
 
 
 /**
@@ -22,8 +23,11 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		
+		Console console = Console.getInstance();
+		console.setNamespace("general");
 		System.out.println("Current namespace: general\n");
-		 
+		
+		
 		while (true){
 			try{
 			    BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
