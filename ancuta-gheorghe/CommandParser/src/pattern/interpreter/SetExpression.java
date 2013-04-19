@@ -20,7 +20,8 @@ public class SetExpression extends Expression {
 	
 	public String interpret(){
 		Console console = Console.getInstance();
-		return "Namespace " + console.getNamespace() + ": " + this.parameter.getName() + " = " + this.parameter.getValue();
+		console.setParameter(this.parameter);
+		return console.getNamespace() + ": " + this.parameter.getName() + " = " + this.parameter.getValue();
 	}
 
 }

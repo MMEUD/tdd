@@ -29,6 +29,7 @@ public class NsExpression extends Expression {
 	public String interpret(){
 		Console console = Console.getInstance();
 		console.setNamespace(this.getNamespace());
+		console.clearParameterList();
 		return "Current namespace: " + this.getNamespace();
 	}
 

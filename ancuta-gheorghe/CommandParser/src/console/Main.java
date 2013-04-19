@@ -36,17 +36,7 @@ public class Main {
 			    Evaluator sentence = new Evaluator(expression);
 				String result = sentence.interpret();
 				System.out.println(result);
-			    
-				/*
-			    if (s.length() > 0){
-			    	if (s.substring(0, 2).equals("ns")){
-				    	System.out.println("Current namespace: " + s.substring(2));
-				    }
-			    	if (s.substring(0, 3).equals("set")){
-				    	System.out.println("Current namespace: " + s.split(" ")[1] + " = " + s.split(" ")[2]);
-				    }
-			    }
-			    */
+			  
 		 	}
 			catch(IOException e)
 			{
