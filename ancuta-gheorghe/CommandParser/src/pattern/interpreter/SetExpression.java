@@ -1,5 +1,6 @@
 package pattern.interpreter;
 import pattern.singleton.Console;
+import pattern.utils.Namespace;
 import pattern.utils.Parameter;
 
 /**
@@ -20,8 +21,10 @@ public class SetExpression extends Expression {
 	
 	public String interpret(){
 		Console console = Console.getInstance();
-		console.setParameter(this.parameter);
-		return console.getNamespace() + ": " + this.parameter.getName() + " = " + this.parameter.getValue();
+		Namespace nsTemp = console.getCurrentNamespace();
+		nsTemp.setParameter(this.parameter);
+		return console.getCurrentNamespace().getName() + ": " + this.parameter.getName() + " = " + this.parameter.getValue();
+		
 	}
 
 }

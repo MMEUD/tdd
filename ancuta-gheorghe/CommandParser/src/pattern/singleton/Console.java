@@ -4,8 +4,7 @@
 package pattern.singleton;
 
 import java.util.ArrayList;
-
-import pattern.utils.Parameter;
+import pattern.utils.Namespace;
 
 /**
  * @author ancuta
@@ -14,8 +13,8 @@ import pattern.utils.Parameter;
 public class Console {
 
 	private static volatile Console instance = null;
-	private String namespace;
-	private ArrayList<Parameter> parameters = new ArrayList<Parameter>();
+	private Namespace currentNamespace = new Namespace();
+	private ArrayList<Namespace> namespaces = new ArrayList<Namespace>();
 	
     private Console() {
     	
@@ -33,36 +32,53 @@ public class Console {
     }
 
 
-	public String getNamespace() {
-		return namespace;
+	public Namespace getCurrentNamespace() {
+		return currentNamespace;
 	}
 
-	public void setNamespace(String namespace) {
-		this.namespace = namespace;
-	}
-
-	public ArrayList<Parameter> getParameters() {
-		return parameters;
-	}
-
-	public Parameter getParameter(String name){
-		Parameter parameter = null;
-		for (Parameter parameterTemp : this.getParameters()) {
-	        if (parameterTemp.getName().equals(name)) {
-	        	parameter = parameterTemp;
+	public void setCurrentNamespace(String name) {
+		Namespace namespace = new Namespace();
+		boolean exists = false;
+		for (Namespace namespaceTemp : getNamespaces()) {
+	        if (namespaceTemp.getName().equals(name)) {
+	        	exists = true;
+	        	namespace = namespaceTemp;
 	        }
 	    }
-		return parameter;
+		if (exists){
+			this.currentNamespace = namespace;
+		} else {
+			namespace.setName(name);
+			this.setNamespace(namespace);
+			this.setCurrentNamespace(name);
+		}
+		
 	}
-	public void setParameters(ArrayList<Parameter> parameters) {
-		this.parameters = parameters;
+
+	public ArrayList<Namespace> getNamespaces() {
+		return this.namespaces;
+	}
+
+	public Namespace getNamespace(String name){
+		Namespace namespace = null;
+		for (Namespace namespaceTemp : getNamespaces()) {
+	        if (namespaceTemp.getName().equals(name)) {
+	        	namespace = namespaceTemp;
+	        }
+	    }
+		return namespace;
 	}
 	
-	public void setParameter(Parameter parameter){
-		this.parameters.add(parameter);
+	public void setNamespaces(ArrayList<Namespace> namespaces) {
+		this.namespaces = namespaces;
 	}
-	public void clearParameterList(){
-		this.parameters.clear();
+	
+	public void setNamespace(Namespace namespace){
+		this.namespaces.add(namespace);
+	}
+	
+	public void clearNamespaceList(){
+		namespaces.clear();
 	}
 	
 }

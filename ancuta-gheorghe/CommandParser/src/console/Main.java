@@ -24,7 +24,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Console console = Console.getInstance();
-		console.setNamespace("general");
+		console.setCurrentNamespace("general");
 		System.out.println("Current namespace: general\n");
 		
 		

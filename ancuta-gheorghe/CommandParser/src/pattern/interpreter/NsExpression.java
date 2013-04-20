@@ -12,25 +12,24 @@ import pattern.singleton.Console;
  */
 public class NsExpression extends Expression {
 	
-	private String namespace;
+	private String name;
 	
-	public NsExpression(String namespace){
-		this.setNamespace(namespace);
+	public NsExpression(String name){
+		this.setName(name);
 	}
 	
-	public String getNamespace() {
-		return namespace;
+	public String getName() {
+		return name;
 	}
 
-	public void setNamespace(String namespace) {
-		this.namespace = namespace;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String interpret(){
 		Console console = Console.getInstance();
-		console.setNamespace(this.getNamespace());
-		console.clearParameterList();
-		return "Current namespace: " + this.getNamespace();
+		console.setCurrentNamespace(name);
+		return "Current namespace: " + console.getCurrentNamespace().getName();
 	}
 
 }
