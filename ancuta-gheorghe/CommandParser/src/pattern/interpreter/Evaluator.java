@@ -1,5 +1,7 @@
 package pattern.interpreter;
 
+import java.util.Arrays;
+
 /**
  * 
  */
@@ -11,19 +13,37 @@ package pattern.interpreter;
 public class Evaluator extends Expression{
 	
 	private Expression syntaxTree;
+	private String[] commandParameters;
 	 
     public Evaluator(String expression) {
-        if (expression.split(" ")[0] != null && expression.split(" ")[0].equals("ns")){
-        	syntaxTree = new NsExpression(expression.split(" ")[1]!=null?expression.split(" ")[1].toString():"");
-        } else if (expression.split(" ")[0] != null && expression.split(" ")[0].equals("set")){
-        	syntaxTree = new SetExpression(expression.split(" ")[1] != null?expression.split(" ")[1].toString():"", 
-            		expression.split(" ")[2] != null?expression.split(" ")[2].toString():"");
-        } else if (expression.split(" ")[0] != null && expression.split(" ")[0].equals("get")){
-        	syntaxTree = new GetExpression(expression.split(" ")[1] != null?expression.split(" ")[1].toString():"");
-        }
+    	commandParameters = expression.split(" ");
+    	String command = commandParameters[0];
+    	commandParameters = Arrays.copyOfRange(commandParameters, 1, commandParameters.length);
+    	if (command == null){
+    		System.out.println("Please enter a command.");
+        	return;
+    	} else {
+    		if (command.equals("ns")){
+            	syntaxTree = new NsExpression(this.commandParameters);
+            } else if (command.equals("set")){
+            	syntaxTree = new SetExpression(this.commandParameters);
+            } else if (command.equals("get")){
+            	syntaxTree = new GetExpression(this.commandParameters);
+            } else if (command.equals("list")){
+            	syntaxTree = new ListExpression(this.commandParameters);
+            } else {
+            	System.out.println("This command does not exist.");
+            	return;
+            }
+    	}
     }
  
-    public String interpret() {
-        return syntaxTree.interpret();
+	public boolean validateCommandParameters() {
+		return false;
+	}
+
+	public void interpretCommand() {
+        syntaxTree.interpretCommand();
     }
+	
 }

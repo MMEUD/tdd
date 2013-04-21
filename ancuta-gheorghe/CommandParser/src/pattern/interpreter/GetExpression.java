@@ -1,6 +1,3 @@
-/**
- * 
- */
 package pattern.interpreter;
 
 import pattern.singleton.Console;
@@ -11,21 +8,54 @@ import pattern.utils.Parameter;
  * @author Ancuta Gheorghe
  *
  */
+
 public class GetExpression extends Expression {
 	
-	Namespace namespace;
-	Parameter parameter;
+	private Parameter parameter;
+	private String[] commandParameters;
 	
-	public GetExpression(String name){
+	public GetExpression(String[] commandParameters){
 		Console console = Console.getInstance();
-		this.namespace = console.getCurrentNamespace();
-		this.parameter = this.namespace.getParameter(name);
+		this.setCommandParameters(commandParameters);
+		if (this.validateCommandParameters()) {
+			Namespace nsTemp = console.getCurrentNamespace();
+			this.setParameter(nsTemp.getParameter(this.getCommandParameters()[0]));
+		}
+	}
+
+	public Parameter getParameter() {
+		return this.parameter;
+	}
+
+	public void setParameter(Parameter parameter) {
+		this.parameter = parameter;
 	}
 	
-	public String interpret(){
+	public String[] getCommandParameters() {
+		return commandParameters;
+	}
+
+	public void setCommandParameters(String[] commandParameters) {
+		this.commandParameters = commandParameters;
+	}
+	
+	public boolean validateCommandParameters() {
+		if (this.commandParameters.length == 1){
+			return true;
+		}
+		return false;
+	}
+	
+	public void interpretCommand(){
 		Console console = Console.getInstance();
-		if (this.parameter == null) return console.getCurrentNamespace().getName() + ": this parameter does not exist.";
-		return console.getCurrentNamespace().getName() + ": " + this.parameter.getName() + " = " + this.parameter.getValue();
+		if (this.parameter == null) {
+			System.out.println(console.getCurrentNamespace().getName() + ": this parameter does not exist.");
+		}
+		if (this.validateCommandParameters()){
+			System.out.println(console.getCurrentNamespace().getName() + ": " + this.getParameter().getName() + " = " + this.getParameter().getValue());
+		} else {
+			System.out.println("Get command is not formed properly. Correct format: get {parameter_name}");
+		}
 	}
 
 }

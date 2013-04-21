@@ -34,9 +34,10 @@ public class Main {
 			    String expression = bufferRead.readLine();
 			    
 			    Evaluator sentence = new Evaluator(expression);
-				String result = sentence.interpret();
-				System.out.println(result);
-			  
+				try{
+					sentence.interpretCommand();
+				} catch (Exception e){
+				}
 		 	}
 			catch(IOException e)
 			{

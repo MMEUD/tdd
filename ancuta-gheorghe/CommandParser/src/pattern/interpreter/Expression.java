@@ -10,6 +10,8 @@ package pattern.interpreter;
  */
 public abstract class Expression {
 
-	public abstract String interpret();
+	public abstract void interpretCommand();
+	
+	public abstract boolean validateCommandParameters();
 	
 }
