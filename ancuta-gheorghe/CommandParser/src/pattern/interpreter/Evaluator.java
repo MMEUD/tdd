@@ -31,6 +31,10 @@ public class Evaluator extends Expression{
             	syntaxTree = new GetExpression(this.commandParameters);
             } else if (command.equals("list")){
             	syntaxTree = new ListExpression(this.commandParameters);
+            } else if (command.equals("load")){
+            	syntaxTree = new LoadExpression(this.commandParameters);
+            } else if (command.equals("save")){
+            	syntaxTree = new SaveExpression(this.commandParameters);
             } else {
             	System.out.println("This command does not exist.");
             	return;
