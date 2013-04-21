@@ -48,11 +48,12 @@ public class GetExpression extends Expression {
 	
 	public void interpretCommand(){
 		Console console = Console.getInstance();
-		if (this.parameter == null) {
-			System.out.println(console.getCurrentNamespace().getName() + ": this parameter does not exist.");
-		}
 		if (this.validateCommandParameters()){
-			System.out.println(console.getCurrentNamespace().getName() + ": " + this.getParameter().getName() + " = " + this.getParameter().getValue());
+			if (this.parameter == null) {
+				System.out.println(console.getCurrentNamespace().getName() + ": this parameter does not exist.");
+			} else {
+				System.out.println(console.getCurrentNamespace().getName() + ": " + this.getParameter().getName() + " = " + this.getParameter().getValue());
+			}
 		} else {
 			System.out.println("Get command is not formed properly. Correct format: get {parameter_name}");
 		}
