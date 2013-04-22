@@ -4,8 +4,12 @@
 package pattern.utils;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,10 +21,20 @@ import java.util.Map;
 public class PropertiesFile {
 	
 	//de generalizat sau externalizat.
-	private static String propertiesDir = "C:\\Users\\ancuta\\Documents\\GitHub\\tdd\\ancuta-gheorghe\\CommandParser\\properties";
+	//private static String propertiesDir = "C:\\Users\\ancuta\\Documents\\GitHub\\tdd\\ancuta-gheorghe\\CommandParser\\properties";
+	private static String propertiesDir = "C:\\Users\\Ancuta Gheorghe\\Documents\\GitHub\\tdd\\ancuta-gheorghe\\CommandParser\\properties";
 
-	public void saveToFile(String namespaceName){
-		
+	public static void saveToFile(String namespaceName, ArrayList<Parameter> parameters){
+		Writer output;
+		try {
+			output = new BufferedWriter(new FileWriter(propertiesDir + "\\" + namespaceName + ".properties", true));
+			for (Parameter paramTemp: parameters){
+				output.append(paramTemp.getName() + "=" + paramTemp.getValue() + "\n");
+			}
+			output.close();
+		} catch (Exception e) {
+			System.out.println(e.getStackTrace());
+		}
 	}
 	
 	public static ArrayList<Map<String, String>> loadFile(String namespaceName){
@@ -53,5 +67,6 @@ public class PropertiesFile {
 	
 	public static void main(String[] args){
 		//PropertiesFile.getFiles();
+		//PropertiesFile.saveToFile();
 	}
 }

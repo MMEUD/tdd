@@ -4,10 +4,13 @@
 package pattern.interpreter;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Map;
 
 import pattern.singleton.Console;
 import pattern.utils.Namespace;
 import pattern.utils.Parameter;
+import pattern.utils.PropertiesFile;
 
 /**
  * @author ancuta
@@ -48,6 +51,22 @@ public class SaveExpression extends Expression{
 	}
 	
 	public void interpretCommand(){
+		if (this.validateCommandParameters()) {
+			if (this.commandParameters.length > 0){
+				Namespace nsTemp = this.namespaces.get(0);
+				PropertiesFile.saveToFile(nsTemp.getName(), nsTemp.getParameters());
+				System.out.println(this.commandParameters[0] + ": saved " + nsTemp.getParameters().size() + " parameters.");
+			} else {
+				for (Namespace nsTemp: this.namespaces){
+					PropertiesFile.saveToFile(nsTemp.getName(), nsTemp.getParameters());
+					System.out.println(nsTemp.getName() + ": saved " + nsTemp.getParameters().size() + " parameters.");
+				}
+			}
+		} else {
+			System.out.println("Load command is not formed properly. Correct format: load or load {namespace}");
+		}
+		
+		
 		if (this.validateCommandParameters()){
 			for (Namespace nsTemp: this.namespaces){
 				ArrayList<Parameter> parameters = new ArrayList<Parameter>();
