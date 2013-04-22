@@ -1,6 +1,6 @@
 <?
 
-  class NamespaceSingleton  {
+  class ContextSingleton  {
 
     // singleton instance
     private static $instance = null;
@@ -19,13 +19,11 @@
       if(!self::$instance) {
         self::$instance = new self();
       }
-
       return self::$instance;
     }
 
     public function addNamespace($namespaceObj) {
       $this->namespace[] = $namespaceObj;
-
     }
 
     public function setCurrentNamespace($currentNamespace) {

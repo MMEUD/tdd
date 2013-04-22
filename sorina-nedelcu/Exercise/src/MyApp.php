@@ -1,5 +1,5 @@
 <?php
-require_once 'NamespaceSingleton.php';
+require_once 'ContextSingleton.php';
 require_once 'actions/FirstAction.php';
 require_once 'actions/NsAction.php';
 
@@ -12,10 +12,10 @@ class MyApp
     $stdIn = fopen('php://stdin', 'r');
     echo "Add commands! Press Q to quit...\n\n";
 
-    //init NamespaceSingleton - Singleton
-    $namespaceSingleton = NamespaceSingleton::getInstance();
+    //init ContextSingleton - Singleton
+    $contextSingleton = ContextSingleton::getInstance();
     //Scenario 1 - set current Namespace to General
-    $firstAction = new FirstAction($namespaceSingleton);
+    $firstAction = new FirstAction($contextSingleton);
     $firstAction->doAction('');
 
 
@@ -26,7 +26,7 @@ class MyApp
       $params = explode(" ", $line);
       if($params[0] == "ns") {
         //Scenario 2 - change current Namespace
-        $nsAction = new NsAction($namespaceSingleton);
+        $nsAction = new NsAction($contextSingleton);
         $nsAction->doAction($params);
       }
 

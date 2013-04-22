@@ -11,10 +11,10 @@ require_once '/util/NamespaceObject.php';
  */
 class FirstAction implements Action {
 
-  private $namespace; //  NamespaceSingleton
+  private $context; //  ContextSingleton
 
-  public function __construct($namespaceSingleton) {
-      $this::setNamespace($namespaceSingleton);
+  public function __construct($contextSingleton) {
+      $this::setContext($contextSingleton);
   }
 
   public function doAction($param) {
@@ -22,18 +22,20 @@ class FirstAction implements Action {
     $newNamespace = new NamespaceObject();
     $newNamespace->setName("General");
     //add the new namespace to the namespace list and set it as current namespace
-    $this->namespace->addNamespace($newNamespace);
-    $this->namespace->setCurrentNamespace($newNamespace->getName());
+    $this->context->addNamespace($newNamespace);
+    $this->context->setCurrentNamespace($newNamespace->getName());
     //write current namespace
-    $currentNamespace = $this->namespace->getCurrentNamespace();
+    $currentNamespace = $this->context->getCurrentNamespace();
     echo "Current namespace is : " . $currentNamespace . "\n\n";
   }
 
-  public function setNamespace($namespace) {
-    $this->namespace = $namespace;
+  public function setContext($context) {
+    $this->context = $context;
   }
 
-  public function getNamespace() {
-    return $this->namespace;
+  public function getContext() {
+    return $this->context;
   }
+
+
 }

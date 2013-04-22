@@ -11,34 +11,36 @@ require_once '/util/NamespaceObject.php';
  */
 class NsAction implements Action {
 
-  private $namespace;  //NamespeceSingleton
+  private $context;  //ContextSingleton
 
-  public function __construct($namespaceSingleton) {
-      $this::setNamespace($namespaceSingleton);
+  public function __construct($contextSingleton) {
+      $this::setContext($contextSingleton);
   }
 
   public function doAction($params) {
 
-    if($params[1]== null || $params[1] == '') {
-      echo "No name for namespace! Please enter a name";
+    if(count($params)<=1) {
+      echo "No name for namespace! Please enter a name for namespace.\n";
     } else {
       //create a new Namespace
       $newNamespace = new NamespaceObject();
       $newNamespace->setName($params[1]);
 
-      $this->namespace->addNamespace($newNamespace);
-      $this->namespace->setCurrentNamespace($newNamespace->getName());
+      $this->context->addNamespace($newNamespace);
+      $this->context->setCurrentNamespace($newNamespace->getName());
 
-      $currentNamespace = $this->namespace->getCurrentNamespace();
+      $currentNamespace = $this->context->getCurrentNamespace();
       echo "Current namespace is now : " . $currentNamespace . "\n";
     }
   }
 
-  public function setNamespace($namespace) {
-    $this->namespace = $namespace;
+  public function setContext($context) {
+    $this->context = $context;
   }
 
-  public function getNamespace() {
-    return $this->namespace;
+  public function getContext() {
+    return $this->context;
   }
+
+
 }
