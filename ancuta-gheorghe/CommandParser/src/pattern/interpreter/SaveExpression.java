@@ -4,8 +4,6 @@
 package pattern.interpreter;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
 
 import pattern.singleton.Console;
 import pattern.utils.Namespace;
@@ -18,6 +16,7 @@ import pattern.utils.PropertiesFile;
  */
 public class SaveExpression extends Expression{
 
+	//de refactorizat cod pentru factory method pattern.
 	private ArrayList<Namespace> namespaces = new ArrayList<Namespace>();
 	private String[] commandParameters;
 	

@@ -8,6 +8,7 @@ import pattern.utils.Parameter;
 
 public class ListExpression extends Expression{
 
+	//de refactorizat cod pentru strategy pattern.
 	private ArrayList<Namespace> namespaces = new ArrayList<Namespace>();
 	private String[] commandParameters;
 	
