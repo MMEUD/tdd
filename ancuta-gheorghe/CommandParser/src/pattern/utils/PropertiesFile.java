@@ -64,9 +64,5 @@ public class PropertiesFile {
 	    }
 		return files;
 	}
-	
-	public static void main(String[] args){
-		//PropertiesFile.getFiles();
-		//PropertiesFile.saveToFile();
-	}
+
 }
