@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>AutofacContrib.NSubstitute</id>
+    <version>3.1.0</version>
+    <title>AutofacContrib.NSubstitute</title>
+    <authors>Miguel Madero and Robert Moore</authors>
+    <owners>Miguel Madero and Robert Moore</owners>
+    <licenseUrl>https://github.com/robdmoore/AutofacContrib.NSubstitute/blob/master/LICENSE</licenseUrl>
+    <projectUrl>http://github.com/robdmoore/AutofacContrib.NSubstitute</projectUrl>
+    <iconUrl>https://raw.github.com/robdmoore/AutofacContrib.NSubstitute/master/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Auto-mocking Autofac container that uses NSubstitute.</description>
+    <releaseNotes>Version 3 of AutofacContrib.NSubstitute brings some significant changes from previous versions:
+      We have deprecated the AutoMock class in favour of AutoSubstitute (in keeping with the theme of the NSubstitute library).
+      There is a new constructor that allows you to make modifications to the ContainerBuilder before the IContainer is built.
+      The latest version of NSubstitute is subpported and there isn't such a hard restriction on the NSubstitute and Autofac version numbers anymore.</releaseNotes>
+    <copyright />
+    <language>en-US</language>
+    <tags>substitute, mocking, mocks, nsubstitute, autofac, container, dependency-injection, di, testing, unit-testing, TDD, AAA, auto-mock, auto-substitute</tags>
+    <dependencies>
+      <dependency id="NSubstitute" version="1.5.0.0" />
+      <dependency id="Autofac" version="3.0.0" />
+    </dependencies>
+    <references>
+      <reference file="AutofacContrib.NSubstitute.dll" />
+    </references>
+  </metadata>
+</package>
