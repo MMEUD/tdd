@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @author Ancuta Gheorghe
  *
  */
-public class Namespace {
+public class Namespace{
 
 	private String name;
 	private ArrayList<Parameter> parameters = new ArrayList<Parameter>();

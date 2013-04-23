@@ -1,15 +1,11 @@
-/**
- * 
- */
 package tests.pattern.utils;
 
 
-import org.junit.Before;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 import pattern.utils.Parameter;
-
-import static org.junit.Assert.assertEquals;
 
 /**
  * @author Ancuta Gheorghe
@@ -17,18 +13,16 @@ import static org.junit.Assert.assertEquals;
  */
 public class ParameterTest {
 
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@Before
-	public void setUp() throws Exception {
-	}
-	
 	@Test
-	public void testParameterBuild(){
+	public void testParameterName(){
 		Parameter p = new Parameter("age", "27y");
-		assertEquals("The elements are equal.", p.getName(), "age");
-		
+		assertEquals(p.getName(), "age");
+		assertEquals(p.getValue(), "27y");
 	}
 
+	@Test
+	public void testParameterValue(){
+		Parameter p = new Parameter("age", "27y");
+		assertEquals(p.getValue(), "27y");
+	}
 }
