@@ -16,7 +16,6 @@ public class ParameterTest {
 	@Test
 	public void testParameterName(){
 		Parameter p = new Parameter("age", "27y");
-		assertEquals(p.getName(), "age");
 		assertEquals(p.getValue(), "27y");
 	}
 

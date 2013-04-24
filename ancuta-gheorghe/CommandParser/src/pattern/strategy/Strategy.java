@@ -3,7 +3,8 @@
  */
 package pattern.strategy;
 
-import java.util.ArrayList;
+import java.util.Map;
+
 
 /**
  * @author Ancuta Gheorghe
@@ -11,6 +12,6 @@ import java.util.ArrayList;
  */
 public interface Strategy {
 
-	public ArrayList<Object> execute(ArrayList<Object> arrayList);
+	public Map<String, String> execute(Map<String, String> mss);
 	
 }
