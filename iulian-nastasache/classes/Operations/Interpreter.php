@@ -15,7 +15,7 @@ class Interpreter
     public function __construct($commandString)
     {
         $this->commandString = $commandString;
-        echo "I:".$this->commandString."\n";
+
     }
 
     public function Interpret()
@@ -36,7 +36,8 @@ class Interpreter
 
         if (is_File(COMMANDS_FOLDER.$className.'.php') && class_Exists($className)) {
 
-            $operation = new $className($commandComponents);
+            $operation = new $className();
+            $operation->SetCommandParams($commandComponents);
             $operation->CommandInterpreter();
 
         } else {

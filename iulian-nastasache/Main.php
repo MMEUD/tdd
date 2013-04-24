@@ -1,6 +1,6 @@
 #!/usr/bin/php -q
 <?php
-require("AutoLoader.php");
+require("BootStrap.php");
 
 // Create default IniGroup and set it as current
 IniGroupsContainer::AddIniGroup(DEFAULT_NAMESPACE, new IniGroup());

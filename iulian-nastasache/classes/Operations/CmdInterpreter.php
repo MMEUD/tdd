@@ -11,8 +11,12 @@ abstract class CmdInterpreter
     protected static $params;
 
     // Add parameters to the command
-    public function CmdInterpreter($params)
-    {
+    // public function CmdInterpreter()
+    // {
+
+    // }
+
+    public function SetCommandParams($params) {
         self::$params = $params;
     }
 

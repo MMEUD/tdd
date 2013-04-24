@@ -5,7 +5,7 @@ ob_Implicit_flush(true);
 
 ini_Set('xdebug.show_exception_trace', 0);
 
-deFine('MY_BASE_PATH', (string) ('/var/www/tdd'));
+deFine('MY_BASE_PATH', (string) ('/var/www/radu/tdd/iulian-nastasache'));
 deFine('CONFIG_FOLDER','./configs/');
 deFine('DEFAULT_NAMESPACE','general');
 deFine('COMMANDS_FOLDER','./classes/Operations/Commands/');
