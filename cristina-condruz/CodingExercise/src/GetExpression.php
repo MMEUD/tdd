@@ -23,15 +23,18 @@ class GetExpression implements CommandExpression{
    }
   public function interpret(){
       //the command should be get {parameter_name}
-      //to verify if args correspond
-      $currentSession = MySingleton::getInstance();
-      $currentNamespace = $currentSession->getCurrentNamespace();
-      $nmsProperties = $currentNamespace->getProperties();
-      print_r($nmsProperties);
-      if(array_key_exists($this->getArgument(),$nmsProperties)){
-        return $currentNamespace->getName()." : ". $nmsProperties[$this->getArgument()]->getName() ." = ". $nmsProperties[$this->getArgument()]->getValue();
+      if($this->getArgument() != ""){
+        $currentSession = MySingleton::getInstance();
+        $currentNamespace = $currentSession->getCurrentNamespace();
+        $nmsProperties = $currentNamespace->getProperties();
+        //print_r($nmsProperties);
+        if(array_key_exists($this->getArgument(),$nmsProperties)){
+          return $currentNamespace->getName()." : ". $nmsProperties[$this->getArgument()]->getName() ." = ". $nmsProperties[$this->getArgument()]->getValue();
+        }else{
+          return "There is no parameter named: ".$this->getArgument()." in current namespace: ".$currentNamespace->getName();
+        }
       }else{
-        return "There is no parameter named: ".$this->getArgument()." in current namespace: ".$currentNamespace->getName();
+        return "Parameter missing. The command should be get {parameter_name}.";
       }
     }
 }

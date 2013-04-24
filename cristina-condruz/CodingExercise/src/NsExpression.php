@@ -21,10 +21,15 @@ class NsExpression implements CommandExpression{
           return $this->argument;
   }
   public function interpret(){
-    //to verify if args correspond
-    $currentSession = MySingleton::getInstance();
-    $currentSession->setCurrentNamespace($this->getArgument());
-    return "Current namespace: ". $currentSession->getCurrentNamespace()->getName();
+     //command should be ns {namespace_name}
+    if ($this->getArgument() != ""){
+      $currentSession = MySingleton::getInstance();
+      $currentSession->setCurrentNamespace($this->getArgument());
+      return "Current namespace: ". $currentSession->getCurrentNamespace()->getName();
+    }else{
+      return "Parameter missing. The command should be ns {namespace_name}.";
+    }
+
   }
 }
 ?>

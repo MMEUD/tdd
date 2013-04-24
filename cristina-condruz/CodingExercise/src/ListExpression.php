@@ -22,16 +22,33 @@ class ListExpression implements CommandExpression{
            return $this->argument;
    }
   public function interpret(){
-      //the command should be get {parameter_name}
-      //to verify if args correspond
+      //the command should be list or list {namespace_name}
+      $msg = "";
       $currentSession = MySingleton::getInstance();
-      $currentNamespace = $currentSession->getCurrentNamespace();
-      $nmsProperties = $currentNamespace->getProperties();
-      print_r($nmsProperties);
-      if(array_key_exists($this->getArgument(),$nmsProperties)){
-        return $currentNamespace->getName()." : ". $nmsProperties[$this->getArgument()]->getName() ." = ". $nmsProperties[$this->getArgument()]->getValue();
+      $allNamespaces = $currentSession->getNamespaces();
+      if ($this->getArgument() != ""){
+        //list {namespace_name}
+        if(array_key_exists($this->getArgument(),$allNamespaces)){
+          $selectedNamespace = $currentSession->getNamespace($this->getArgument());
+          $allPropertiesOfNamespace = $selectedNamespace->getProperties();
+          ksort($allPropertiesOfNamespace); // SORT_NATURAL | SORT_FLAG_CASE
+          foreach($allPropertiesOfNamespace as $selectedProperty){
+            $msg .= $selectedNamespace->getName()." : ".$selectedProperty->getName(). " = ". $selectedProperty->getValue()."\n";
+          }
+        }else{
+          return "There is no namespace named: ".$this->getArgument();
+        }
       }else{
-        return "There is no parameter named: ".$this->getArgument()." in current namespace: ".$currentNamespace->getName();
+        //list all namespaces ordered alphabetically
+        ksort($allNamespaces);//// SORT_NATURAL | SORT_FLAG_CASE
+        foreach($allNamespaces as $selectedNamespace){
+          $allPropertiesOfNamespace = $selectedNamespace->getProperties();
+          ksort($allPropertiesOfNamespace);// SORT_NATURAL | SORT_FLAG_CASE
+          foreach($allPropertiesOfNamespace as $selectedProperty){
+            $msg .= $selectedNamespace->getName()." : ".$selectedProperty->getName(). " = ". $selectedProperty->getValue()."\n";
+          }
+        }
       }
+      return $msg;
     }
 }

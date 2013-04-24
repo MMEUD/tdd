@@ -22,14 +22,18 @@ class SetExpression implements CommandExpression{
            return $this->arguments;
    }
   public function interpret(){
-      //to verify if args correspond
+      //command should be set {parameter_name} {parameter_value}
       $currentSession = MySingleton::getInstance();
       $currentNamespace = $currentSession->getCurrentNamespace();
       $arrArguments = explode(" ", $this->getArguments());
-      $currentProperty = new NamespaceProperty($arrArguments[0],$arrArguments[1]);
-      $currentNamespace->addProperties($currentProperty);
-      //$nmsProperties = $currentNamespace->getProperties();
-      //print_r($nmsProperties);
-      return $currentNamespace->getName()." : ". $currentProperty->getName() ." = ". $currentProperty->getValue();
+      if(count($arrArguments) == 2){
+        $currentProperty = new NamespaceProperty($arrArguments[0],$arrArguments[1]);
+        $currentNamespace->addProperties($currentProperty);
+        //$nmsProperties = $currentNamespace->getProperties();
+        //print_r($nmsProperties);
+        return $currentNamespace->getName()." : ". $currentProperty->getName() ." = ". $currentProperty->getValue();
+      }else{
+        return "Parameters incorrect. The command should be set {parameter_name} {parameter_value}.";
+      }
     }
 }
