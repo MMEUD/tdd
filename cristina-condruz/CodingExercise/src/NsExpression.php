@@ -10,23 +10,21 @@ require_once('CommandExpression.php');
 require_once('MySingleton.php');
 
 class NsExpression implements CommandExpression{
-  private $ns;
-  public function __construct($ns){
-      $this->ns = $ns;
+  private $argument;
+  public function __construct($argument){
+      $this->argument = $argument;
   }
-  public function setNs($ns){
-        $this->ns = $ns;
+  public function setArgument($argument){
+        $this->argument = $argument;
   }
-  public function getNs(){
-          return $this->ns;
+  public function getArgument(){
+          return $this->argument;
   }
   public function interpret(){
-      $currentSession = MySingleton::getInstance();
-      $currentSession->setCurrentNamespace($this->getNs());
-      return "Current namespace: ". $currentSession->getCurrentNamespace()->getName();
-  }
-  public function __toString(){
-      return (string) $this->ns;
+    //to verify if args correspond
+    $currentSession = MySingleton::getInstance();
+    $currentSession->setCurrentNamespace($this->getArgument());
+    return "Current namespace: ". $currentSession->getCurrentNamespace()->getName();
   }
 }
 ?>

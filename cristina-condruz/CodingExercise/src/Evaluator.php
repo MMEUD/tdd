@@ -8,20 +8,35 @@
  */
 require_once('CommandExpression.php');
 require_once('NsExpression.php');
+require_once('SetExpression.php');
+require_once('GetExpression.php');
 
 class Evaluator implements CommandExpression{
  private $syntaxTree;
 
  public function __construct($expression){
-     $stack = array();
      $tokens = explode(" ", $expression);
-     //process array !!!
-     if($tokens[0] == "ns"){
-       $syntaxTree = new NsExpression((isset($tokens[1])?$tokens[1]:(" ")));
-     }
-     else if($tokens[0] == "set"){
-     }
-     else{
+     $nrArgs = sizeOf($tokens);
+     if($nrArgs == 0){
+       echo "Please insert a command!";
+       return;
+     }else{
+       $command = $tokens[0];
+       $paramsArr = array_shift($tokens);
+       $params = implode(" ", $tokens);
+       if($command == "ns"){
+         $syntaxTree = new NsExpression($params);
+       }
+       else if($command == "set"){
+         $syntaxTree = new SetExpression($params);
+       }
+       else if($command == "get"){
+         $syntaxTree = new GetExpression($params);
+       }
+       else{
+         echo "Please insert a valid command!";
+         return;
+       }
      }
      $this->syntaxTree = $syntaxTree;
  }
