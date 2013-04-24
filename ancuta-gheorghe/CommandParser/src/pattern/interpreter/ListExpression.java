@@ -2,6 +2,8 @@ package pattern.interpreter;
 
 import java.util.ArrayList;
 
+import pattern.parameterstrategy.Context;
+import pattern.parameterstrategy.OrderArraylist;
 import pattern.singleton.Console;
 import pattern.utils.Namespace;
 import pattern.utils.Parameter;
@@ -46,6 +48,8 @@ public class ListExpression extends Expression{
 			for (Namespace nsTemp: this.namespaces){
 				ArrayList<Parameter> parameters = new ArrayList<Parameter>();
 				parameters = nsTemp.getParameters();
+				Context context = new Context(new OrderArraylist());
+				parameters = context.executeStrategy(parameters);
 				for (Parameter pTemp: parameters){
 					System.out.println(nsTemp.getName() + ": " + pTemp.getName() + " = " + pTemp.getValue());
 				}
