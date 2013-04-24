@@ -8,6 +8,5 @@
  */
 interface CommandExpression {
   public function interpret();
-  public function __toString();
 }
 ?>

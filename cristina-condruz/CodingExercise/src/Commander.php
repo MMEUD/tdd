@@ -1,6 +1,7 @@
 <?php
 require_once('Evaluator.php');
 require_once('MySingleton.php');
+
 class Commander
 {
         public static function main()

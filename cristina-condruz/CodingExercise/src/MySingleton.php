@@ -7,11 +7,12 @@
  * To change this template use File | Settings | File Templates.
  */
 require_once('CommandNamespace.php');
+
 class MySingleton {
 
   private static $instance = null;
   private $currentNamespace = ""; //new CommandNamespace();
-  private $namespaces = array();// array of objects
+  private $namespaces = array();// array of CommandNamespace;
 
   private function __construct(){}
 
@@ -47,7 +48,7 @@ class MySingleton {
   }
 
   public function addNamespace($namespaceObj) {
-    $this->namespaces[] = $namespaceObj;
+    $this->namespaces[$namespaceObj->getName()] = $namespaceObj;
   }
 
   public function getNamespace($namespaceName){

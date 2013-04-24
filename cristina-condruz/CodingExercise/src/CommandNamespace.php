@@ -8,7 +8,7 @@
  */
 class CommandNamespace{
   private $name;
-  private $properties = array();
+  private $properties = array();// array de NamespaceProperty
 
   public function setName($name) {
     $this->name = $name;
@@ -20,6 +20,11 @@ class CommandNamespace{
 
   public function setProperties($properties) {
     $this->properties = $properties;
+  }
+
+  public function addProperties($propertiesObj) {
+     //if(array_key_exists($propertiesObj->getName(),$this->properties))
+       $this->properties[$propertiesObj->getName()] = $propertiesObj;
   }
 
   public function getProperties() {
