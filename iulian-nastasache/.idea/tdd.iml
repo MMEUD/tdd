@@ -7,9 +7,11 @@
     <orderEntry type="module-library">
       <library name="PHP">
         <CLASSES>
+          <root url="file:///usr/share/php/PEAR" />
           <root url="file:///usr/share/php/PHPUnit" />
         </CLASSES>
         <SOURCES>
+          <root url="file:///usr/share/php/PEAR" />
           <root url="file:///usr/share/php/PHPUnit" />
         </SOURCES>
       </library>

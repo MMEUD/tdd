@@ -38,7 +38,9 @@ class Interpreter
 
             $operation = new $className();
             $operation->SetCommandParams($commandComponents);
-            $operation->CommandInterpreter();
+            $output = $operation->CommandInterpreter();
+
+            return $this->CommandMessage($output);
 
         } else {
             return $this->CommandMessage("Command '$command' not implemented");
