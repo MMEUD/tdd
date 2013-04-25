@@ -1,7 +1,12 @@
-<?php
-require_once 'ContextSingleton.php';
-require_once 'actions/FirstAction.php';
-require_once 'actions/NsAction.php';
+<?
+require_once "/ContextSingleton.php";
+require_once "/Interpreter.php";
+require_once "/actions/FirstAction.php";
+require_once "/actions/NsAction.php";
+require_once "/actions/SetParameterAction.php";
+require_once "/actions/GetParameterAction.php";
+require_once "/actions/ListNamespaceAction.php";
+require_once "/actions/LoadAction.php";
 
 
 class MyApp
@@ -12,28 +17,23 @@ class MyApp
     $stdIn = fopen('php://stdin', 'r');
     echo "Add commands! Press Q to quit...\n\n";
 
-    //init ContextSingleton - Singleton
-    $contextSingleton = ContextSingleton::getInstance();
     //Scenario 1 - set current Namespace to General
-    $firstAction = new FirstAction($contextSingleton);
-    $firstAction->doAction('');
-
+//    $firstAction = new FirstAction();
+//    $firstAction->doAction('');
+//
+    $expr = new Interpreter("Start");
+    echo $expr->msg;
 
     while(!$getOut) {
       $line = fread($stdIn, 1024);
       $line = trim($line);
 
-      $params = explode(" ", $line);
-      if($params[0] == "ns") {
-        //Scenario 2 - change current Namespace
-        $nsAction = new NsAction($contextSingleton);
-        $nsAction->doAction($params);
-      }
-
-      //Quit
-      if($line=='Q' || $line=='q') {
-              echo "Quit!\n";
-              $getOut = TRUE;
+      $expr = new Interpreter($line);
+      if ($expr->msg!="Q")
+        echo $expr->msg;
+      else {
+        echo "Quit!\n";
+        $getOut = TRUE;  //Quit
       }
     }
     return(0);

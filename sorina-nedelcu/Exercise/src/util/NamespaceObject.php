@@ -9,7 +9,7 @@
 class NamespaceObject {
 
   private $name;
-  private $properties = array();
+  private $properties;  // array of objects Property
 
   public function setName($name) {
     $this->name = $name;
@@ -25,5 +25,13 @@ class NamespaceObject {
 
   public function getProperties() {
     return $this->properties;
+  }
+
+  public function addProperty($proprName, $property) {
+    $this->properties[$proprName] = $property;
+  }
+
+  public function getProperty($proprName) {
+    return $this->properties[$proprName];
   }
 }
