@@ -1,48 +1,38 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: Sorina Nedelcu
- * Date: 4/23/13
- * Time: 4:31 PM
- * To change this template use File | Settings | File Templates.
- */
+require_once "/actions/FirstAction.php";
+require_once "/actions/NsAction.php";
+require_once "/actions/SetParameterAction.php";
+require_once "/actions/GetParameterAction.php";
+require_once "/actions/ListNamespaceAction.php";
+require_once "/actions/LoadAction.php";
+require_once "/actions/SaveAction.php";
+require_once "/actions/UnknownAction.php";
+
 class Interpreter {
 	public $msg = '';
 	public $interpretedOperation;
 
   public function Interpreter($line) {
+    $action = new UnknownAction();
 
     $params = explode(" ", $line);
     if($params[0] == "Start") {
-      $firstAction = new FirstAction();
-      $this->msg = $firstAction->doAction('');
+      $action = new FirstAction();          //Scenario 1 - first Action
     } else if($params[0] == "ns") {
-      //Scenario 2 - change current Namespace
-      $nsAction = new NsAction();
-      $this->msg = $nsAction->doAction($params);
+      $action = new NsAction();             //Scenario 2 - change current Namespace
     } else if($params[0] == "set") {
-      //Scenario 3 - set parameters for current namespace
-      $setParameterAction = new SetParameterAction();
-      $this->msg = $setParameterAction->doAction($params);
+      $action = new SetParameterAction();   //Scenario 3 - set parameters for current namespace
     } else if($params[0] == "get") {
-      //Scenario 4 - get parameters value for current namespace
-      $getParameterAction = new GetParameterAction();
-      $this->msg =$getParameterAction->doAction($params);
+      $action = new GetParameterAction();   //Scenario 4 - get parameters value for current namespace
     } else if($params[0] == "list") {
-      //Scenario 5 - list all namespace
-      //Scenario 6 - list current namespace
-      $listNamespaceAction = new ListNamespaceAction();
-      $this->msg = $listNamespaceAction->doAction($params);
-    }  else if($params[0] == "load") {
-      //Scenario 4 - get parameters value for current namespace
-      $loadAction = new LoadAction();
-      $this->msg = $loadAction->doAction($params);
-    } else if($line=='Q' || $line=='q') {
-      $this->msg = "Q";
-    } else {
-      $this->msg = "Unknown command.\n";
+      $action = new ListNamespaceAction();  //Scenario 5,6 - list all namespace or list current namespace
+    } else if($params[0] == "load") {
+      $action = new LoadAction();           //Scenario 7, 9 - load from a file name
+    } else if($params[0] == "save") {
+      $action = new SaveAction();           //Scenario 8, 10 - save in a file name
     }
 
+    $this->msg = $action->doAction($params);
 		return $this->msg;
     }
 }

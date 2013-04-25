@@ -4,16 +4,7 @@ require_once '/ContextSingleton.php';
 require_once '/util/NamespaceObject.php';
 require_once '/util/Property.php';
 
-
-/**
- * Created by JetBrains PhpStorm.
- * User: Sorina Nedelcu
- * Date: 4/22/13
- * Time: 3:59 PM
- * To change this template use File | Settings | File Templates.
- */
 class LoadAction implements Action {
-
   private $context;  //ContextSingleton
 
   public function __construct() {
@@ -22,30 +13,28 @@ class LoadAction implements Action {
 
   public function doAction($params) {
     $msg =  "\n";
-
     if(count($params)<=1) {
       foreach (glob("files/*.properties") as $filename) {
-      			$filename = str_replace('.properties', '', $filename);
-            $filename = str_replace('files/', '', $filename);
-
-      			$this->loadFile($filename);
+      			$filename = str_replace('.properties', '', substr($filename, 6));
+      			$msg.= $this->loadFile($filename);
       		}
-
-
-
     } else {
-      $this->loadFile($params[1]);
+      $msg.= $this->loadFile($params[1]);
     }
     return $msg;
   }
 
+
+
   public function loadFile ($fileName) {
+    $msg = "";
     if (is_file('files/'.$fileName.'.properties')) {
       $lines = file('files/'.$fileName.'.properties', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
       $this->loadNamespace($fileName, $lines);
     } else {
       $msg = "File $fileName.properties not found";
     }
+    return $msg;
  }
 
   public function loadNamespace($ns, $lines) {

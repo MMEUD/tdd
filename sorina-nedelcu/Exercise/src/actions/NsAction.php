@@ -3,15 +3,7 @@ require_once 'Action.php';
 require_once '/util/NamespaceObject.php';
 require_once '/ContextSingleton.php';
 
-/**
- * Created by JetBrains PhpStorm.
- * User: Sorina Nedelcu
- * Date: 4/19/13
- * Time: 3:45 PM
- * To change this template use File | Settings | File Templates.
- */
 class NsAction implements Action {
-
   private $context;  //ContextSingleton
 
   public function __construct() {
