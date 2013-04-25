@@ -1,7 +1,7 @@
 /**
  * 
  */
-package pattern.parameterstrategy;
+package pattern.strategy;
 
 import java.util.ArrayList;
 import java.util.Collections;

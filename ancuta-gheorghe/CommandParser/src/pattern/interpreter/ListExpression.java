@@ -2,9 +2,9 @@ package pattern.interpreter;
 
 import java.util.ArrayList;
 
-import pattern.parameterstrategy.Context;
-import pattern.parameterstrategy.OrderArraylist;
 import pattern.singleton.Console;
+import pattern.strategy.Context;
+import pattern.strategy.OrderArraylist;
 import pattern.utils.Namespace;
 import pattern.utils.Parameter;
 

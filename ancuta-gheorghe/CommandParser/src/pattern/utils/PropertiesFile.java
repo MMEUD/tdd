@@ -13,9 +13,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import pattern.strategy.Context;
-import pattern.strategy.OrderMap;
-
 /**
  * @author ancuta
  *
@@ -52,8 +49,7 @@ public class PropertiesFile {
 	        br.close();
 	    } catch (Exception e) {
 		}
-	    Context context = new Context(new OrderMap());
-	    return context.executeStrategy(paramsTemp);
+	    return paramsTemp;
 	}
 	
 	public static ArrayList<String> getFiles(){

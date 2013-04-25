@@ -3,7 +3,10 @@
  */
 package pattern.strategy;
 
+import java.util.ArrayList;
 import java.util.Map;
+
+import pattern.utils.Parameter;
 
 /**
  * @author Ancuta Gheorghe
@@ -17,7 +20,7 @@ public class Context {
 		this.strategy = strategy;
 	}
 	
-	public Map<String, String> executeStrategy(Map<String, String> mss){
+	public ArrayList<Parameter> executeStrategy(ArrayList<Parameter> mss){
 		return this.strategy.execute(mss);
 	}
 }

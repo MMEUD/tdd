@@ -3,7 +3,9 @@
  */
 package pattern.strategy;
 
-import java.util.Map;
+import java.util.ArrayList;
+
+import pattern.utils.Parameter;
 
 
 /**
@@ -12,6 +14,6 @@ import java.util.Map;
  */
 public interface Strategy {
 
-	public Map<String, String> execute(Map<String, String> mss);
+	public ArrayList<Parameter> execute(ArrayList<Parameter> mss);
 	
 }
