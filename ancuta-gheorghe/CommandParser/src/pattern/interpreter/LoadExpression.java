@@ -56,18 +56,17 @@ public class LoadExpression extends Expression{
 				Namespace nsTemp = new Namespace();
 				nsTemp.setName(this.getCommandParameters()[0]);
 				console.setNamespace(nsTemp);
-				ArrayList<Map<String, String>> paramsTemp = PropertiesFile.loadFile(this.getCommandParameters()[0]);
+				
+				Map<String, String> paramsTemp = PropertiesFile.loadFile(this.getCommandParameters()[0]);
 				int size = paramsTemp.size();
 				Parameter paramTemp = null;
-				for (Map<String, String> paramTempH: paramsTemp){
-					Iterator it = paramTempH.entrySet().iterator();
-				    while (it.hasNext()) {
-				        Map.Entry pairs = (Map.Entry)it.next();
-				        paramTemp = new Parameter(pairs.getKey().toString(), pairs.getValue().toString());
-				        it.remove();
-				    }	
+				Iterator it = paramsTemp.entrySet().iterator();
+				while (it.hasNext()) {
+				    Map.Entry pairs = (Map.Entry)it.next();
+				    paramTemp = new Parameter(pairs.getKey().toString(), pairs.getValue().toString());
 				    nsTemp.setParameter(paramTemp);
-				}
+				    it.remove();
+				}				
 				System.out.println(this.commandParameters[0] + ": loaded " + size + " parameters.");
 			} else {
 				this.setFiles(PropertiesFile.getFiles());
@@ -75,18 +74,16 @@ public class LoadExpression extends Expression{
 					Namespace nsTemp = new Namespace();
 					nsTemp.setName(file);
 					console.setNamespace(nsTemp);
-					ArrayList<Map<String, String>> paramsTemp = PropertiesFile.loadFile(file);
+					Map<String, String> paramsTemp = PropertiesFile.loadFile(file);
 					int size = paramsTemp.size();
 					Parameter paramTemp = null;
-					for (Map<String, String> paramTempH: paramsTemp){
-						Iterator it = paramTempH.entrySet().iterator();
-					    while (it.hasNext()) {
-					        Map.Entry pairs = (Map.Entry)it.next();
-					        paramTemp = new Parameter(pairs.getKey().toString(), pairs.getValue().toString());
-					        it.remove();
-					    }	
+					Iterator it = paramsTemp.entrySet().iterator();
+					while (it.hasNext()) {
+					    Map.Entry pairs = (Map.Entry)it.next();
+					    paramTemp = new Parameter(pairs.getKey().toString(), pairs.getValue().toString());
 					    nsTemp.setParameter(paramTemp);
-					}
+					    it.remove();
+					}		
 					System.out.println(file + ": loaded " + size + " parameters.");
 				}
 			}

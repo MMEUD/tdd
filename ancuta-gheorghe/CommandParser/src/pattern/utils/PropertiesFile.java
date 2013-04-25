@@ -8,7 +8,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,23 +36,20 @@ public class PropertiesFile {
 		}
 	}
 	
-	public static ArrayList<Map<String, String>> loadFile(String namespaceName){
+	public static Map<String, String> loadFile(String namespaceName){
 		BufferedReader br = null;
-		ArrayList<Map<String, String>> paramsTemp = new ArrayList<Map<String, String>>();
+		Map<String, String> paramsTemp = new HashMap<String, String>();
 		try {
 			br = new BufferedReader(new FileReader(PropertiesFile.propertiesDir + "\\" + namespaceName + ".properties"));
 		    String line = br.readLine();
-	        Map<String, String> paramTemp = null;
 	        while (line != null) {
-	        	paramTemp = new HashMap<String, String>();
-	        	paramTemp.put(line.split("=")[0], line.split("=")[1]);
-	        	paramsTemp.add(paramTemp);
-	            line = br.readLine();
+	        	paramsTemp.put(line.split("=")[0], line.split("=")[1]);
+	        	line = br.readLine();
 	        }
 	        br.close();
 	    } catch (Exception e) {
 		}
-		return paramsTemp;
+	    return paramsTemp;
 	}
 	
 	public static ArrayList<String> getFiles(){

@@ -23,16 +23,52 @@
       <file leaf-file-name="MyApp.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyApp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="24" selection-start="802" selection-end="802" vertical-scroll-proportion="-10.615385">
+            <state line="8" column="27" selection-start="325" selection-end="325" vertical-scroll-proportion="-5.230769">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Action.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/Action.php">
+      <file leaf-file-name="SetParameterAction.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/SetParameterAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="227" selection-end="227" vertical-scroll-proportion="-7.1923075">
+            <state line="39" column="61" selection-start="954" selection-end="1122" vertical-scroll-proportion="-10.843137">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetParameterAction.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/GetParameterAction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="50" selection-start="1004" selection-end="1004" vertical-scroll-proportion="-11.333333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListNamespaceAction.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/ListNamespaceAction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="33" selection-start="103" selection-end="104" vertical-scroll-proportion="-0.33333334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestProperty.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TestProperty.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="25" selection-start="1144" selection-end="1144" vertical-scroll-proportion="-30.73077">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestNsAction.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TestNsAction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="7" selection-start="134" selection-end="134" vertical-scroll-proportion="-3.9230769">
               <folding />
             </state>
           </provider>
@@ -41,25 +77,61 @@
       <file leaf-file-name="FirstAction.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/actions/FirstAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="28" selection-start="487" selection-end="487" vertical-scroll-proportion="-7.769231">
+            <state line="15" column="0" selection-start="359" selection-end="359" vertical-scroll-proportion="-9.807693">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NsAction.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="NsAction.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/actions/NsAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="24" selection-start="481" selection-end="481" vertical-scroll-proportion="0.27241963">
+            <state line="26" column="41" selection-start="641" selection-end="721" vertical-scroll-proportion="-17.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NamespaceObject.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/NamespaceObject.php">
+      <file leaf-file-name="Interpreter.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Interpreter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="20" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+            <state line="16" column="30" selection-start="379" selection-end="379" vertical-scroll-proportion="-8.846154">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="general.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/files/general.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadAction.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/LoadAction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="756" selection-end="756" vertical-scroll-proportion="-7.6862745">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spaceNew.properties" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/files/spaceNew.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="13" selection-start="83" selection-end="83" vertical-scroll-proportion="0.096045196">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="space.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/files/space.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -68,25 +140,34 @@
       <file leaf-file-name="ContextSingleton.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ContextSingleton.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="512" selection-end="512" vertical-scroll-proportion="-13.730769">
+            <state line="45" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="-27.153847">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Propertie.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/Propertie.php">
+      <file leaf-file-name="Property.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/Property.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="28" selection-start="328" selection-end="328" vertical-scroll-proportion="-6.6923075">
+            <state line="22" column="29" selection-start="428" selection-end="428" vertical-scroll-proportion="-9.076923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyAppTest.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/MyAppTest.php">
+      <file leaf-file-name="NamespaceObject.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/NamespaceObject.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="442" selection-end="442" vertical-scroll-proportion="-11.115385">
+            <state line="8" column="6" selection-start="177" selection-end="177" vertical-scroll-proportion="-5.230769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Action.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/Action.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="-8.5">
               <folding />
             </state>
           </provider>
@@ -102,21 +183,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/namespace.txt" />
-        <option value="$PROJECT_DIR$/src/main.php" />
-        <option value="$PROJECT_DIR$/src/Namespace.php" />
-        <option value="$PROJECT_DIR$/src/util/Propertie.php" />
-        <option value="$PROJECT_DIR$/src/files/general.properties" />
-        <option value="$PROJECT_DIR$/src/actions/firstAction.php" />
-        <option value="$PROJECT_DIR$/src/NamespaceObj.php" />
-        <option value="$PROJECT_DIR$/src/actions/Action.php" />
-        <option value="$PROJECT_DIR$/src/util/NamespaceObject.php" />
-        <option value="$PROJECT_DIR$/src/NamespaceSingleton.php" />
-        <option value="$PROJECT_DIR$/tests/MyAppTest.php" />
-        <option value="$PROJECT_DIR$/src/MyApp.php" />
-        <option value="$PROJECT_DIR$/src/actions/FirstAction.php" />
+        <option value="$PROJECT_DIR$/src/tests/NsActionTest.php" />
+        <option value="$PROJECT_DIR$/src/TestNsAction.php" />
+        <option value="$PROJECT_DIR$/src/actions/ListNamespace.php" />
+        <option value="$PROJECT_DIR$/src/actions/SetParameterAction.php" />
+        <option value="$PROJECT_DIR$/src/actions/GetParameterAction.php" />
+        <option value="$PROJECT_DIR$/src/actions/ListOneNamespace.php" />
+        <option value="$PROJECT_DIR$/src/Interpreter.php" />
         <option value="$PROJECT_DIR$/src/ContextSingleton.php" />
+        <option value="$PROJECT_DIR$/src/MyApp.php" />
+        <option value="$PROJECT_DIR$/src/actions/ListNamespaceAction.php" />
+        <option value="$PROJECT_DIR$/src/actions/FirstAction.php" />
+        <option value="$PROJECT_DIR$/src/files/space.properties" />
+        <option value="$PROJECT_DIR$/src/files/general.properties" />
         <option value="$PROJECT_DIR$/src/actions/NsAction.php" />
+        <option value="$PROJECT_DIR$/src/actions/LoadAction.php" />
+        <option value="$PROJECT_DIR$/src/files/spaceNew.properties" />
       </list>
     </option>
   </component>
@@ -164,20 +246,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Exercise" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Exercise" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Exercise" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -256,11 +324,11 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="reference.webide.settings.project.settings.php" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="reference.webide.settings.project.settings.php.phpunit.skeletonGenerator" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -274,17 +342,44 @@
     </servers>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MOOD_INTERNAL\Projects\Exercise\src\files" />
+      <recent name="D:\MOOD_INTERNAL\Projects\Exercise\src\actions" />
+      <recent name="D:\MOOD_INTERNAL\Projects\Exercise\tests\util" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\MOOD_INTERNAL\Projects\Exercise\src\files" />
+      <recent name="D:\MOOD_INTERNAL\Projects\Exercise\src" />
+      <recent name="D:\MOOD_INTERNAL\Projects\Exercise\src\actions" />
+      <recent name="D:\MOOD_INTERNAL\Projects\Exercise\src\tests" />
+      <recent name="D:\MOOD_INTERNAL\Projects\Exercise\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.MyAppTest">
+  <component name="RunManager" selected="PHPUnit.NsActionTest">
     <configuration default="false" name="MyAppTest.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/tests/MyAppTest.php">
       <RunnerSettings RunnerId="PhpRunner" />
       <ConfigurationWrapper RunnerId="PhpRunner" />
       <method />
     </configuration>
     <configuration default="false" name="MyApp.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/MyApp.php">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MyAppTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="MyAppTest" file="$PROJECT_DIR$/src/MyAppTest.php" scope="Class" />
+      <RunnerSettings RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PropertyTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="PropertyTest" file="$PROJECT_DIR$/src/tests/util/PropertyTest.php" scope="Class" />
+      <RunnerSettings RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="NsActionTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="NsActionTest" file="$PROJECT_DIR$/src/TestNsAction.php" scope="Class" />
       <RunnerSettings RunnerId="PhpRunner" />
       <ConfigurationWrapper RunnerId="PhpRunner" />
       <method />
@@ -299,21 +394,20 @@
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
-    <configuration default="false" name="MyAppTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner class="MyAppTest" file="$PROJECT_DIR$/tests/MyAppTest.php" scope="Class" />
-      <RunnerSettings RunnerId="PhpRunner" />
-      <ConfigurationWrapper RunnerId="PhpRunner" />
-      <method />
-    </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="PHPUnit.MyAppTest" />
-      <item index="1" class="java.lang.String" itemvalue="PHP Script.MyAppTest.php" />
-      <item index="2" class="java.lang.String" itemvalue="PHP Script.MyApp.php" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.MyAppTest.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.MyApp.php" />
+      <item index="2" class="java.lang.String" itemvalue="PHPUnit.MyAppTest" />
+      <item index="3" class="java.lang.String" itemvalue="PHPUnit.PropertyTest" />
+      <item index="4" class="java.lang.String" itemvalue="PHPUnit.NsActionTest" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="PHP Script.MyAppTest.php" />
-        <item index="1" class="java.lang.String" itemvalue="PHP Script.MyApp.php" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="PHPUnit.NsActionTest" />
+        <item index="1" class="java.lang.String" itemvalue="PHPUnit.NsActionTest" />
+        <item index="2" class="java.lang.String" itemvalue="PHPUnit.NsActionTest" />
+        <item index="3" class="java.lang.String" itemvalue="PHPUnit.NsActionTest" />
+        <item index="4" class="java.lang.String" itemvalue="PHPUnit.NsActionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -346,19 +440,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2827957" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3236559" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26040554" sideWeight="0.7172043" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2614728" sideWeight="0.6763441" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32258064" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -421,108 +515,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ContextSingleton.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Propertie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="28" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/MyAppTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/MyAppTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="10" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyApp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="2" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/files/general.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/files/general.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/files/general.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="9" selection-start="30" selection-end="30" vertical-scroll-proportion="0.05635359" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/NamespaceObject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="20" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/MyAppTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="442" selection-end="442" vertical-scroll-proportion="-11.115385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Propertie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="28" selection-start="328" selection-end="328" vertical-scroll-proportion="-6.6923075">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ContextSingleton.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="512" selection-end="512" vertical-scroll-proportion="-13.730769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/Action.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="227" selection-end="227" vertical-scroll-proportion="-7.1923075">
+        <state line="13" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="-8.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyApp.php">
+    <entry file="file://$PROJECT_DIR$/src/actions/GetParameterAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="24" selection-start="802" selection-end="802" vertical-scroll-proportion="-10.615385">
+        <state line="34" column="50" selection-start="1004" selection-end="1004" vertical-scroll-proportion="-11.333333">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/FirstAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="487" selection-end="487" vertical-scroll-proportion="-7.769231">
+        <state line="15" column="0" selection-start="359" selection-end="359" vertical-scroll-proportion="-9.807693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interpreter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="30" selection-start="379" selection-end="379" vertical-scroll-proportion="-8.846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyApp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="27" selection-start="325" selection-end="325" vertical-scroll-proportion="-5.230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/SetParameterAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="61" selection-start="954" selection-end="1122" vertical-scroll-proportion="-10.843137">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/files/space.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/files/general.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ContextSingleton.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="-27.153847">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/NamespaceObject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="6" selection-start="177" selection-end="177" vertical-scroll-proportion="-5.230769">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/NsAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="24" selection-start="481" selection-end="481" vertical-scroll-proportion="0.27241963">
+        <state line="26" column="41" selection-start="641" selection-end="721" vertical-scroll-proportion="-17.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestProperty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="25" selection-start="1144" selection-end="1144" vertical-scroll-proportion="-30.73077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestNsAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="7" selection-start="134" selection-end="134" vertical-scroll-proportion="-3.9230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/ListNamespaceAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="33" selection-start="103" selection-end="104" vertical-scroll-proportion="-0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/LoadAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="756" selection-end="756" vertical-scroll-proportion="-7.6862745">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/files/spaceNew.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="83" selection-end="83" vertical-scroll-proportion="0.096045196">
           <folding />
         </state>
       </provider>

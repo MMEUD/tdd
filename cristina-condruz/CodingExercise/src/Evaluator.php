@@ -10,12 +10,13 @@ require_once('CommandExpression.php');
 require_once('NsExpression.php');
 require_once('SetExpression.php');
 require_once('GetExpression.php');
+require_once('ListExpression.php');
 
 class Evaluator implements CommandExpression{
  private $syntaxTree;
 
  public function __construct($expression){
-     $tokens = explode(" ", $expression);
+     $tokens = explode(" ", trim($expression));
      $nrArgs = sizeOf($tokens);
      if($nrArgs == 0){
        echo "Please insert a command!";
@@ -32,6 +33,15 @@ class Evaluator implements CommandExpression{
        }
        else if($command == "get"){
          $syntaxTree = new GetExpression($params);
+       }
+       else if($command == "list"){
+         $syntaxTree = new ListExpression($params);
+       }
+       else if($command == "load"){
+         $syntaxTree = new LoadExpression($params);
+       }
+       else if($command == "save"){
+         $syntaxTree = new SaveExpression($params);
        }
        else{
          echo "Please insert a valid command!";

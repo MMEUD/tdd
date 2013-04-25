@@ -5,12 +5,15 @@ package pattern.strategy;
 
 import java.util.ArrayList;
 
+import pattern.utils.Parameter;
+
+
 /**
  * @author Ancuta Gheorghe
  *
  */
 public interface Strategy {
 
-	public ArrayList<Object> execute(ArrayList<Object> arrayList);
+	public ArrayList<Parameter> execute(ArrayList<Parameter> mss);
 	
 }
