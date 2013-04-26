@@ -1,6 +1,6 @@
 package interpreter;
 
-import org.omg.CORBA.StringHolder;
+import context.Property;
 
 import java.util.StringTokenizer;
 
@@ -20,15 +20,26 @@ public class CommandInterpreter extends CommandLine {
   static final String COMMAND_LIST = "list";
   static final String COMMAND_EXIT = "exit";
 
-
   /**
    * Interprets the given command line and instantiate the appropriate command type.
-   * @param commandLine
+   * @param commandLineStr String containing the expression entered in command line
+   *                    (containing commands and commands' parameters)
    */
-  public CommandInterpreter(String commandLine) {
-    StringTokenizer st = new StringTokenizer(commandLine, " ");
+  public CommandInterpreter(String commandLineStr) {
+    StringTokenizer st = new StringTokenizer(commandLineStr, " ");
     if(st.hasMoreElements()) {
+      // get command from command line
       String command = st.nextToken();
+      Property commandParameter = null;
+
+      // get parameter name from command line
+      if(st.hasMoreElements()) {
+        commandParameter = new Property(st.nextToken());
+        // get parameter value from command line
+        if(st.hasMoreElements()) {
+          commandParameter.setValue(st.nextToken());
+        }
+      }
 
       if(command.equals(COMMAND_NS)) {
         this.commandLine = new NsCommand();
@@ -46,24 +57,36 @@ public class CommandInterpreter extends CommandLine {
         this.commandLine = new ExitCommand();
       } else {
         System.out.println("Invalid command. Enter a valid command:");
+        return;
       }
 
+      // add to the command the command parameter read from the command line
+      this.commandLine.addCommandParameter(commandParameter);
+
     } else {
+      // no command entered
       System.out.println("Enter a command:");
       return;
     }
-
   }
 
   @Override
   public boolean interpret() {
     boolean execute = true;
-    if(commandLine != null) {
-      execute = commandLine.interpret();
+    if(this.commandLine != null) {
+      execute = this.commandLine.interpret();
     }
     if(execute) {
       CommandLine.prompt();
     }
     return execute;
   }
+
+  @Override
+  public String commandSyntax() {
+    return ""; // not valid this case
+  }
+
+
+
 }

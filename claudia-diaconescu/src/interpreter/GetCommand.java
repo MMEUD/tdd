@@ -10,4 +10,9 @@ public class GetCommand extends CommandLine {
     System.out.println("GET command");
     return true;
   }
+
+  @Override
+  public String commandSyntax() {
+    return "get {parameter_name}";
+  }
 }

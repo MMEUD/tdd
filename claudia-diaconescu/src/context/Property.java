@@ -8,6 +8,10 @@ public class Property {
   private String name;
   private String value;
 
+  public Property(String name) {
+    this.name = name;
+  }
+
   /**
    * Gets property name
    * @return property name

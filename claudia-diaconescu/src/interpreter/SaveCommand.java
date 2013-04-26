@@ -11,4 +11,9 @@ public class SaveCommand extends CommandLine {
     System.out.println("SAVE command");
     return true;
   }
+
+  @Override
+  public String commandSyntax() {
+    return "save {namespace_name}";
+  }
 }

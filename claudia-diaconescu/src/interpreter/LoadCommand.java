@@ -11,4 +11,9 @@ public class LoadCommand extends CommandLine {
     System.out.println("LOAD command");
     return true;
   }
+
+  @Override
+  public String commandSyntax() {
+    return "load {namespace_name}";
+  }
 }

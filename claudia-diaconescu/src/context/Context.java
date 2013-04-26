@@ -3,6 +3,8 @@ package context;
 import java.util.List;
 
 /**
+ * This is a singleton that keeps the namespaces instances read from the command line.
+ *
  * @author <a href="mailto:c.diaconescu@moodmedia.ro">Claudia Diaconescu</a>
  * @version $Revision:$
  */
@@ -49,7 +51,12 @@ public class Context {
     setCurrentNamespace(new Namespace("general"));
   }
 
-  public void promptNamespace() {
-    System.out.println("Current namespace:" + getCurrentNamespace().getName());
+  public void promptCurrentNamespaceName() {
+    System.out.println("Current namespace: " + getCurrentNamespace().getName());
   }
+
+  public void promptCurrentNamespace(Property property) {
+    System.out.println(getCurrentNamespace().getName() + " : " + property.getName() + " = " + property.getValue());
+  }
+
 }

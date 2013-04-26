@@ -11,4 +11,9 @@ public class ListCommand extends CommandLine {
     System.out.println("List command");
     return true;
   }
+
+  @Override
+  public String commandSyntax() {
+    return "list {namespace_name}";
+  }
 }

@@ -1,6 +1,7 @@
 package context;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -9,7 +10,7 @@ import java.util.List;
  */
 public class Namespace {
   private String name;
-  private List<Property> properties;
+  private HashMap<String,Property> properties;
 
   /**
    * Creates a namespacxe by name.
@@ -17,7 +18,7 @@ public class Namespace {
    */
   public Namespace(String name) {
     this.name = name;
-    this.properties = new ArrayList<Property>();
+    this.properties = new HashMap<String,Property>();
   }
 
 
@@ -26,7 +27,13 @@ public class Namespace {
    * @param property
    */
   public void addProperty(Property property) {
-    this.properties.add(property);
+    if(properties.containsKey(property.getName())) {
+      // update property value
+      properties.get(property.getName()).setValue(property.getValue());
+    } else {
+      // insert property
+      this.properties.put(property.getName(), property);
+    }
   }
 
 

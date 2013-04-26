@@ -10,4 +10,9 @@ public class ExitCommand extends CommandLine {
   public boolean interpret() {
     return false;  //To change body of implemented methods use File | Settings | File Templates.
   }
+
+  @Override
+  public String commandSyntax() {
+    return "exit";
+  }
 }

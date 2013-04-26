@@ -16,7 +16,7 @@ public class Main {
   public static void main(String args[]) {
 
     Context context = Context.getInstance();
-    context.promptNamespace();
+    context.promptCurrentNamespaceName();
 
     // read context from console and interpret them
     CommandLine.prompt();
