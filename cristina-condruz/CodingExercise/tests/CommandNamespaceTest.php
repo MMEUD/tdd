@@ -6,7 +6,7 @@
  * Time: 3:21 PM
  * To change this template use File | Settings | File Templates.
  */
-require_once('../src/CommandNamespace.php');
+require_once('../src/utils/CommandNamespace.php');
 class CommandNamespaceTest extends PHPUnit_Framework_TestCase{
   public function testCommandNamespace() {
        $commandNamespace = new CommandNamespace();

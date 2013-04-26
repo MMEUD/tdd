@@ -1,6 +1,6 @@
 <?php
-require_once('Evaluator.php');
-require_once('MySingleton.php');
+require_once('/interpretor/Evaluator.php');
+require_once('/singleton/MySingleton.php');
 
 class Commander
 {
