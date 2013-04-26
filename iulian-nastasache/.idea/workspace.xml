@@ -4,32 +4,32 @@
     <list default="true" id="5b2de6cf-7b4d-4e9f-9260-323d546aff91" name="Default" comment="" />
     <ignored path="tdd.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/AutoLoader.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366790391977" ignored="false" />
-    <file path="/Property.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366725684722" ignored="false" />
-    <file path="/Main.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366790402149" ignored="false" />
-    <file path="/FileSaveLoad.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366717094399" ignored="false" />
-    <file path="/ConfigurationInitialize.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366712147054" ignored="false" />
-    <file path="/PropertiesReader.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366708569016" ignored="false" />
-    <file path="/IniGroupsContainer.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366718816469" ignored="false" />
-    <file path="/IniGroup.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366727844597" ignored="false" />
-    <file path="/a.dummy" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366643820489" ignored="false" />
-    <file path="/NameSpaces.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366640117904" ignored="false" />
-    <file path="/FileReadWrite.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366636175095" ignored="false" />
-    <file path="/SaveCmdInterpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366723822531" ignored="false" />
-    <file path="/CmdInterpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366719265066" ignored="false" />
-    <file path="/NameSpaceObj.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366636058783" ignored="false" />
-    <file path="/GetCmdInterpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366721720110" ignored="false" />
-    <file path="/SetCmdInterpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366718660053" ignored="false" />
-    <file path="/NsCmdInterpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366645630800" ignored="false" />
-    <file path="/Console.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366718489256" ignored="false" />
-    <file path="/LoadCmdInterpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366717861882" ignored="false" />
-    <file path="/ListCmdInterpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366711503201" ignored="false" />
-    <file path="/Interpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366711717872" ignored="false" />
-    <file path="/program.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366635013895" ignored="false" />
-    <file path="$PROJECT_DIR$/../trunk/classes/DevicePlaylistProperty.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366379688988" ignored="false" />
-    <file path="/interpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366381119514" ignored="false" />
-    <file path="/index.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366360103596" ignored="false" />
     <file path="/ConsoleTest.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366791396024" ignored="false" />
+    <file path="/index.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366360103596" ignored="false" />
+    <file path="/interpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366381119514" ignored="false" />
+    <file path="$PROJECT_DIR$/../trunk/classes/DevicePlaylistProperty.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366379688988" ignored="false" />
+    <file path="/program.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366635013895" ignored="false" />
+    <file path="/Interpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366711717872" ignored="false" />
+    <file path="/ListCmdInterpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366711503201" ignored="false" />
+    <file path="/LoadCmdInterpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366717861882" ignored="false" />
+    <file path="/Console.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366718489256" ignored="false" />
+    <file path="/NsCmdInterpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366645630800" ignored="false" />
+    <file path="/SetCmdInterpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366718660053" ignored="false" />
+    <file path="/GetCmdInterpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366721720110" ignored="false" />
+    <file path="/NameSpaceObj.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366636058783" ignored="false" />
+    <file path="/CmdInterpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366719265066" ignored="false" />
+    <file path="/SaveCmdInterpreter.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366723822531" ignored="false" />
+    <file path="/FileReadWrite.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366636175095" ignored="false" />
+    <file path="/NameSpaces.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366640117904" ignored="false" />
+    <file path="/a.dummy" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366643820489" ignored="false" />
+    <file path="/IniGroup.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366727844597" ignored="false" />
+    <file path="/IniGroupsContainer.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366718816469" ignored="false" />
+    <file path="/PropertiesReader.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366708569016" ignored="false" />
+    <file path="/ConfigurationInitialize.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366712147054" ignored="false" />
+    <file path="/FileSaveLoad.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366717094399" ignored="false" />
+    <file path="/Main.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366790402149" ignored="false" />
+    <file path="/Property.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366725684722" ignored="false" />
+    <file path="/AutoLoader.php" changelist="5b2de6cf-7b4d-4e9f-9260-323d546aff91" time="1366790391977" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,157 +52,43 @@
       <file leaf-file-name="Main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="43" selection-start="501" selection-end="501" vertical-scroll-proportion="-9.807693">
+            <state line="12" column="78" selection-start="446" selection-end="446" vertical-scroll-proportion="-7.8461537">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Interpreter.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/classes/Operations/Interpreter.php">
+      <file leaf-file-name="ListCmdInterpreterTest.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/UnitTests/ListCmdInterpreterTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="3" selection-start="200" selection-end="200" vertical-scroll-proportion="0.23639774">
+            <state line="41" column="51" selection-start="1227" selection-end="1227" vertical-scroll-proportion="1.1273408">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListCmdInterpreter.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/ListCmdInterpreter.php">
+      <file leaf-file-name="SaveCmdInterpreter.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/SaveCmdInterpreter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="47" selection-start="1245" selection-end="1245" vertical-scroll-proportion="-24.846153">
+            <state line="32" column="0" selection-start="975" selection-end="975" vertical-scroll-proportion="-14.653846">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigurationInitialize.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/Utilities/ConfigurationInitialize.php">
+      <file leaf-file-name="SetCmdInterpreter.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/SetCmdInterpreter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="20" column="14" selection-start="517" selection-end="517" vertical-scroll-proportion="-13.076923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Console.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/Console/Console.php">
+      <file leaf-file-name="GetCmdInterpreterTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UnitTests/GetCmdInterpreterTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="46" selection-start="672" selection-end="686" vertical-scroll-proportion="-14.384615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PHP/\SaveCmdInterpreter" pinned="false" current="false" current-in-tab="false">
-        <entry file="uml://PHP/\SaveCmdInterpreter">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>PHP</ID>
-              <OriginalElement>\SaveCmdInterpreter</OriginalElement>
-              <nodes>
-                <node x="367.99999999999994" y="139.0">\SaveCmdInterpreter</node>
-                <node x="180.99999999999994" y="139.0">\SetCmdInterpreter</node>
-                <node x="565.0" y="139.0">\GetCmdInterpreter</node>
-                <node x="753.0" y="139.0">\ListCmdInterpreter</node>
-                <node x="605.25" y="0.0">\ICmdInterpreter</node>
-                <node x="0.0" y="139.0">\NsCmdInterpreter</node>
-                <node x="942.0" y="139.0">\LoadCmdInterpreter</node>
-                <node x="352.6666666666666" y="0.0">\CmdInterpreter</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="\GetCmdInterpreter" target="\CmdInterpreter">
-                  <point x="-42.0" y="-14.5" />
-                  <point x="607.0" y="89.0" />
-                  <point x="436.0833333333332" y="89.0" />
-                  <point x="11.916666666666629" y="14.5" />
-                </edge>
-                <edge source="\ListCmdInterpreter" target="\CmdInterpreter">
-                  <point x="-42.25" y="-14.5" />
-                  <point x="795.25" y="79.0" />
-                  <point x="459.9166666666666" y="79.0" />
-                  <point x="35.75" y="14.5" />
-                </edge>
-                <edge source="\SaveCmdInterpreter" target="\CmdInterpreter">
-                  <point x="-44.25" y="-14.5" />
-                  <point x="-11.916666666666629" y="14.5" />
-                </edge>
-                <edge source="\GetCmdInterpreter" target="\ICmdInterpreter">
-                  <point x="42.0" y="-14.5" />
-                  <point x="12.25" y="14.5" />
-                </edge>
-                <edge source="\SetCmdInterpreter" target="\ICmdInterpreter">
-                  <point x="41.75" y="-14.5" />
-                  <point x="306.24999999999994" y="109.0" />
-                  <point x="642.0" y="109.0" />
-                  <point x="-36.75" y="14.5" />
-                </edge>
-                <edge source="\LoadCmdInterpreter" target="\CmdInterpreter">
-                  <point x="-44.5" y="-14.5" />
-                  <point x="986.5" y="59.0" />
-                  <point x="483.74999999999983" y="59.0" />
-                  <point x="59.58333333333326" y="14.5" />
-                </edge>
-                <edge source="\NsCmdInterpreter" target="\CmdInterpreter">
-                  <point x="-40.25" y="-14.5" />
-                  <point x="40.25" y="79.0" />
-                  <point x="364.5833333333332" y="79.0" />
-                  <point x="-59.58333333333337" y="14.5" />
-                </edge>
-                <edge source="\SaveCmdInterpreter" target="\ICmdInterpreter">
-                  <point x="44.25" y="-14.5" />
-                  <point x="500.74999999999994" y="119.0" />
-                  <point x="666.5" y="119.0" />
-                  <point x="-12.25" y="14.5" />
-                </edge>
-                <edge source="\ListCmdInterpreter" target="\ICmdInterpreter">
-                  <point x="42.25" y="-14.5" />
-                  <point x="879.75" y="69.0" />
-                  <point x="715.5" y="69.0" />
-                  <point x="36.75" y="14.5" />
-                </edge>
-                <edge source="\SetCmdInterpreter" target="\CmdInterpreter">
-                  <point x="-41.75" y="-14.5" />
-                  <point x="222.74999999999994" y="89.0" />
-                  <point x="388.4166666666666" y="89.0" />
-                  <point x="-35.75" y="14.5" />
-                </edge>
-                <edge source="\LoadCmdInterpreter" target="\ICmdInterpreter">
-                  <point x="44.5" y="-14.5" />
-                  <point x="1075.5" y="49.0" />
-                  <point x="740.0" y="49.0" />
-                  <point x="61.25" y="14.5" />
-                </edge>
-                <edge source="\NsCmdInterpreter" target="\ICmdInterpreter">
-                  <point x="40.25" y="-14.5" />
-                  <point x="120.75" y="99.0" />
-                  <point x="617.5" y="99.0" />
-                  <point x="-61.25" y="14.5" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="60.0" y="-90.0" />
-              <SelectedNodes>
-                <node>\SaveCmdInterpreter</node>
-              </SelectedNodes>
-              <Categories />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IniGroup.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/IniGroups/IniGroup.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="601" selection-end="601" vertical-scroll-proportion="-16.346153">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NsCmdInterpreter.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/NsCmdInterpreter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="147" selection-end="147" vertical-scroll-proportion="-5.230769">
+            <state line="41" column="0" selection-start="1031" selection-end="1165" vertical-scroll-proportion="-16.0">
               <folding />
             </state>
           </provider>
@@ -211,7 +97,43 @@
       <file leaf-file-name="GetCmdInterpreter.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/GetCmdInterpreter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="-5.230769">
+            <state line="17" column="13" selection-start="413" selection-end="419" vertical-scroll-proportion="-11.115385">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListCmdInterpreter.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/ListCmdInterpreter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="0" selection-start="1020" selection-end="1020" vertical-scroll-proportion="-8.769231">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadCmdInterpreter.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/LoadCmdInterpreter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="24" selection-start="864" selection-end="864" vertical-scroll-proportion="-17.26923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NsCmdInterpreter.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/NsCmdInterpreter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="18" selection-start="739" selection-end="739" vertical-scroll-proportion="-16.307692">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IniGroupsContainer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/IniGroups/IniGroupsContainer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="44" selection-start="418" selection-end="435" vertical-scroll-proportion="-4.8431373">
               <folding />
             </state>
           </provider>
@@ -227,35 +149,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/classes/Operations/Commands/SetCmdInterpreter.php" />
-        <option value="$PROJECT_DIR$/classes/Operations/Commands/LoadCmdInterpreter.php" />
-        <option value="$PROJECT_DIR$/classes/Operations/CmdInterpreter.php" />
-        <option value="$PROJECT_DIR$/classes/Utilities/ConfigurationInitialize.php" />
-        <option value="$PROJECT_DIR$/classes/Utilities/FileReadWrite.php" />
-        <option value="$PROJECT_DIR$/classes/Operations/Commands/GetCmdInterpreter.php" />
-        <option value="$PROJECT_DIR$/classes/Operations/Commands/SaveCmdInterpreter.php" />
-        <option value="$PROJECT_DIR$/classes/IniGroups/Property.php" />
         <option value="$PROJECT_DIR$/classes/IniGroups/IniGroup.php" />
         <option value="$PROJECT_DIR$/AutoLoader.php" />
         <option value="$PROJECT_DIR$/classes/Tests/ConsoleTest.php" />
         <option value="$PROJECT_DIR$/classes/Console/Console.php" />
-        <option value="$PROJECT_DIR$/classes/Operations/Commands/ListCmdInterpreter.php" />
         <option value="$PROJECT_DIR$/classes/Console/ConsoleController.php" />
-        <option value="$PROJECT_DIR$/Main.php" />
+        <option value="$PROJECT_DIR$/classes/Operations/Commands/CommandOutput.php" />
         <option value="$PROJECT_DIR$/classes/Operations/Interpreter.php" />
+        <option value="$PROJECT_DIR$/classes/Operations/Commands/GetCmdInterpreter.php" />
+        <option value="$PROJECT_DIR$/classes/Operations/Commands/ListCmdInterpreter.php" />
+        <option value="$PROJECT_DIR$/classes/Operations/Commands/LoadCmdInterpreter.php" />
+        <option value="$PROJECT_DIR$/classes/Operations/Commands/SaveCmdInterpreter.php" />
+        <option value="$PROJECT_DIR$/classes/Operations/Commands/SetCmdInterpreter.php" />
+        <option value="$PROJECT_DIR$/classes/Operations/Commands/NsCmdInterpreter.php" />
+        <option value="$PROJECT_DIR$/Main.php" />
+        <option value="$PROJECT_DIR$/classes/Operations/Commands/ListCmdInterpreterTest.php" />
+        <option value="$PROJECT_DIR$/UnitTests/ListCmdInterpreterTest.php" />
       </list>
     </option>
   </component>
-  <component name="PhpUnitSkelgen" path_to_phpunit_skelgen="/usr/bin" use_skeleton_generator="true" />
+  <component name="PhpUnitSkelgen" path_to_phpunit_skelgen="/usr/bin" bootstrap_file_path="$PROJECT_DIR$/BootStrap.php" use_bootstrap_file="true" use_skeleton_generator="true" />
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="php-cli">
     <include_path>
       <path value="/usr/share/php/PHPUnit" />
-      <path value="$PROJECT_DIR$/classes/Console" />
-      <path value="$PROJECT_DIR$/classes/IniGroups" />
-      <path value="$PROJECT_DIR$/classes/Operations" />
-      <path value="$PROJECT_DIR$/classes/Operations/Commands" />
-      <path value="$PROJECT_DIR$/classes/Utilities" />
-      <path value="$PROJECT_DIR$/classes" />
+      <path value="/usr/share/php/PEAR" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
@@ -305,7 +222,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tdd" />
+              <option name="myItemId" value="iulian-nastasache" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -315,7 +232,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="iulian-nastasache" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UnitTests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="tdd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iulian-nastasache" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tdd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iulian-nastasache" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -333,21 +278,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tdd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tdd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tdd" />
+              <option name="myItemId" value="iulian-nastasache" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -365,7 +296,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tdd" />
+              <option name="myItemId" value="iulian-nastasache" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -387,7 +318,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tdd" />
+              <option name="myItemId" value="iulian-nastasache" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -405,7 +336,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tdd" />
+              <option name="myItemId" value="iulian-nastasache" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -424,11 +355,11 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="options.lastSelected" value="settings.github" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../radu" />
-    <property name="options.searchVisible" value="true" />
+    <property name="options.lastSelected" value="reference.webide.settings.project.settings.php.phpunit.skeletonGenerator" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -461,16 +392,28 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/UnitTests" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/classes/Console" />
       <recent name="$PROJECT_DIR$/classes/Operations/Commands" />
       <recent name="$PROJECT_DIR$/classes/Commands" />
-      <recent name="$PROJECT_DIR$/classes/Utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ConsoleTest">
+  <component name="RunManager" selected="PHPUnit.ListCmdInterpreterTest">
     <configuration default="false" name="ConsoleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="ConsoleTest" file="$PROJECT_DIR$/classes/Tests/ConsoleTest.php" scope="Class" />
+      <RunnerSettings RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GetCmdInterpreterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="GetCmdInterpreterTest" file="$PROJECT_DIR$/UnitTests/GetCmdInterpreterTest.php" scope="Class" />
+      <RunnerSettings RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ListCmdInterpreterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="ListCmdInterpreterTest" file="$PROJECT_DIR$/UnitTests/ListCmdInterpreterTest.php" scope="Class" />
       <RunnerSettings RunnerId="PhpRunner" />
       <ConfigurationWrapper RunnerId="PhpRunner" />
       <method />
@@ -491,14 +434,18 @@
     <configuration default="false" name="GetCmdInterpreter.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/classes/Operations/Commands/GetCmdInterpreter.php">
       <method />
     </configuration>
-    <list size="3">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="PHP Script.FileReadWrite.php" />
       <item index="1" class="java.lang.String" itemvalue="PHP Script.GetCmdInterpreter.php" />
       <item index="2" class="java.lang.String" itemvalue="PHPUnit.ConsoleTest" />
+      <item index="3" class="java.lang.String" itemvalue="PHPUnit.GetCmdInterpreterTest" />
+      <item index="4" class="java.lang.String" itemvalue="PHPUnit.ListCmdInterpreterTest" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="PHPUnit.ConsoleTest" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="PHPUnit.ListCmdInterpreterTest" />
+        <item index="1" class="java.lang.String" itemvalue="PHPUnit.GetCmdInterpreterTest" />
+        <item index="2" class="java.lang.String" itemvalue="PHPUnit.ConsoleTest" />
       </list>
     </recent_temporary>
   </component>
@@ -536,19 +483,19 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21024546" sideWeight="0.67184037" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21237993" sideWeight="0.672949" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32815966" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32705098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -607,172 +554,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/classes/Operations/CmdInterpreter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="450" selection-end="695" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/SetCmdInterpreter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="54" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://PHP/\SetCmdInterpreter">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>PHP</ID>
-          <OriginalElement>\SetCmdInterpreter</OriginalElement>
-          <nodes>
-            <node x="64.75" y="79.0">\SetCmdInterpreter</node>
-            <node x="149.0" y="0.0">\ICmdInterpreter</node>
-            <node x="0.0" y="0.0">\CmdInterpreter</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="\SetCmdInterpreter" target="\ICmdInterpreter">
-              <point x="37.5" y="-14.5" />
-              <point x="177.25" y="54.0" />
-              <point x="215.0" y="54.0" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="\SetCmdInterpreter" target="\CmdInterpreter">
-              <point x="-37.5" y="-14.5" />
-              <point x="102.25" y="54.0" />
-              <point x="64.5" y="54.0" />
-              <point x="0.0" y="14.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-416.0" y="-120.0" />
-          <SelectedNodes>
-            <node>\SetCmdInterpreter</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://PHP/\NsCmdInterpreter">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>PHP</ID>
-          <OriginalElement>\NsCmdInterpreter</OriginalElement>
-          <nodes>
-            <node x="350.0" y="139.0">\SaveCmdInterpreter</node>
-            <node x="179.0" y="139.0">\GetCmdInterpreter</node>
-            <node x="694.0" y="139.0">\SetCmdInterpreter</node>
-            <node x="864.0" y="139.0">\ListCmdInterpreter</node>
-            <node x="560.75" y="0.0">\ICmdInterpreter</node>
-            <node x="0.0" y="139.0">\LoadCmdInterpreter</node>
-            <node x="336.0" y="0.0">\CmdInterpreter</node>
-            <node x="529.0" y="139.0">\NsCmdInterpreter</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="\GetCmdInterpreter" target="\CmdInterpreter">
-              <point x="-37.75" y="-14.5" />
-              <point x="216.75" y="89.0" />
-              <point x="368.25" y="89.0" />
-              <point x="-32.25" y="14.5" />
-            </edge>
-            <edge source="\ListCmdInterpreter" target="\CmdInterpreter">
-              <point x="-37.5" y="-14.5" />
-              <point x="901.5" y="59.0" />
-              <point x="454.25" y="59.0" />
-              <point x="53.75" y="14.5" />
-            </edge>
-            <edge source="\SaveCmdInterpreter" target="\CmdInterpreter">
-              <point x="-39.75" y="-14.5" />
-              <point x="-10.75" y="14.5" />
-            </edge>
-            <edge source="\GetCmdInterpreter" target="\ICmdInterpreter">
-              <point x="37.75" y="-14.5" />
-              <point x="292.25" y="109.0" />
-              <point x="593.75" y="109.0" />
-              <point x="-33.0" y="14.5" />
-            </edge>
-            <edge source="\SetCmdInterpreter" target="\ICmdInterpreter">
-              <point x="37.5" y="-14.5" />
-              <point x="806.5" y="69.0" />
-              <point x="659.75" y="69.0" />
-              <point x="33.0" y="14.5" />
-            </edge>
-            <edge source="\LoadCmdInterpreter" target="\CmdInterpreter">
-              <point x="-39.75" y="-14.5" />
-              <point x="39.75" y="79.0" />
-              <point x="346.75" y="79.0" />
-              <point x="-53.75" y="14.5" />
-            </edge>
-            <edge source="\NsCmdInterpreter" target="\CmdInterpreter">
-              <point x="-36.25" y="-14.5" />
-              <point x="565.25" y="89.0" />
-              <point x="411.25" y="89.0" />
-              <point x="10.75" y="14.5" />
-            </edge>
-            <edge source="\SaveCmdInterpreter" target="\ICmdInterpreter">
-              <point x="39.75" y="-14.5" />
-              <point x="469.25" y="119.0" />
-              <point x="615.75" y="119.0" />
-              <point x="-11.0" y="14.5" />
-            </edge>
-            <edge source="\LoadCmdInterpreter" target="\ICmdInterpreter">
-              <point x="39.75" y="-14.5" />
-              <point x="119.25" y="99.0" />
-              <point x="571.75" y="99.0" />
-              <point x="-55.0" y="14.5" />
-            </edge>
-            <edge source="\ListCmdInterpreter" target="\ICmdInterpreter">
-              <point x="37.5" y="-14.5" />
-              <point x="976.5" y="49.0" />
-              <point x="681.75" y="49.0" />
-              <point x="55.0" y="14.5" />
-            </edge>
-            <edge source="\SetCmdInterpreter" target="\CmdInterpreter">
-              <point x="-37.5" y="-14.5" />
-              <point x="731.5" y="79.0" />
-              <point x="432.75" y="79.0" />
-              <point x="32.25" y="14.5" />
-            </edge>
-            <edge source="\NsCmdInterpreter" target="\ICmdInterpreter">
-              <point x="36.25" y="-14.5" />
-              <point x="11.0" y="14.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="1062.0" y="258.0" />
-          <SelectedNodes>
-            <node>\NsCmdInterpreter</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AutoLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="22" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/IniGroups/Property.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="10" selection-start="398" selection-end="398" vertical-scroll-proportion="-16.346153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Utilities/ConfigurationInitialize.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://PHP/\SaveCmdInterpreter">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -784,9 +565,9 @@
             <node x="565.0" y="139.0">\GetCmdInterpreter</node>
             <node x="753.0" y="139.0">\ListCmdInterpreter</node>
             <node x="605.25" y="0.0">\ICmdInterpreter</node>
-            <node x="0.0" y="139.0">\NsCmdInterpreter</node>
-            <node x="942.0" y="139.0">\LoadCmdInterpreter</node>
             <node x="352.6666666666666" y="0.0">\CmdInterpreter</node>
+            <node x="942.0" y="139.0">\LoadCmdInterpreter</node>
+            <node x="0.0" y="139.0">\NsCmdInterpreter</node>
           </nodes>
           <notes />
           <edges>
@@ -834,17 +615,17 @@
               <point x="666.5" y="119.0" />
               <point x="-12.25" y="14.5" />
             </edge>
-            <edge source="\ListCmdInterpreter" target="\ICmdInterpreter">
-              <point x="42.25" y="-14.5" />
-              <point x="879.75" y="69.0" />
-              <point x="715.5" y="69.0" />
-              <point x="36.75" y="14.5" />
-            </edge>
             <edge source="\SetCmdInterpreter" target="\CmdInterpreter">
               <point x="-41.75" y="-14.5" />
               <point x="222.74999999999994" y="89.0" />
               <point x="388.4166666666666" y="89.0" />
               <point x="-35.75" y="14.5" />
+            </edge>
+            <edge source="\ListCmdInterpreter" target="\ICmdInterpreter">
+              <point x="42.25" y="-14.5" />
+              <point x="879.75" y="69.0" />
+              <point x="715.5" y="69.0" />
+              <point x="36.75" y="14.5" />
             </edge>
             <edge source="\LoadCmdInterpreter" target="\ICmdInterpreter">
               <point x="44.5" y="-14.5" />
@@ -869,49 +650,105 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/IniGroups/IniGroup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="601" selection-end="601" vertical-scroll-proportion="-16.346153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/NsCmdInterpreter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="147" selection-end="147" vertical-scroll-proportion="-5.230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/GetCmdInterpreter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="-5.230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/ListCmdInterpreter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="47" selection-start="1245" selection-end="1245" vertical-scroll-proportion="-24.846153">
+        <state line="27" column="0" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/Console/Console.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="46" selection-start="672" selection-end="686" vertical-scroll-proportion="-14.384615">
+        <state line="31" column="46" selection-start="672" selection-end="686" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.php">
+    <entry file="file://$PROJECT_DIR$/classes/Utilities/FileReadWrite.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="43" selection-start="501" selection-end="501" vertical-scroll-proportion="-9.807693">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.7692308">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/Operations/Interpreter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="3" selection-start="200" selection-end="200" vertical-scroll-proportion="0.23639774">
+        <state line="40" column="19" selection-start="1017" selection-end="1024" vertical-scroll-proportion="-14.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Operations/CmdInterpreter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="450" selection-end="695" vertical-scroll-proportion="-9.807693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/GetCmdInterpreter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="13" selection-start="413" selection-end="419" vertical-scroll-proportion="-11.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/IniGroups/IniGroupsContainer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="44" selection-start="418" selection-end="435" vertical-scroll-proportion="-4.8431373">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/SetCmdInterpreter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="14" selection-start="517" selection-end="517" vertical-scroll-proportion="-13.076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/SaveCmdInterpreter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="975" selection-end="975" vertical-scroll-proportion="-14.653846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/NsCmdInterpreter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="18" selection-start="739" selection-end="739" vertical-scroll-proportion="-16.307692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="78" selection-start="446" selection-end="446" vertical-scroll-proportion="-7.8461537">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UnitTests/GetCmdInterpreterTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1031" selection-end="1165" vertical-scroll-proportion="-16.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/ListCmdInterpreter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="1020" selection-end="1020" vertical-scroll-proportion="-8.769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Operations/Commands/LoadCmdInterpreter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="24" selection-start="864" selection-end="864" vertical-scroll-proportion="-17.26923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UnitTests/ListCmdInterpreterTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="51" selection-start="1227" selection-end="1227" vertical-scroll-proportion="1.1273408">
           <folding />
         </state>
       </provider>

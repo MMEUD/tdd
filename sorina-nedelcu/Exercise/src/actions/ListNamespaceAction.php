@@ -4,16 +4,7 @@ require_once '/ContextSingleton.php';
 require_once '/util/NamespaceObject.php';
 require_once '/util/Property.php';
 
-
-/**
- * Created by JetBrains PhpStorm.
- * User: Sorina Nedelcu
- * Date: 4/22/13
- * Time: 3:59 PM
- * To change this template use File | Settings | File Templates.
- */
 class ListNamespaceAction implements Action {
-
   private $context;  //ContextSingleton
 
   public function __construct() {
@@ -28,7 +19,8 @@ class ListNamespaceAction implements Action {
       ksort($allNamespaces);
 
       foreach($allNamespaces as $param => $aNamespace) {
-        $msg = $msg . " " . $aNamespace->getName() . "\n";;
+        $msg = $msg . " " . $aNamespace->getName() . "\n";
+
         $properties = $aNamespace->getProperties();
         for ($j=0; $j<count($properties); $j++) {
            $msg = $msg . "  " . $aNamespace->getName() . " : " . $properties[$j]->getName() . "=" . $properties[$j]->getValue() .  "\n";

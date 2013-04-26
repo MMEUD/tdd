@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: Sorina Nedelcu
- * Date: 4/19/13
- * Time: 11:15 AM
- * To change this template use File | Settings | File Templates.
- */
 class Property {
 
   private $name;
@@ -31,5 +24,4 @@ class Property {
   public function getValue() {
     return $this->value;
   }
-
 }

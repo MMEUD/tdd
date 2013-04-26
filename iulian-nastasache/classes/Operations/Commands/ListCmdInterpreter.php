@@ -11,7 +11,7 @@ class ListCmdInterpreter extends CmdInterpreter implements ICmdInterpreter
 
     public function CommandInterpreter()
     {
-
+        $message = "";
 
         if(coUnt(self::$params)== 0) {
 
@@ -23,7 +23,7 @@ class ListCmdInterpreter extends CmdInterpreter implements ICmdInterpreter
 
                 $iniGroup = IniGroupsContainer::GetIniGroupByName($groupName);
 
-                $this->OutPutIniGroupProperties($groupName,$iniGroup);
+                $message .= $this->OutPutIniGroupProperties($groupName,$iniGroup);
 
             }
 
@@ -32,9 +32,11 @@ class ListCmdInterpreter extends CmdInterpreter implements ICmdInterpreter
             $groupName = self::$params[0];
             $iniGroup = IniGroupsContainer::GetIniGroupByName($groupName);
 
-            $this->OutPutIniGroupProperties($groupName,$iniGroup);
+            $message .= $this->OutPutIniGroupProperties($groupName,$iniGroup);
 
         }
+
+        return $message;
 
     }
 
@@ -43,6 +45,8 @@ class ListCmdInterpreter extends CmdInterpreter implements ICmdInterpreter
 
         $iterator = $group->ReadProperties();
         $properties = array();
+
+        $message = "";
 
         while($iterator->valid()) {
 
@@ -54,9 +58,10 @@ class ListCmdInterpreter extends CmdInterpreter implements ICmdInterpreter
         kSort($properties); /// Sort properties
 
         foreach($properties as $key => $value) {
-            echo $groupName." : ".  $key." = ".$value."\n";
-        };
+            $message .= $groupName." : ".  $key." = ".$value."\n";
+        }
 
+        return $message;
     }
 
 }

@@ -1,7 +1,5 @@
 <?
-
   class ContextSingleton  {
-
     // singleton instance
     private static $instance = null;
     private $namespace = array(); // array of NamespaceObject
@@ -13,7 +11,6 @@
 
     // getInstance method
     public static function getInstance() {
-
       if(!self::$instance) {
         self::$instance = new self();
       }
@@ -43,7 +40,5 @@
     public function getNamespace() {
       return $this->namespace;
     }
-
-
   }
 ?>

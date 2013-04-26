@@ -11,6 +11,8 @@ require_once('NsExpression.php');
 require_once('SetExpression.php');
 require_once('GetExpression.php');
 require_once('ListExpression.php');
+require_once('LoadExpression.php');
+require_once('SaveExpression.php');
 
 class Evaluator implements CommandExpression{
  private $syntaxTree;

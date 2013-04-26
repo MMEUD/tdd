@@ -11,13 +11,14 @@ class LoadCmdInterpreter extends CmdInterpreter implements ICmdInterpreter
 
     public function CommandInterpreter()
     {
+        $message = "";
 
         if(!empty(self::$params) && self::$params[0] != "") {
 
             $iniGroupName = self::$params[0];
 
 
-            $this->OutPutIniGroupLoads($iniGroupName);
+           $message .= $this->OutPutIniGroupLoads($iniGroupName);
 
 
         } else {
@@ -28,11 +29,12 @@ class LoadCmdInterpreter extends CmdInterpreter implements ICmdInterpreter
 
                 $iniGroupName = $fileInfo->getBasename(INI_GROUP_EXTENSION);
 
-                $this->OutputIniGroupLoads($iniGroupName);
+                $message .= $this->OutputIniGroupLoads($iniGroupName);
 
             }
         }
 
+        return $message;
     }
 
 
@@ -42,7 +44,7 @@ class LoadCmdInterpreter extends CmdInterpreter implements ICmdInterpreter
         IniGroupsContainer::AddIniGroup($iniGroupName,$iniGroupObj);
         IniGroupsContainer::LoadPropertiesFromFile($iniGroupName);
 
-        echo $iniGroupName." loaded: ".$iniGroupObj->GetPropertiesCount()." parameters\n";
+        return $iniGroupName." loaded: ".$iniGroupObj->GetPropertiesCount()." parameters\n";
     }
 
 }

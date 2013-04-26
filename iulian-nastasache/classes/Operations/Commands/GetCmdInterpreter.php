@@ -15,7 +15,7 @@ class GetCmdInterpreter extends CmdInterpreter implements ICmdInterpreter
        $iterator = IniGroupsContainer::GetCurentIniGroup()->ReadProperties();
        $property = self::ReadProperty($iterator,self::$params[0]);
 
-       echo IniGroupsContainer::GetCurentIniGroupName()." : ".self::$params[0]." = ".$property[self::$params[0]]."\n";
+       return IniGroupsContainer::GetCurentIniGroupName()." : ".self::$params[0]." = ".$property[self::$params[0]]."\n";
     }
 
 }

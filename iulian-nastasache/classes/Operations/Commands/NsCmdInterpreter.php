@@ -24,9 +24,12 @@ class NsCmdInterpreter extends CmdInterpreter implements ICmdInterpreter
 
             IniGroupsContainer::SetCurentIniGroup($currIniGroup);
 
+            return "Current namespace: ".IniGroupsContainer::GetCurentIniGroupName() ." \n";
+
+
         } else {
 
-            echo ("No IniGrup provided. Use last one \n");
+            return ("No IniGrup provided. Use last one \n");
         }
 
     }
