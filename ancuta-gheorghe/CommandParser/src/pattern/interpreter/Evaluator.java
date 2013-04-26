@@ -12,34 +12,38 @@ import java.util.Arrays;
  */
 public class Evaluator extends Expression{
 	
-	private Expression syntaxTree;
+	private Expression expression;
 	private String[] commandParameters;
 	 
-    public Evaluator(String expression) {
-    	commandParameters = expression.split(" ");
-    	String command = commandParameters[0];
+    public Evaluator(String command) {
+    	commandParameters = command.split(" ");
+    	String commandName = commandParameters[0];
     	commandParameters = Arrays.copyOfRange(commandParameters, 1, commandParameters.length);
-    	if (command == null){
+    	if (commandName == null){
     		System.out.println("Please enter a command.");
         	return;
     	} else {
-    		if (command.equals("ns")){
-            	syntaxTree = new NsExpression(this.commandParameters);
-            } else if (command.equals("set")){
-            	syntaxTree = new SetExpression(this.commandParameters);
-            } else if (command.equals("get")){
-            	syntaxTree = new GetExpression(this.commandParameters);
-            } else if (command.equals("list")){
-            	syntaxTree = new ListExpression(this.commandParameters);
-            } else if (command.equals("load")){
-            	syntaxTree = new LoadExpression(this.commandParameters);
-            } else if (command.equals("save")){
-            	syntaxTree = new SaveExpression(this.commandParameters);
+    		if (commandName.equals("ns")){
+            	expression = new NsExpression(this.commandParameters);
+            } else if (commandName.equals("set")){
+            	expression = new SetExpression(this.commandParameters);
+            } else if (commandName.equals("get")){
+            	expression = new GetExpression(this.commandParameters);
+            } else if (commandName.equals("list")){
+            	expression = new ListExpression(this.commandParameters);
+            } else if (commandName.equals("load")){
+            	expression = new LoadExpression(this.commandParameters);
+            } else if (commandName.equals("save")){
+            	expression = new SaveExpression(this.commandParameters);
             } else {
             	System.out.println("This command does not exist.");
             	return;
             }
     	}
+    }
+    
+    public Expression getExpression(){
+    	return this.expression;
     }
  
 	public boolean validateCommandParameters() {
@@ -47,7 +51,7 @@ public class Evaluator extends Expression{
 	}
 
 	public void interpretCommand() {
-        syntaxTree.interpretCommand();
+        expression.interpretCommand();
     }
 	
 }

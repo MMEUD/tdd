@@ -1,7 +1,7 @@
 /**
  * 
  */
-package tests.pattern.utils;
+package tests.console;
 
 import static org.junit.Assert.assertEquals;
 
