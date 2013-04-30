@@ -6,8 +6,10 @@
  * Time: 5:06 PM
  * To change this template use File | Settings | File Templates.
  */
-class ConcreteSortStrategy extends SortStrategy{
-  public function AlgorithmInterface(){
-
+require_once('SortStrategy.php');
+class AlphabeticallySortStrategy extends SortStrategy{
+  public function sortEntityArray($entities){
+    ksort($entities);
+    return $entities;
   }
 }

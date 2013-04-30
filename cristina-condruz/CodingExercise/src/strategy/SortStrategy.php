@@ -7,5 +7,5 @@
  * To change this template use File | Settings | File Templates.
  */
 abstract class SortStrategy{
-    public abstract function AlgorithmInterface();
+    public abstract function sortEntityArray($entities);
 }

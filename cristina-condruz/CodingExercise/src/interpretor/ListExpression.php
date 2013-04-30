@@ -9,7 +9,7 @@
 require_once('CommandExpression.php');
 require_once('/utils/NamespaceProperty.php');
 require_once('/singleton/MySingleton.php');
-
+require_once('/strategy/StrategyContext.php');
 class ListExpression implements CommandExpression{
    private $argument;
    public function __construct($argument){
@@ -31,8 +31,11 @@ class ListExpression implements CommandExpression{
         if(array_key_exists($this->getArgument(),$allNamespaces)){
           $selectedNamespace = $currentSession->getNamespace($this->getArgument());
           $allPropertiesOfNamespace = $selectedNamespace->getProperties();
-          ksort($allPropertiesOfNamespace); // SORT_NATURAL | SORT_FLAG_CASE
-          foreach($allPropertiesOfNamespace as $selectedProperty){
+          //ksort($allPropertiesOfNamespace); // SORT_NATURAL | SORT_FLAG_CASE
+          //apply strategy pattern for sorting the properties
+          $strategyContextForProp = new StrategyContext('A');
+          $sortedProperties = $strategyContextForProp->getSortedArray($allPropertiesOfNamespace);
+          foreach($sortedProperties as $selectedProperty){
             $msg .= $selectedNamespace->getName()." : ".$selectedProperty->getName(). " = ". $selectedProperty->getValue()."\n";
           }
         }else{
@@ -40,11 +43,17 @@ class ListExpression implements CommandExpression{
         }
       }else{
         //list all namespaces ordered alphabetically
-        ksort($allNamespaces);//// SORT_NATURAL | SORT_FLAG_CASE
-        foreach($allNamespaces as $selectedNamespace){
+        //ksort($allNamespaces);//// SORT_NATURAL | SORT_FLAG_CASE
+        //apply strategy pattern for sorting the namespaces
+        $strategyContextForNms = new StrategyContext('A');
+        $sortedNamespaces = $strategyContextForNms->getSortedArray($allNamespaces);
+        foreach($sortedNamespaces as $selectedNamespace){
           $allPropertiesOfNamespace = $selectedNamespace->getProperties();
-          ksort($allPropertiesOfNamespace);// SORT_NATURAL | SORT_FLAG_CASE
-          foreach($allPropertiesOfNamespace as $selectedProperty){
+          //ksort($allPropertiesOfNamespace);// SORT_NATURAL | SORT_FLAG_CASE
+           //apply strategy pattern for sorting the properties
+          $strategyContextForProp = new StrategyContext('A');
+          $sortedProperties = $strategyContextForProp->getSortedArray($allPropertiesOfNamespace);
+          foreach($sortedProperties as $selectedProperty){
             $msg .= $selectedNamespace->getName()." : ".$selectedProperty->getName(). " = ". $selectedProperty->getValue()."\n";
           }
         }
