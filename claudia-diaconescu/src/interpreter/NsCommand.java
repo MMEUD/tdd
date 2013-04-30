@@ -4,6 +4,11 @@ import context.Context;
 import context.Namespace;
 
 /**
+ * Set the current namespace to {namespace_name}
+ * and displays "Current namespace : {namespace_name}"  <br/>
+ *
+ * <b>Command syntax:</b>  "ns {namespace_name}"
+ *
  * @author <a href="mailto:c.diaconescu@moodmedia.ro">Claudia Diaconescu</a>
  * @version $Revision:$
  */

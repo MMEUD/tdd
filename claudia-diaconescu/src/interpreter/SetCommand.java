@@ -5,6 +5,11 @@ import context.Namespace;
 import context.Property;
 
 /**
+ * Inserts or updates in the current namespace a parameter with the name {parameter_name} and the value {parameter_value}
+ * and displays "{namespace_name} : {parameter_name}  = {parameter_value}"   <br/>
+ *
+ * <b>Command syntax:</b>  "set {parameter_name} {parameter_value}"
+ *
  * @author <a href="mailto:c.diaconescu@moodmedia.ro">Claudia Diaconescu</a>
  * @version $Revision:$
  */
@@ -18,7 +23,7 @@ public class SetCommand extends CommandLine {
       // get the context instance
       Context context = Context.getInstance();
       Property property = this.getFirstCommandParameter();
-      context.getCurrentNamespace().addProperty(property);
+      context.getCurrentNamespace().setProperty(property);
 
       // displays current namespace name
       context.promptCurrentNamespace(property);
