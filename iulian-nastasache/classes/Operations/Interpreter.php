@@ -4,7 +4,7 @@
  * User: iulian
  * Date: 4/19/13
  * Time: 5:38 PM
- * Split console line into command and parameters; Load specific command.
+ * Split console line into command and parameters; translate to load specific command.
  ****** Pattern: Interpreter
  */
 class Interpreter
@@ -33,6 +33,8 @@ class Interpreter
         }
 
         $className = $command . "CmdInterpreter";
+
+        // Possible TODO: return operation here, instantiate operation object not in interpreter
 
         if (is_File(COMMANDS_FOLDER.$className.'.php') && class_Exists($className)) {
 

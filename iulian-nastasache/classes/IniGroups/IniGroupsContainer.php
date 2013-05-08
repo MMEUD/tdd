@@ -76,7 +76,7 @@ class IniGroupsContainer
     }
 
 
-    /** Load properties of given IniGroup */
+    /** Save properties of given IniGroup */
     public static function SavePropertiesToFile($iniGroupName)
     {
 
