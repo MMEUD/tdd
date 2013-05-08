@@ -19,7 +19,7 @@ class SaveCmdInterpreter extends CmdInterpreter implements ICmdInterpreter
             foreach(IniGroupsContainer::ListIniGroupsNames() as $iniGroupName){
 
                 IniGroupsContainer::SavePropertiesToFile($iniGroupName);
-                $message =  "$iniGroupName : saved " .IniGroupsContainer::GetIniGroupByName($iniGroupName)->GetPropertiesCount()." parameters \n";
+                $message .=  "$iniGroupName : saved " .IniGroupsContainer::GetIniGroupByName($iniGroupName)->GetPropertiesCount()." parameters \n";
             }
 
         } else {
