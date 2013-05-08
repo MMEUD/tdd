@@ -69,7 +69,7 @@ class IniGroupsContainer
 
 
     /** Load properties of given IniGroup */
-    public function LoadPropertiesFromFile($iniGroupName)
+    public static function LoadPropertiesFromFile($iniGroupName)
     {
         $file = new FileReadWrite(CONFIG_FOLDER . $iniGroupName . INI_GROUP_EXTENSION);
         self::$IniGroups[$iniGroupName]->SetProperties($file->ReadFile());
@@ -77,7 +77,7 @@ class IniGroupsContainer
 
 
     /** Load properties of given IniGroup */
-    public function SavePropertiesToFile($iniGroupName)
+    public static function SavePropertiesToFile($iniGroupName)
     {
 
         $stringToWrite="";

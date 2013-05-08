@@ -16,9 +16,11 @@ class IniGroup
     }
 
     public function SetProperty($key,$val) {
+
         $iterator = $this->ReadProperties();
 
         $found = false;
+
         while($iterator->valid()) {
 
             if($iterator->current()->GetKey() == $key) {
@@ -28,11 +30,10 @@ class IniGroup
 
             $iterator->next();
         }
+
         if ($found == false){
             $this->properties->append(new Property($key, $val));
         }
-
-
 
     }
 
