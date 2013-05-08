@@ -49,34 +49,24 @@ public class SaveExpression extends Expression{
 		return false;
 	}
 	
-	public void interpretCommand(){
+	public String interpretCommand(){
+		String output = "";
 		if (this.validateCommandParameters()) {
 			if (this.commandParameters.length > 0){
 				Namespace nsTemp = this.namespaces.get(0);
 				PropertiesFile.saveToFile(nsTemp.getName(), nsTemp.getParameters());
-				System.out.println(this.commandParameters[0] + ": saved " + nsTemp.getParameters().size() + " parameters.");
+				return this.commandParameters[0] + ": saved " + nsTemp.getParameters().size() + " parameters.";
 			} else {
 				for (Namespace nsTemp: this.namespaces){
 					PropertiesFile.saveToFile(nsTemp.getName(), nsTemp.getParameters());
-					System.out.println(nsTemp.getName() + ": saved " + nsTemp.getParameters().size() + " parameters.");
+					output += nsTemp.getName() + ": saved " + nsTemp.getParameters().size() + " parameters.\n";
 				}
+				return output;
 			}
 		} else {
-			System.out.println("Load command is not formed properly. Correct format: load or load {namespace}");
+			return "Load command is not formed properly. Correct format: save or save {namespace}";
 		}
 		
-		
-		if (this.validateCommandParameters()){
-			for (Namespace nsTemp: this.namespaces){
-				ArrayList<Parameter> parameters = new ArrayList<Parameter>();
-				parameters = nsTemp.getParameters();
-				for (Parameter pTemp: parameters){
-					System.out.println(nsTemp.getName() + ": " + pTemp.getName() + " = " + pTemp.getValue());
-				}
-			}
-		} else {
-			System.out.println("List command is not formed properly. Correct format: list or list {namespace}");
-		}
 	}
 	
 }
