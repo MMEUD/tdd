@@ -11,6 +11,7 @@ class SaveCmdInterpreter extends CmdInterpreter implements ICmdInterpreter
 
     public function CommandInterpreter()
     {
+        $message  = "";
 
         if(coUnt(self::$params)== 0) {
 
