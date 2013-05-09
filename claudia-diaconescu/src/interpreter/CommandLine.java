@@ -14,7 +14,7 @@ public abstract class CommandLine {
 
   /**
    * This method must be implemented by each command implementation
-   * @return true if the command is interpreted and executed and false if the programs must exits.
+   * @return true if the command is interpreted and executed and false if the programs must exit.
    */
   public abstract boolean interpret();
 
