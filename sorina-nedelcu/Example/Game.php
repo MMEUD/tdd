@@ -101,7 +101,7 @@ class Game {
 						. "'s new location is "
 						.$this->places[$this->currentPlayer]);
 				echoln("The category is " . $this->currentCategory());
-				$this->askQuestion();
+				$this->askPopQuestionOrAskScienceQuestionOrAskSportQuestionOrAskRockQuestion();
 			} else {
 				echoln($this->players[$this->currentPlayer] . " is not getting out of the penalty box");
 				$this->isGettingOutOfPenaltyBox = false;
@@ -116,12 +116,12 @@ class Game {
 					. "'s new location is "
 					.$this->places[$this->currentPlayer]);
 			echoln("The category is " . $this->currentCategory());
-			$this->askQuestion();
+			$this->askPopQuestionOrAskScienceQuestionOrAskSportQuestionOrAskRockQuestion();
 		}
 
 	}
 
-	function  askQuestion() {
+	function  askPopQuestionOrAskScienceQuestionOrAskSportQuestionOrAskRockQuestion() {
 		if ($this->currentCategory() == "Pop")
 			echoln(array_shift($this->popQuestions));
 		if ($this->currentCategory() == "Science")
