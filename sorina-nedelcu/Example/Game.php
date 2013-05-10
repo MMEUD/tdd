@@ -47,14 +47,34 @@ class Game {
 
 	function addPlayerAndInitPlacesAndInitPursesAndInitPenaltyBoxAndShowNameInfoAndShowPlayerNumber($playerName) {
     $this->addPlayer($playerName);
-    $this->places[$this->howManyPlayers()] = 0;
-	   $this->purses[$this->howManyPlayers()] = 0;
-	   $this->inPenaltyBox[$this->howManyPlayers()] = false;
+    $this->initPlaces();
+    $this->initPurses();
+    $this->initPenaltyBox();
 
-	    echoln($playerName . " was added");
-	    echoln("They are player number " . count($this->players));
-		return true;
+    $this->showNameInfo($playerName);
+    $this->showPlayerNumber();
+    return true;
 	}
+
+  public function showPlayerNumber() {
+    echoln("They are player number " . count($this->players));
+  }
+
+  public function showNameInfo($playerName) {
+    echoln($playerName . " was added");
+  }
+
+  public function initPenaltyBox() {
+    $this->inPenaltyBox[$this->howManyPlayers()] = false;
+  }
+
+  public function initPurses() {
+    $this->purses[$this->howManyPlayers()] = 0;
+  }
+
+  public function initPlaces() {
+    $this->places[$this->howManyPlayers()] = 0;
+  }
 
   public function addPlayer(&$playerName) {
     array_push($this->players, $playerName);
