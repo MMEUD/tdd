@@ -45,9 +45,9 @@ class Game {
 		return ($this->howManyPlayers() >= 2);
 	}
 
-	function add($playerName) {
-	   array_push($this->players, $playerName);
-	   $this->places[$this->howManyPlayers()] = 0;
+	function addPlayerAndInitPlacesAndInitPursesAndInitPenaltyBoxAndShowNameInfoAndShowPlayerNumber($playerName) {
+    $this->addPlayer($playerName);
+    $this->places[$this->howManyPlayers()] = 0;
 	   $this->purses[$this->howManyPlayers()] = 0;
 	   $this->inPenaltyBox[$this->howManyPlayers()] = false;
 
@@ -56,7 +56,12 @@ class Game {
 		return true;
 	}
 
-	function howManyPlayers() {
+  public function addPlayer(&$playerName) {
+    array_push($this->players, $playerName);
+  }
+
+
+  function howManyPlayers() {
 		return count($this->players);
 	}
 
