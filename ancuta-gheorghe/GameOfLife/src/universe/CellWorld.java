@@ -13,11 +13,12 @@ public class CellWorld extends Cell{
 
     private ArrayList<Cell> neighbors = new ArrayList<Cell>();
 
-    public CellWorld() {
-    }
-
     public CellWorld(int id) {
         super(id);
+    }
+
+    public CellWorld(XAxis x, YAxis y) {
+        super(x, y);
     }
 
     public ArrayList<Cell> getNeighbors() {

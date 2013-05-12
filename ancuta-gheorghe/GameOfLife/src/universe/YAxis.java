@@ -11,6 +11,10 @@ public class YAxis implements Axis {
 
     int axis;
 
+    public YAxis(int axis) {
+        this.axis = axis;
+    }
+
     @Override
     public void setAxis(int location) {
         this.axis = location;

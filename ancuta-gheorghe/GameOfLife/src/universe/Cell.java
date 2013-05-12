@@ -14,7 +14,10 @@ public class Cell {
     private YAxis y;
     private boolean isAlive = false;
 
-    public Cell() {
+    public Cell(XAxis x, YAxis y) {
+        this.setX(x);
+        this.setY(y);
+        this.setAlive(true);
     }
 
     public Cell(int id) {

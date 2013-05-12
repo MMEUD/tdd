@@ -4,14 +4,14 @@
     <list default="true" id="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" name="Default" comment="" />
     <ignored path="GameOfLife.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/BigBang.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368306649426" ignored="false" />
+    <file path="/BigBang.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368369145310" ignored="false" />
     <file path="/Universe.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368353312914" ignored="false" />
     <file path="/DeathByCrowdnessLaw.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368305488695" ignored="false" />
     <file path="/ILaw.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368255075128" ignored="false" />
-    <file path="/Axis.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368252998179" ignored="false" />
+    <file path="/Axis.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368364494755" ignored="false" />
     <file path="/X.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368253093846" ignored="false" />
     <file path="/YAxis.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368253155101" ignored="false" />
-    <file path="/Cell.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368259569275" ignored="false" />
+    <file path="/Cell.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368369188094" ignored="false" />
     <file path="/Vecinity.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368259367176" ignored="false" />
     <file path="/BirthLaw.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368305511039" ignored="false" />
     <file path="/DeathByLonelinessLaw.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368255305368" ignored="false" />
@@ -81,7 +81,7 @@
       <file leaf-file-name="BigBang.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/universe/BigBang.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="18" selection-start="3550" selection-end="3550" vertical-scroll-proportion="0.0">
+            <state line="17" column="73" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,30 +105,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Initiate.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Initiate.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TheBeginingOfTheUniverse/Initiate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="25" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CellWorld.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/universe/CellWorld.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="18" selection-start="693" selection-end="693" vertical-scroll-proportion="0.8129371">
-              <folding>
-                <element signature="e#293#299#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BirthLaw.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/universe/BirthLaw.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="35" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0">
+            <state line="15" column="25" selection-start="350" selection-end="350" vertical-scroll-proportion="0.6136364">
               <folding />
             </state>
           </provider>
@@ -138,15 +118,6 @@
         <entry file="file://$PROJECT_DIR$/src/universe/DeathByCrowdnessLaw.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="16" column="70" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeathByLonelinessLaw.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/universe/DeathByLonelinessLaw.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="49" selection-start="207" selection-end="222" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -162,21 +133,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/universe/Axis.java" />
-        <option value="$PROJECT_DIR$/src/universe/X.java" />
-        <option value="$PROJECT_DIR$/src/universe/YAxis.java" />
         <option value="$PROJECT_DIR$/src/universe/Vecinity.java" />
         <option value="$PROJECT_DIR$/src/universe/CellVecinity.java" />
         <option value="$PROJECT_DIR$/src/universe/ILaw.java" />
         <option value="$PROJECT_DIR$/src/universe/DeathByLonelinessLaw.java" />
-        <option value="$PROJECT_DIR$/src/universe/Cell.java" />
         <option value="$PROJECT_DIR$/src/TheBeginingOfTheUniverse/BigBang.java" />
         <option value="$PROJECT_DIR$/src/TheBeginingOfTheUniverse/Initiate.java" />
         <option value="$PROJECT_DIR$/src/universe/UniverseSnapshot.java" />
         <option value="$PROJECT_DIR$/src/universe/DeathByCrowdnessLaw.java" />
         <option value="$PROJECT_DIR$/src/universe/BirthLaw.java" />
         <option value="$PROJECT_DIR$/src/universe/Universe.java" />
+        <option value="$PROJECT_DIR$/src/universe/XAxis.java" />
+        <option value="$PROJECT_DIR$/src/universe/Axis.java" />
+        <option value="$PROJECT_DIR$/src/universe/YAxis.java" />
         <option value="$PROJECT_DIR$/src/universe/BigBang.java" />
+        <option value="$PROJECT_DIR$/src/universe/Cell.java" />
         <option value="$PROJECT_DIR$/src/universe/CellWorld.java" />
       </list>
     </option>
@@ -444,7 +415,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="776" extended-state="0" />
+    <frame x="-8" y="-8" width="1296" height="776" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -455,16 +426,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24230146" sideWeight="0.68012923" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.318323" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24230146" sideWeight="0.68174475" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31825525" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990307" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -555,44 +526,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/universe/Axis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/universe/XAxis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="25" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/universe/YAxis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/universe/ILaw.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="41" selection-start="240" selection-end="240" vertical-scroll-proportion="0.5081522">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/universe/Cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TheBeginingOfTheUniverse/Initiate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="25" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -625,6 +561,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/universe/Axis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/universe/YAxis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="28" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/universe/XAxis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="28" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/universe/Universe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="44" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0">
@@ -632,19 +589,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/universe/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="26" selection-start="400" selection-end="400" vertical-scroll-proportion="0.5151515">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/universe/BigBang.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="18" selection-start="3550" selection-end="3550" vertical-scroll-proportion="0.0">
+        <state line="17" column="73" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/universe/CellWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="18" selection-start="693" selection-end="693" vertical-scroll-proportion="0.8129371">
+        <state line="19" column="40" selection-start="401" selection-end="401" vertical-scroll-proportion="0.31565657">
           <folding>
             <element signature="e#293#299#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TheBeginingOfTheUniverse/Initiate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="25" selection-start="350" selection-end="350" vertical-scroll-proportion="0.6136364">
+          <folding />
         </state>
       </provider>
     </entry>

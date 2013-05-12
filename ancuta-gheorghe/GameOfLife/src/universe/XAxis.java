@@ -10,6 +10,11 @@ package universe;
 public class XAxis implements Axis {
 
     int axis;
+
+    public XAxis(int axis) {
+        this.axis = axis;
+    }
+
     @Override
     public void setAxis(int location) {
         this.axis = location;
