@@ -15,7 +15,30 @@ public class BigBang {
     Universe universe = new Universe();
 
     public BigBang(){
-        universe.addCellWorld(new CellWorld(new XAxis(1), new YAxis(1)));
+        CellWorld cw1 = new CellWorld(1);
+        CellWorld cw2 = new CellWorld(2);
+        CellWorld cw3 = new CellWorld(3);
+        CellWorld cw4 = new CellWorld(4);
+        cw1.setAlive(true);
+        cw1.setAliveForSnapshot(true);
+        cw2.setAlive(true);
+        cw2.setAliveForSnapshot(true);
+        cw3.setAlive(true);
+        cw3.setAliveForSnapshot(true);
+        cw4.setAlive(true);
+        cw4.setAliveForSnapshot(true);
+        cw1.setNv(cw2);
+        //cw1.setV(cw4);
+        cw2.setSe(cw1);
+        cw2.setSv(cw4);
+        cw2.setNv(cw3);
+        cw3.setSe(cw2);
+        //cw4.setE(cw1);
+        cw4.setNe(cw2);
+        universe.addCellWorld(cw1);
+        universe.addCellWorld(cw2);
+        universe.addCellWorld(cw3);
+        universe.addCellWorld(cw4);
     }
 
     public void ignite(){
@@ -25,19 +48,19 @@ public class BigBang {
         System.out.println();
         System.out.println("---");
         for (int i=0; i<3; i++){
-            UniverseSnapshot universeSnapshot = new UniverseSnapshot();
-            universeSnapshot.setUniverse(universe.getUniverse());
-            for (CellWorld cellWorld: universeSnapshot.getUniverse()){
+            for (CellWorld cellWorld: universe.getUniverse()){
                 DeathByLonelinessLaw deathByLonelinessLaw = new DeathByLonelinessLaw();
-                //DeathByCrowdnessLaw deathByCrowdnessLaw = new DeathByCrowdnessLaw();
-                //BirthLaw birthLaw = new BirthLaw();
-                deathByLonelinessLaw.apply(cellWorld);
-                //deathByCrowdnessLaw.apply(cellWorld);
-                //birthLaw.apply(cellWorld);
-                System.out.print(cellWorld.isAlive() + " ");
+                DeathByCrowdnessLaw deathByCrowdnessLaw = new DeathByCrowdnessLaw();
+                cellWorld.setAliveForSnapshot(deathByLonelinessLaw.apply(cellWorld));
+                //cellWorld.setAliveForSnapshot(deathByCrowdnessLaw.apply(cellWorld));
+                System.out.print(cellWorld.isAliveForSnapshot() + " ");
             }
             System.out.println();
             System.out.println("---");
+            for (CellWorld cellWorld: universe.getUniverse()){
+                cellWorld.setAlive(cellWorld.isAliveForSnapshot());
+
+            }
         }
     }
 }

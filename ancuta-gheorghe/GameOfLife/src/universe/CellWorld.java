@@ -11,29 +11,93 @@ import java.util.ArrayList;
  */
 public class CellWorld extends Cell{
 
-    private ArrayList<Cell> neighbors = new ArrayList<Cell>();
+    private Cell n;
+    private Cell ne;
+    private Cell e;
+    private Cell se;
+    private Cell s;
+    private Cell sv;
+    private Cell v;
+    private Cell nv;
 
     public CellWorld(int id) {
         super(id);
     }
 
-    public CellWorld(XAxis x, YAxis y) {
-        super(x, y);
+    public Cell getN() {
+        return n;
     }
 
-    public ArrayList<Cell> getNeighbors() {
-        return neighbors;
+    public void setN(Cell n) {
+        this.n = n;
     }
 
-    public void addNeighbor(Cell cell){
-        this.neighbors.add(cell);
+    public Cell getNe() {
+        return ne;
     }
 
-    public void removeNeighbor(Cell cell){
-        this.neighbors.remove(cell);
+    public void setNe(Cell ne) {
+        this.ne = ne;
     }
 
-    public void generateNeighbors(){
-        //lalalala
+    public Cell getE() {
+        return e;
+    }
+
+    public void setE(Cell e) {
+        this.e = e;
+    }
+
+    public Cell getSe() {
+        return se;
+    }
+
+    public void setSe(Cell se) {
+        this.se = se;
+    }
+
+    public Cell getS() {
+        return s;
+    }
+
+    public void setS(Cell s) {
+        this.s = s;
+    }
+
+    public Cell getSv() {
+        return sv;
+    }
+
+    public void setSv(Cell sv) {
+        this.sv = sv;
+    }
+
+    public Cell getV() {
+        return v;
+    }
+
+    public void setV(Cell v) {
+        this.v = v;
+    }
+
+    public Cell getNv() {
+        return nv;
+    }
+
+    public void setNv(Cell nv) {
+        this.nv = nv;
+    }
+
+    public int getNumberOfNeighbors(){
+        int numberOfNeighbors = 0;
+        if (this.getN() != null && this.getN().isAlive()) numberOfNeighbors++;
+        if (this.getNe() != null && this.getNe().isAlive()) numberOfNeighbors++;
+        if (this.getE() != null && this.getE().isAlive()) numberOfNeighbors++;
+        if (this.getSe() != null && this.getSe().isAlive()) numberOfNeighbors++;
+        if (this.getS() != null && this.getS().isAlive()) numberOfNeighbors++;
+        if (this.getSv() != null && this.getSv().isAlive()) numberOfNeighbors++;
+        if (this.getV() != null && this.getV().isAlive()) numberOfNeighbors++;
+        if (this.getNv() != null && this.getNv().isAlive()) numberOfNeighbors++;
+        return numberOfNeighbors;
     }
 }

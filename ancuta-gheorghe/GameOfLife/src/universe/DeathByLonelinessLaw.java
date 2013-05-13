@@ -9,15 +9,10 @@ package universe;
  */
 public class DeathByLonelinessLaw implements ILaw {
     @Override
-    public void apply(CellWorld cellWorld) {
-        int aliveNeighbors = 0;
-        for (int i=0; i<cellWorld.getNeighbors().size(); i++){
-            if (cellWorld.getNeighbors().get(i).isAlive()){
-                aliveNeighbors++;
-            }
+    public boolean apply(CellWorld cellWorld) {
+        if (cellWorld.getNumberOfNeighbors() < 2) {
+           return false;
         }
-        if (aliveNeighbors < 2){
-            cellWorld.setAlive(false);
-        }
+        return true;
     }
 }

@@ -13,6 +13,7 @@ public class Universe {
 
     private ArrayList<CellWorld> universe;
 
+
     public Universe(){
         this.universe = new ArrayList<CellWorld>();
     }

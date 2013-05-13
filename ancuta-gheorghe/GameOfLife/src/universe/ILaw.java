@@ -9,6 +9,6 @@ package universe;
  */
 public interface ILaw {
 
-    public void apply(CellWorld cellWorld);
+    public boolean apply(CellWorld cellWorld);
 
 }

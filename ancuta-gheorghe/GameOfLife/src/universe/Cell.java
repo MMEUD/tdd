@@ -10,15 +10,8 @@ package universe;
 public class Cell {
 
     private int id;
-    private XAxis x;
-    private YAxis y;
     private boolean isAlive = false;
-
-    public Cell(XAxis x, YAxis y) {
-        this.setX(x);
-        this.setY(y);
-        this.setAlive(true);
-    }
+    private boolean isAliveForSnapshot = false;
 
     public Cell(int id) {
         this.id = id;
@@ -32,27 +25,19 @@ public class Cell {
         this.id = id;
     }
 
-    public XAxis getX() {
-        return x;
-    }
-
-    public void setX(XAxis x) {
-        this.x = x;
-    }
-
-    public YAxis getY() {
-        return y;
-    }
-
-    public void setY(YAxis y) {
-        this.y = y;
-    }
-
     public boolean isAlive() {
         return isAlive;
     }
 
     public void setAlive(boolean alive) {
         isAlive = alive;
+    }
+
+    public boolean isAliveForSnapshot() {
+        return isAliveForSnapshot;
+    }
+
+    public void setAliveForSnapshot(boolean aliveForSnapshot) {
+        isAliveForSnapshot = aliveForSnapshot;
     }
 }
