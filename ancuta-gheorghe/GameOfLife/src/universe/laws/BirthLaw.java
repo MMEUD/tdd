@@ -1,4 +1,7 @@
-package universe;
+package universe.laws;
+
+import universe.CellWorld;
+import universe.laws.ILaw;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,12 +10,12 @@ package universe;
  * Time: 9:44 AM
  * To change this template use File | Settings | File Templates.
  */
-public class DeathByLonelinessLaw implements ILaw {
+public class BirthLaw implements ILaw {
     @Override
     public boolean apply(CellWorld cellWorld) {
-        if (cellWorld.getNumberOfNeighbors() < 2) {
-           return false;
+        if (cellWorld.getNumberOfNeighbors() == 3) {
+            return true;
         }
-        return true;
+        return false;
     }
 }

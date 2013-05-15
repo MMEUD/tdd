@@ -1,4 +1,6 @@
-package universe;
+package universe.laws;
+
+import universe.CellWorld;
 
 /**
  * Created with IntelliJ IDEA.

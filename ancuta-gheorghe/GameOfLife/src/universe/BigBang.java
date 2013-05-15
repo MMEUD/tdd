@@ -1,7 +1,8 @@
 package universe;
 
-import universe.CellWorld;
-import universe.Universe;
+import universe.laws.DeathByCrowdnessLaw;
+import universe.laws.DeathByLonelinessLaw;
+import universe.laws.commandPattern.DieByLonelinessLaw;
 
 /**
  * Created with IntelliJ IDEA.
@@ -49,10 +50,14 @@ public class BigBang {
         System.out.println("---");
         for (int i=0; i<3; i++){
             for (CellWorld cellWorld: universe.getUniverse()){
-                DeathByLonelinessLaw deathByLonelinessLaw = new DeathByLonelinessLaw();
-                DeathByCrowdnessLaw deathByCrowdnessLaw = new DeathByCrowdnessLaw();
-                cellWorld.setAliveForSnapshot(deathByLonelinessLaw.apply(cellWorld));
-                //cellWorld.setAliveForSnapshot(deathByCrowdnessLaw.apply(cellWorld));
+                if (cellWorld.getNumberOfNeighbors() < 2){
+                    DeathByLonelinessLaw deathByLonelinessLaw = new DeathByLonelinessLaw();
+                    cellWorld.setAliveForSnapshot(deathByLonelinessLaw.apply(cellWorld));
+                } else if (cellWorld.getNumberOfNeighbors() > 3){
+                    DeathByCrowdnessLaw deathByCrowdnessLaw = new DeathByCrowdnessLaw();
+                    cellWorld.setAliveForSnapshot(deathByCrowdnessLaw.apply(cellWorld));
+                }
+
                 System.out.print(cellWorld.isAliveForSnapshot() + " ");
             }
             System.out.println();
