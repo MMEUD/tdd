@@ -20,10 +20,10 @@ public class LifeCycle {
     }
 
     public void die(){
-        this.cellWorld.setAlive(false);
+        this.cellWorld.setAliveForSnapshot(false);
     }
 
     public void live(){
-        this.cellWorld.setAlive(true);
+        this.cellWorld.setAliveForSnapshot(true);
     }
 }

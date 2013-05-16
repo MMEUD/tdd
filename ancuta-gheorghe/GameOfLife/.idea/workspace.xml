@@ -4,7 +4,7 @@
     <list default="true" id="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" name="Default" comment="" />
     <ignored path="GameOfLife.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/BigBang.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368612765423" ignored="false" />
+    <file path="/BigBang.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368700489384" ignored="false" />
     <file path="/Universe.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368458629512" ignored="false" />
     <file path="/DeathByCrowdnessLaw.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368612433461" ignored="false" />
     <file path="/ILaw.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368612458237" ignored="false" />
@@ -20,10 +20,11 @@
     <file path="/CellWorld.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368453670540" ignored="false" />
     <file path="/fragment.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368446681763" ignored="false" />
     <file path="/Law.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368538116535" ignored="false" />
-    <file path="/LifeCycle.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368541185619" ignored="false" />
+    <file path="/LifeCycle.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368617954062" ignored="false" />
     <file path="/Agent.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368540864629" ignored="false" />
     <file path="/DieByLonelinessLaw.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368538107489" ignored="false" />
     <file path="/DieByCrowdinessLaw.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368538285895" ignored="false" />
+    <file path="$PROJECT_DIR$/src/universe/laws/BirthLaw.java" changelist="e4f4c032-ce79-4ff5-973f-eb6ad41ee670" time="1368618528786" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,28 +85,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DeathByLonelinessLaw.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/universe/laws/DeathByLonelinessLaw.java">
+      <file leaf-file-name="Law.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/Law.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="24" selection-start="328" selection-end="427" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ILaw.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/universe/laws/ILaw.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="18" selection-start="243" selection-end="250" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BirthLaw.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/universe/laws/BirthLaw.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="18" selection-start="298" selection-end="305" vertical-scroll-proportion="0.0">
+            <state line="13" column="28" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -114,43 +97,34 @@
       <file leaf-file-name="LifeCycle.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/LifeCycle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="16" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
+            <state line="26" column="39" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Universe.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/universe/Universe.java">
+      <file leaf-file-name="Agent.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/Agent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="4" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
+            <state line="22" column="18" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CellWorld.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/universe/CellWorld.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="43" selection-start="1787" selection-end="1787" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DieByCrowdinessLaw.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DieByCrowdinessLaw.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/DieByCrowdinessLaw.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="24" selection-start="447" selection-end="447" vertical-scroll-proportion="0.5022157">
+            <state line="13" column="18" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BigBang.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BigBang.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/universe/BigBang.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="20" selection-start="1913" selection-end="1913" vertical-scroll-proportion="0.0">
+            <state line="59" column="55" selection-start="1897" selection-end="1915" vertical-scroll-proportion="0.49778435">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -158,19 +132,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeathByCrowdnessLaw.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/universe/laws/DeathByCrowdnessLaw.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="18" selection-start="282" selection-end="289" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DieByLonelinessLaw.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/DieByLonelinessLaw.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="26" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
+            <state line="21" column="19" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -195,13 +160,13 @@
         <option value="$PROJECT_DIR$/src/universe/laws/commandPattern/Agent.java" />
         <option value="$PROJECT_DIR$/src/universe/laws/commandPattern/Law.java" />
         <option value="$PROJECT_DIR$/src/universe/laws/commandPattern/DieByLonelinessLaw.java" />
-        <option value="$PROJECT_DIR$/src/universe/laws/commandPattern/LifeCycle.java" />
         <option value="$PROJECT_DIR$/src/universe/laws/DeathByLonelinessLaw.java" />
         <option value="$PROJECT_DIR$/src/universe/laws/DeathByCrowdnessLaw.java" />
         <option value="$PROJECT_DIR$/src/universe/laws/BirthLaw.java" />
         <option value="$PROJECT_DIR$/src/universe/laws/ILaw.java" />
-        <option value="$PROJECT_DIR$/src/universe/BigBang.java" />
         <option value="$PROJECT_DIR$/src/universe/laws/commandPattern/DieByCrowdinessLaw.java" />
+        <option value="$PROJECT_DIR$/src/universe/laws/commandPattern/LifeCycle.java" />
+        <option value="$PROJECT_DIR$/src/universe/BigBang.java" />
       </list>
     </option>
   </component>
@@ -237,7 +202,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -293,32 +257,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="laws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameOfLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameOfLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="universe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="commandPattern" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -357,6 +295,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -421,19 +360,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -459,6 +385,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -538,7 +477,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -554,7 +493,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15955175" sideWeight="0.78198" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21802002" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21802002" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -627,9 +566,32 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/Law.java">
+    <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/Agent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="25" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+        <state line="22" column="18" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/DieByCrowdinessLaw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="18" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/universe/BigBang.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="58" selection-start="1921" selection-end="1921" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/DieByLonelinessLaw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="19" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -637,13 +599,6 @@
     <entry file="file://$PROJECT_DIR$/src/universe/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="29" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/Agent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="24" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -676,13 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/DieByLonelinessLaw.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="26" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/universe/CellWorld.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="96" column="43" selection-start="1787" selection-end="1787" vertical-scroll-proportion="0.0">
@@ -690,54 +638,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/universe/laws/DeathByCrowdnessLaw.java">
+    <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/DieByLonelinessLaw.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="18" selection-start="282" selection-end="289" vertical-scroll-proportion="0.0">
+        <state line="21" column="19" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/universe/laws/BirthLaw.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="18" selection-start="298" selection-end="305" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/universe/laws/ILaw.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="18" selection-start="243" selection-end="250" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/universe/laws/DeathByLonelinessLaw.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="24" selection-start="328" selection-end="427" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/universe/BigBang.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="20" selection-start="1913" selection-end="1913" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/LifeCycle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="16" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
+        <state line="26" column="39" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/Agent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="18" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/Law.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="28" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/universe/laws/commandPattern/DieByCrowdinessLaw.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="24" selection-start="447" selection-end="447" vertical-scroll-proportion="0.5022157">
+        <state line="13" column="18" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/universe/BigBang.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="55" selection-start="1897" selection-end="1915" vertical-scroll-proportion="0.49778435">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
