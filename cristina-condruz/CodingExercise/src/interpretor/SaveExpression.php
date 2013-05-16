@@ -12,6 +12,7 @@ require_once('/singleton/MySingleton.php');
 
 class SaveExpression implements CommandExpression{
    private $argument;
+   private $msg;
    public function __construct($argument){
        $this->argument = $argument;
    }
@@ -23,7 +24,6 @@ class SaveExpression implements CommandExpression{
    }
   public function interpret(){
       //the command should be save or save {namespace_name}
-      $msg = "";
       $currentSession = MySingleton::getInstance();
       $allNamespaces = $currentSession->getNamespaces();
       if ($this->getArgument() != ""){
@@ -33,7 +33,7 @@ class SaveExpression implements CommandExpression{
           $allPropertiesOfNamespace = $selectedNamespace->getProperties();
           //to implement
         }else{
-          return "There is no namespace named: ".$this->getArgument();
+          $this->msg =  "There is no namespace named: ".$this->getArgument();
         }
       }else{
         //save -- stores all the properties of a each namespace into {namespace_name}.properties
@@ -43,6 +43,6 @@ class SaveExpression implements CommandExpression{
           //to implement
         }
       }
-      return $msg;
+      return $this->msg;
     }
 }

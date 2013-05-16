@@ -12,6 +12,7 @@ require_once('/singleton/MySingleton.php');
 
 class GetExpression implements CommandExpression{
    private $argument;
+   private $msg;
    public function __construct($argument){
        $this->argument = $argument;
    }
@@ -29,12 +30,13 @@ class GetExpression implements CommandExpression{
         $nmsProperties = $currentNamespace->getProperties();
         //print_r($nmsProperties);
         if(array_key_exists($this->getArgument(),$nmsProperties)){
-          return $currentNamespace->getName()." : ". $nmsProperties[$this->getArgument()]->getName() ." = ". $nmsProperties[$this->getArgument()]->getValue();
+          $this->msg = $currentNamespace->getName()." : ". $nmsProperties[$this->getArgument()]->getName() ." = ". $nmsProperties[$this->getArgument()]->getValue();
         }else{
-          return "There is no parameter named: ".$this->getArgument()." in current namespace: ".$currentNamespace->getName();
+          $this->msg = "There is no parameter named: ".$this->getArgument()." in current namespace: ".$currentNamespace->getName();
         }
       }else{
-        return "Parameter missing. The command should be get {parameter_name}.";
+        $this->msg = "Parameter missing. The command should be get {parameter_name}.";
       }
+    return $this->msg;
     }
 }
