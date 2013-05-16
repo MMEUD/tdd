@@ -20,8 +20,8 @@ public class Main {
 
     // read context from console and interpret them
     CommandLine.prompt();
-
     boolean execute = true;
+
     while (execute) {
       try {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
