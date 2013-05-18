@@ -4,9 +4,9 @@
     <list default="true" id="0a9864c1-14b6-4cba-886e-b85b464cbb31" name="Default" comment="" />
     <ignored path="RefactoringFromFowler1.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Movie.java" changelist="0a9864c1-14b6-4cba-886e-b85b464cbb31" time="1368887988919" ignored="false" />
+    <file path="/Movie.java" changelist="0a9864c1-14b6-4cba-886e-b85b464cbb31" time="1368912071864" ignored="false" />
     <file path="/Rental.java" changelist="0a9864c1-14b6-4cba-886e-b85b464cbb31" time="1368907519290" ignored="false" />
-    <file path="/Customer.java" changelist="0a9864c1-14b6-4cba-886e-b85b464cbb31" time="1368909745842" ignored="false" />
+    <file path="/Customer.java" changelist="0a9864c1-14b6-4cba-886e-b85b464cbb31" time="1368912255239" ignored="false" />
     <file path="/Main.java" changelist="0a9864c1-14b6-4cba-886e-b85b464cbb31" time="1368909975816" ignored="false" />
     <file path="/fragment.java" changelist="0a9864c1-14b6-4cba-886e-b85b464cbb31" time="1368893553233" ignored="false" />
     <file path="$PROJECT_DIR$/../GameOfLife/.idea/workspace.xml" changelist="0a9864c1-14b6-4cba-886e-b85b464cbb31" time="1368893309799" ignored="false" />
@@ -73,7 +73,7 @@
       <file leaf-file-name="Movie.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Movie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="35" column="16" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -82,7 +82,7 @@
       <file leaf-file-name="Rental.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Rental.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="11" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0">
+            <state line="24" column="0" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -91,7 +91,7 @@
       <file leaf-file-name="Customer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="24" selection-start="1122" selection-end="1122" vertical-scroll-proportion="0.34615386">
+            <state line="60" column="68" selection-start="2098" selection-end="2098" vertical-scroll-proportion="0.56153846">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -118,10 +118,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Movie.java" />
-        <option value="$PROJECT_DIR$/src/Rental.java" />
-        <option value="$PROJECT_DIR$/src/Customer.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Rental.java" />
+        <option value="$PROJECT_DIR$/src/Movie.java" />
+        <option value="$PROJECT_DIR$/src/Customer.java" />
       </list>
     </option>
   </component>
@@ -514,20 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Movie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Rental.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="11" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="35" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
@@ -535,9 +521,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Rental.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Movie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="16" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="24" selection-start="1122" selection-end="1122" vertical-scroll-proportion="0.34615386">
+        <state line="60" column="68" selection-start="2098" selection-end="2098" vertical-scroll-proportion="0.56153846">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
