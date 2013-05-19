@@ -20,7 +20,6 @@ public class Main {
 
         System.out.println(customer.statement());
         System.out.println();
-        System.out.println(customer.htmlStatement());
 
     }
 }
