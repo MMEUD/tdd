@@ -7,7 +7,7 @@ import com.iolma.studio.log.ILogger;
 
 public interface IProcess {
 	
-	public String getName();
+	public String getProcessName();
 
 	public ILogger getLogger();
 
@@ -17,6 +17,14 @@ public interface IProcess {
 
 	public ConcurrentHashMap<String, IProcess> getOutputs();
 	
-	public void execute();
-
+	public void push(IFrame frame);
+	
+	public void execute(IFrame frame);
+	
+	public long getQueueSize();
+	
+	public long getFPS();
+	
+	public void clearFPS();
+	
 }

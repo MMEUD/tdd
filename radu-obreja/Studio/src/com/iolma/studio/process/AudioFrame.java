@@ -1,5 +1,5 @@
 package com.iolma.studio.process;
 
-public class AudioFrame {
+public class AudioFrame extends Frame {
 
 }

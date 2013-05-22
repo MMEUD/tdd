@@ -1,5 +1,5 @@
 package com.iolma.studio.process;
 
-public class VideoFrame {
+public class VideoFrame extends Frame {
 
 }
