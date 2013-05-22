@@ -10,7 +10,7 @@ public interface IProcess {
 	public String getProcessName();
 
 	public ILogger getLogger();
-
+	
 	public void addInput(IProcess input);
 	
 	public void removeInput(IProcess input);
@@ -19,7 +19,7 @@ public interface IProcess {
 	
 	public void push(IFrame frame);
 	
-	public void execute(IFrame frame);
+	public IFrame execute(IFrame frame);
 	
 	public long getQueueSize();
 	

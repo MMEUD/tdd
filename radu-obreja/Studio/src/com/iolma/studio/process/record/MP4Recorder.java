@@ -5,8 +5,9 @@ import com.iolma.studio.process.IFrame;
 
 public class MP4Recorder extends BasicProcess {
 
-	public void execute(IFrame frame) {
+	public IFrame execute(IFrame frame) {
 		
+		return frame;
 	}
 
 }

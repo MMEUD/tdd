@@ -9,7 +9,7 @@ public class StatisticsGenerator extends AbstractClock {
 
 	private ConcurrentHashMap<String, IProcess> inputs  = new ConcurrentHashMap<String, IProcess>();
 
-	public StatisticsGenerator(int ticksPerSecond, ILogger logger) {
+	public StatisticsGenerator(double ticksPerSecond, ILogger logger) {
 		this.ticksPerSecond = ticksPerSecond;
 		this.logger = logger;
 	}
@@ -20,7 +20,7 @@ public class StatisticsGenerator extends AbstractClock {
 		Iterator<String> it = inputs.keySet().iterator();
 		while(it.hasNext()) {
 			String name = it.next();
-			sb.append(name + " : " + inputs.get(name).getFPS() + "   ");
+			sb.append(name + " : " + inputs.get(name).getFPS() + "fps/" + inputs.get(name).getQueueSize() + "q   ");
 			inputs.get(name).clearFPS();
 		}
 		logger.info(sb.toString());
@@ -41,9 +41,9 @@ public class StatisticsGenerator extends AbstractClock {
 	}
 
 	@Override
-	public void execute(IFrame frame) {
+	public IFrame execute(IFrame frame) {
 		// TODO Auto-generated method stub
-		
+		return frame;
 	}
 	
 	@Override

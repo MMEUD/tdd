@@ -10,8 +10,8 @@ import com.iolma.studio.log.ILogger;
 
 public abstract class BasicProcess extends Thread implements  IProcess, IServer {
 	
-	private ILogger logger = new ConsoleLogger();
-	private String processName = this.getClass().getSimpleName();
+	protected ILogger logger = new ConsoleLogger();
+	protected String processName = this.getClass().getSimpleName();
 	private AtomicLong fps = new AtomicLong(0);
 
 	private ConcurrentHashMap<String, IProcess> inputs  = new ConcurrentHashMap<String, IProcess>();
@@ -83,8 +83,8 @@ public abstract class BasicProcess extends Thread implements  IProcess, IServer 
 	public void run() {
 		while (true) {
 			try {
-				currentFrame = queue.take();
 				fps.incrementAndGet();
+				currentFrame = queue.take();
 				execute(currentFrame);
 				fireNextProcess();
 			} catch (InterruptedException e) {

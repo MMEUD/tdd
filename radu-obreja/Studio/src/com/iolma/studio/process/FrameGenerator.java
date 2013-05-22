@@ -39,27 +39,15 @@ public class FrameGenerator extends AbstractClock {
 	}
 
 	@Override
-	public void execute(IFrame frame) {
+	public IFrame execute(IFrame frame) {
 		// TODO Auto-generated method stub
-		
+		return frame;
 	}
 
 	@Override
 	public long getQueueSize() {
 		// TODO Auto-generated method stub
 		return 0;
-	}
-
-	@Override
-	public long getFPS() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public void clearFPS() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
