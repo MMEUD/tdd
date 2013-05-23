@@ -6,9 +6,9 @@ $notAWinner;
 
   $aGame = new Game();
   
-  $aGame->addPlayerAndInitPlacesAndInitPursesAndInitPenaltyBoxAndShowNameInfoAndShowPlayerNumber("Chet");
-  $aGame->addPlayerAndInitPlacesAndInitPursesAndInitPenaltyBoxAndShowNameInfoAndShowPlayerNumber("Pat");
-  $aGame->addPlayerAndInitPlacesAndInitPursesAndInitPenaltyBoxAndShowNameInfoAndShowPlayerNumber("Sue");
+  $aGame->add("Chet");
+  $aGame->add("Pat");
+  $aGame->add("Sue");
   
   
   do {

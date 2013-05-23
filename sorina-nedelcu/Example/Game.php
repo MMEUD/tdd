@@ -45,7 +45,7 @@ class Game {
 		return ($this->howManyPlayers() >= 2);
 	}
 
-	function addPlayerAndInitPlacesAndInitPursesAndInitPenaltyBoxAndShowNameInfoAndShowPlayerNumber($playerName) {
+	function add($playerName) {
     $this->addPlayer($playerName);
     $this->initPlaces();
     $this->initPurses();
