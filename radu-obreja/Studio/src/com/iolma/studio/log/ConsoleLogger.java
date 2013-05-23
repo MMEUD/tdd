@@ -10,4 +10,8 @@ public class ConsoleLogger implements ILogger {
 		System.out.println(message);
 	}
 
+	public void error(String message) {
+		System.err.println(message);
+	}
+
 }
