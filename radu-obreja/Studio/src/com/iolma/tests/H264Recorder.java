@@ -18,6 +18,7 @@ import com.iolma.studio.process.FrameGenerator;
 import com.iolma.studio.process.StatisticsGenerator;
 import com.iolma.studio.process.capture.AudioCapture;
 import com.iolma.studio.process.capture.VideoCapture;
+import com.iolma.studio.process.play.AudioPlay;
 
 public class H264Recorder<IProcess> extends JFrame {
 
@@ -37,26 +38,32 @@ public class H264Recorder<IProcess> extends JFrame {
 		videoGenerator.startup();
 
 		// Create audio generator
-		final FrameGenerator audioGenerator = new FrameGenerator(100, logger);
+		final FrameGenerator audioGenerator = new FrameGenerator(2, logger);
 		audioGenerator.setProcessName("audioGenerator");
 		audioGenerator.startup();
 
 		// Create video capture
-		VideoCapture videoCapture = new VideoCapture(640, 480, 30);
+		VideoCapture videoCapture = new VideoCapture(640, 480, 25);
 		videoCapture.setDevice("0");
 		videoCapture.addInput(videoGenerator);
 		videoCapture.startup();
 		
-		// Create audio capture
-		AudioCapture audioCapture = new AudioCapture();		
-		audioCapture.addInput(audioGenerator);
-		audioCapture.startup();
-
 		// Create gui
 		VideoPanel videoPanel = new VideoPanel(640, 480);
 		videoPanel.addInput(videoCapture);
 		videoPanel.startup();
 				
+		// Create audio capture
+		final AudioCapture audioCapture = new AudioCapture();		
+		audioCapture.addInput(audioGenerator);
+		audioCapture.startup();
+
+		// Create audio play
+		final AudioPlay audioPlay = new AudioPlay();		
+		audioPlay.addInput(audioCapture);
+		audioPlay.startup();
+
+		
 		JButton btnRecord = new JButton("Record");
 		JButton btnStop = new JButton("Stop");
 		
@@ -64,8 +71,8 @@ public class H264Recorder<IProcess> extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if (statisticsGenerators.size() == 0) {
 					StatisticsGenerator statistics = new StatisticsGenerator(1, logger);
-					statistics.addInput(videoGenerator);
-					statistics.addInput(audioGenerator);
+					statistics.addInput(audioCapture);
+					statistics.addInput(audioPlay);
 					statistics.startup();
 					statisticsGenerators.put("StatisticsGenerator", statistics);
 				}
