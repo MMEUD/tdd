@@ -6,8 +6,10 @@ import org.bridj.Pointer;
 
 import com.iolma.studio.process.BasicProcess;
 import com.iolma.studio.process.IFrame;
-import com.iolma.studio.process.capture.openimaj.Device;
-import com.iolma.studio.process.capture.openimaj.OpenIMAJGrabber;
+import com.iolma.studio.process.capture.video.Device;
+import com.iolma.studio.process.capture.video.OpenIMAJGrabber;
+import com.xuggle.xuggler.IPixelFormat;
+import com.xuggle.xuggler.IVideoPicture;
 
 public class VideoCapture extends BasicProcess {
 	
@@ -83,7 +85,10 @@ public class VideoCapture extends BasicProcess {
 			grabber.nextFrame();
 			final Pointer<Byte> data = grabber.getImage();
 			if (data != null) {
-				final byte[] d = data.getBytes(width * height * 3);
+				IVideoPicture picture = IVideoPicture.make(IPixelFormat.Type.RGB24, width, height);
+				picture.put(data.getBytes(width * height * 3), 0, 0, width * height * 3);
+				picture.setComplete(true, picture.getPixelType(), width, height, System.currentTimeMillis());
+				frame.setVideoPicture(picture);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
