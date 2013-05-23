@@ -1,0 +1,6 @@
+We will look at the example of a class that represents a bank account.
+The contract for the BankAccount class not only requires methods to get and set the bank account's balance, as well as methods to deposit and withdraw money.
+It also specifies the following two conditions that must be ensured:
+
+  - The bank account's initial balance must be zero.
+  - The bank account's balance cannot become negative.
