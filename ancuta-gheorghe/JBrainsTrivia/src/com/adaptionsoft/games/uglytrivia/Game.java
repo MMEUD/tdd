@@ -19,14 +19,30 @@ public class Game {
     
     public  Game(){
     	for (int i = 0; i < 50; i++) {
-			popQuestions.addLast("Pop Question " + i);
-			scienceQuestions.addLast(("Science Question " + i));
-			sportsQuestions.addLast(("Sports Question " + i));
-			rockQuestions.addLast(createRockQuestion(i));
-    	}
+            addPopQuestions(i);
+            addScienceQuestions(i);
+            addSportsQuestions(i);
+            addRockQuestions(i);
+        }
     }
 
-	public String createRockQuestion(int index){
+    private void addRockQuestions(int i) {
+        rockQuestions.addLast(createRockQuestion(i));
+    }
+
+    private void addSportsQuestions(int i) {
+        sportsQuestions.addLast(("Sports Question " + i));
+    }
+
+    private void addScienceQuestions(int i) {
+        scienceQuestions.addLast(("Science Question " + i));
+    }
+
+    private void addPopQuestions(int i) {
+        popQuestions.addLast("Pop Question " + i);
+    }
+
+    public String createRockQuestion(int index){
 		return "Rock Question " + index;
 	}
 	
@@ -35,19 +51,37 @@ public class Game {
 	}
 
 	public boolean add(String playerName) {
-		
-		
 	    players.add(playerName);
-	    places[howManyPlayers()] = 0;
-	    purses[howManyPlayers()] = 0;
-	    inPenaltyBox[howManyPlayers()] = false;
-	    
-	    System.out.println(playerName + " was added");
-	    System.out.println("They are player number " + players.size());
-		return true;
+        initializePlacesElement();
+        initializePursesElement();
+        initializeInPenaltyBoxElement();
+
+        printAddedPlayer(playerName);
+        printNumberOfAddedPlayer();
+        return true;
 	}
-	
-	public int howManyPlayers() {
+
+    private void initializeInPenaltyBoxElement() {
+        inPenaltyBox[howManyPlayers()] = false;
+    }
+
+    private void initializePursesElement() {
+        purses[howManyPlayers()] = 0;
+    }
+
+    private void initializePlacesElement() {
+        places[howManyPlayers()] = 0;
+    }
+
+    private void printNumberOfAddedPlayer() {
+        System.out.println("They are player number " + players.size());
+    }
+
+    private void printAddedPlayer(String playerName) {
+        System.out.println(playerName + " was added");
+    }
+
+    public int howManyPlayers() {
 		return players.size();
 	}
 
@@ -60,46 +94,59 @@ public class Game {
 				isGettingOutOfPenaltyBox = true;
 				
 				System.out.println(players.get(currentPlayer) + " is getting out of the penalty box");
-				places[currentPlayer] = places[currentPlayer] + roll;
-				if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
-				
-				System.out.println(players.get(currentPlayer) 
-						+ "'s new location is " 
-						+ places[currentPlayer]);
-				System.out.println("The category is " + currentCategory());
-				askQuestion();
+                processCurrentPlayer(roll);
 			} else {
 				System.out.println(players.get(currentPlayer) + " is not getting out of the penalty box");
 				isGettingOutOfPenaltyBox = false;
 				}
 			
 		} else {
-		
-			places[currentPlayer] = places[currentPlayer] + roll;
-			if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
-			
-			System.out.println(players.get(currentPlayer) 
-					+ "'s new location is " 
-					+ places[currentPlayer]);
-			System.out.println("The category is " + currentCategory());
-			askQuestion();
+
+            processCurrentPlayer(roll);
 		}
 		
 	}
 
-	private void askQuestion() {
+    private void processCurrentPlayer(int roll) {
+        places[currentPlayer] = places[currentPlayer] + roll;
+        if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
+
+        System.out.println(players.get(currentPlayer)
+                + "'s new location is "
+                + places[currentPlayer]);
+        System.out.println("The category is " + currentCategory());
+        askQuestion();
+    }
+
+    private void askQuestion() {
 		if (currentCategory() == "Pop")
-			System.out.println(popQuestions.removeFirst());
-		if (currentCategory() == "Science")
-			System.out.println(scienceQuestions.removeFirst());
-		if (currentCategory() == "Sports")
-			System.out.println(sportsQuestions.removeFirst());
-		if (currentCategory() == "Rock")
-			System.out.println(rockQuestions.removeFirst());		
-	}
-	
-	
-	private String currentCategory() {
+            printPopQuestion();
+        if (currentCategory() == "Science")
+            printScienceQuestion();
+        if (currentCategory() == "Sports")
+            printSportsQuestion();
+        if (currentCategory() == "Rock")
+            printRockQuestion();
+    }
+
+    private void printRockQuestion() {
+        System.out.println(rockQuestions.removeFirst());
+    }
+
+    private void printSportsQuestion() {
+        System.out.println(sportsQuestions.removeFirst());
+    }
+
+    private void printScienceQuestion() {
+        System.out.println(scienceQuestions.removeFirst());
+    }
+
+    private void printPopQuestion() {
+        System.out.println(popQuestions.removeFirst());
+    }
+
+
+    private String currentCategory() {
 		if (places[currentPlayer] == 0) return "Pop";
 		if (places[currentPlayer] == 4) return "Pop";
 		if (places[currentPlayer] == 8) return "Pop";
