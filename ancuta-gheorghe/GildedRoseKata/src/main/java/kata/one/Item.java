@@ -44,4 +44,32 @@ public class Item {
 	public void setQuality(int quality) {
 		this.quality = quality;
 	}
+	
+	public boolean diffrentFromString(String string) {
+		return this.name != string;
+	}
+
+	public boolean qualityIsSmallerThan50() {
+		return this.quality < 50;
+	}
+
+	public boolean sellInIsSmallerThan0() {
+		return this.sellIn < 0;
+	}
+
+	public boolean qualityIsBiggerThan0() {
+		return this.quality > 0;
+	}
+
+	public void decreaseSellIn() {
+		this.setSellIn(this.getSellIn() - 1);
+	}
+
+	public void increaseQuality() {
+		this.setQuality(this.getQuality() + 1);
+	}
+
+	public void decreaseQuality() {
+		this.setQuality(this.getQuality() - 1);
+	}
 }
