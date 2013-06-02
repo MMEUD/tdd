@@ -52,7 +52,7 @@ public class Inventory {
 				if (items[i].qualityIsSmallerThan50()) {
 					items[i].increaseQuality();
 
-					if (items[i].diffrentFromString(BACKSTAGE_PASSES_TO_A_TAFKAL80ETC_CONCERT)) {
+					if (!items[i].diffrentFromString(BACKSTAGE_PASSES_TO_A_TAFKAL80ETC_CONCERT)) {
 						if (items[i].getSellIn() < 11) {
 							if (items[i].qualityIsSmallerThan50()) {
 								items[i].increaseQuality();
