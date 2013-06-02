@@ -11,6 +11,7 @@ import java.util.Arrays;
  */
 public class Inventory {
 
+	private static final int _ZERO = 0;
 	private static final String _5_DEXTERITY_VEST = "+5 Dexterity Vest";
 	private static final String CONJURED_MANA_CAKE = "Conjured Mana Cake";
 	private static final String SULFURAS_HAND_OF_RAGNAROS = "Sulfuras, Hand of Ragnaros";
@@ -44,15 +45,14 @@ public class Inventory {
 					new Item(BACKSTAGE_PASSES_TO_A_TAFKAL80ETC_CONCERT, 15, 20),
 					new Item(CONJURED_MANA_CAKE, 3, 6) 
 				};
-
 	}
-
+	
 	public void updateQuality() {
 		for (int i = 0; i < items.length; i++) {
-			if (items[i].getName() != AGED_BRIE
-					&& items[i].getName() != BACKSTAGE_PASSES_TO_A_TAFKAL80ETC_CONCERT) {
+			if (itemsNameIsDifferentFrom(i, AGED_BRIE)
+					&& itemsNameIsDifferentFrom(i, BACKSTAGE_PASSES_TO_A_TAFKAL80ETC_CONCERT)) {
 				if (items[i].getQuality() > 0) {
-					if (items[i].getName() != SULFURAS_HAND_OF_RAGNAROS) {
+					if (itemsNameIsDifferentFrom(i, SULFURAS_HAND_OF_RAGNAROS)) {
 						decreaseQuality(i);
 					}
 				}
@@ -60,7 +60,7 @@ public class Inventory {
 				if (items[i].getQuality() < 50) {
 					increaseQuality(i);
 
-					if (items[i].getName() == BACKSTAGE_PASSES_TO_A_TAFKAL80ETC_CONCERT) {
+					if (!itemsNameIsDifferentFrom(i, BACKSTAGE_PASSES_TO_A_TAFKAL80ETC_CONCERT)) {
 						if (items[i].getSellIn() < 11) {
 							if (items[i].getQuality() < 50) {
 								increaseQuality(i);
@@ -76,21 +76,20 @@ public class Inventory {
 				}
 			}
 
-			if (items[i].getName() != SULFURAS_HAND_OF_RAGNAROS) {
+			if (itemsNameIsDifferentFrom(i, SULFURAS_HAND_OF_RAGNAROS)) {
 				decreaseSellIn(i);
 			}
 
 			if (items[i].getSellIn() < 0) {
-				if (items[i].getName() != AGED_BRIE) {
-					if (items[i].getName() != BACKSTAGE_PASSES_TO_A_TAFKAL80ETC_CONCERT) {
+				if (itemsNameIsDifferentFrom(i, AGED_BRIE)) {
+					if (itemsNameIsDifferentFrom(i, BACKSTAGE_PASSES_TO_A_TAFKAL80ETC_CONCERT)) {
 						if (items[i].getQuality() > 0) {
-							if (items[i].getName() != SULFURAS_HAND_OF_RAGNAROS) {
+							if (itemsNameIsDifferentFrom(i, SULFURAS_HAND_OF_RAGNAROS)) {
 								decreaseQuality(i);
 							}
 						}
 					} else {
-						items[i].setQuality(items[i].getQuality()
-								- items[i].getQuality());
+						items[i].setQuality(_ZERO);
 					}
 				} else {
 					if (items[i].getQuality() < 50) {
@@ -99,6 +98,11 @@ public class Inventory {
 				}
 			}
 		}
+	}
+
+
+	private boolean itemsNameIsDifferentFrom(int i, String string) {
+		return items[i].getName() != string;
 	}
 
 
