@@ -47,7 +47,7 @@ public class Inventory {
 				};
 	}
 	
-	public void updateQuality() {
+	public void updateQualityAndSellIn() {
 		for (int i = 0; i < items.length; i++) {
 			if (itemsNameIsDifferentFrom(i, AGED_BRIE)
 					&& itemsNameIsDifferentFrom(i, BACKSTAGE_PASSES_TO_A_TAFKAL80ETC_CONCERT)) {

@@ -17,7 +17,7 @@ public class ItemKataTwo {
 					"Backstage passes to a TAFKAL80ETC concert 1 21\n" +
 					"Conjured Mana Cake 1 5\n";
 		Inventory inventory = new Inventory();
-        inventory.updateQuality();
+        inventory.updateQualityAndSellIn();
 		assertEquals(output, inventory.toString());
 	}
 
