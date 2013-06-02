@@ -14,7 +14,8 @@ import com.xuggle.xuggler.IAudioSamples;
 public class AudioCapture extends BasicProcess {
 
     // linear PCM 48kHz, 16 bits signed, mono-channel, little endian
-	private AudioFormat audioFormat = new AudioFormat(48000.0F, 16, 1, true, false);
+	private int sampleRate = 48000;
+	private AudioFormat audioFormat = new AudioFormat(sampleRate, 16, 1, true, false);
 	private DataLine.Info targetInfo = null;
 	private TargetDataLine targetDataLine;
 	
@@ -23,7 +24,7 @@ public class AudioCapture extends BasicProcess {
 		try {
 			targetInfo = new DataLine.Info(TargetDataLine.class, audioFormat);
             targetDataLine = (TargetDataLine) AudioSystem.getLine(targetInfo);
-            targetDataLine.open(audioFormat);
+            targetDataLine.open(audioFormat, 12000);
             targetDataLine.start();
         } catch (LineUnavailableException e) {
             logger.error("microphone unavailable");
@@ -41,10 +42,9 @@ public class AudioCapture extends BasicProcess {
 
 	public IFrame execute(IFrame frame) {
 		if (targetDataLine != null) {
-	        int available = targetDataLine.available();
-	        if (available > 0) {
-	        	byte[] buffer = new byte[(int)audioFormat.getSampleRate()];
-	        	int numBytesToRead = targetDataLine.read(buffer, 0, buffer.length);
+	        if (targetDataLine.available() > 0) {
+	        	byte[] buffer = new byte[12000];
+	        	int numBytesToRead = targetDataLine.read(buffer, 0, buffer.length);	        	
 	        	IBuffer iBuf = IBuffer.make(null, buffer, 0, numBytesToRead);
 	        	IAudioSamples audioSamples = IAudioSamples.make(iBuf,audioFormat.getChannels(),IAudioSamples.Format.FMT_S16);
 	        	long numSample = numBytesToRead / audioSamples.getSampleSize();

@@ -87,7 +87,7 @@ public class VideoCapture extends BasicProcess {
 			if (data != null) {
 				IVideoPicture picture = IVideoPicture.make(IPixelFormat.Type.RGB24, width, height);
 				picture.put(data.getBytes(width * height * 3), 0, 0, width * height * 3);
-				picture.setComplete(true, picture.getPixelType(), width, height, System.currentTimeMillis());
+				picture.setComplete(true, picture.getPixelType(), width, height, System.nanoTime()/1000);
 				frame.setVideoPicture(picture);
 			}
 		} catch (Exception e) {

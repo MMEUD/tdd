@@ -16,7 +16,7 @@ public abstract class BasicProcess extends Thread implements  IProcess, IServer 
 
 	private ConcurrentHashMap<String, IProcess> inputs  = new ConcurrentHashMap<String, IProcess>();
 	private ConcurrentHashMap<String, IProcess> outputs  = new ConcurrentHashMap<String, IProcess>();
-	private LinkedBlockingQueue<IFrame> queue = new LinkedBlockingQueue<IFrame>();
+	protected LinkedBlockingQueue<IFrame> queue = new LinkedBlockingQueue<IFrame>();
 	private IFrame currentFrame = null;
 
 	public String getProcessName() {

@@ -13,7 +13,8 @@ import com.xuggle.xuggler.IAudioSamples;
 public class AudioPlay extends BasicProcess {
 
     // linear PCM 48kHz, 16 bits signed, mono-channel, little endian
-	private AudioFormat audioFormat = new AudioFormat(48000.0F, 16, 1, true, false);
+	private int sampleRate = 48000;
+	private AudioFormat audioFormat = new AudioFormat(sampleRate, 16, 1, true, false);
 	private DataLine.Info sourceInfo = null;
 	private SourceDataLine sourceDataLine;
 
@@ -44,7 +45,7 @@ public class AudioPlay extends BasicProcess {
 		if (sourceDataLine != null) {
 			IAudioSamples audioSamples = frame.getAudioSamples();
 			if (audioSamples != null) {
-				byte[] buffer = audioSamples.getData().getByteArray(0, audioSamples.getSize());
+				byte[] buffer = audioSamples.getData().getByteArray(0, audioSamples.getSize());	
 				sourceDataLine.write(buffer, 0, audioSamples.getSize());
 			}
 		}

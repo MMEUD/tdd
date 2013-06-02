@@ -14,11 +14,13 @@ import javax.swing.JPanel;
 import com.iolma.studio.gui.VideoPanel;
 import com.iolma.studio.log.ConsoleLogger;
 import com.iolma.studio.log.ILogger;
+import com.iolma.studio.process.BasicProcess;
 import com.iolma.studio.process.FrameGenerator;
 import com.iolma.studio.process.StatisticsGenerator;
 import com.iolma.studio.process.capture.AudioCapture;
 import com.iolma.studio.process.capture.VideoCapture;
 import com.iolma.studio.process.play.AudioPlay;
+import com.iolma.studio.process.record.MP4Recorder;
 
 public class H264Recorder<IProcess> extends JFrame {
 
@@ -26,24 +28,24 @@ public class H264Recorder<IProcess> extends JFrame {
 
 	public H264Recorder() {
 		
-		// Create IProcess container
-		final HashMap<String, StatisticsGenerator> statisticsGenerators = new HashMap<String, StatisticsGenerator>();		
+		// Create Container
+		final HashMap<String, BasicProcess> processContainer = new HashMap<String, BasicProcess>(); 
 		
 		// Create logger
-		final ILogger logger = new ConsoleLogger();
+		ILogger logger = new ConsoleLogger();
 				
 		// Create video generator
-		final FrameGenerator videoGenerator = new FrameGenerator(25, logger);
+		FrameGenerator videoGenerator = new FrameGenerator(30, logger);
 		videoGenerator.setProcessName("videoGenerator");
 		videoGenerator.startup();
 
 		// Create audio generator
-		final FrameGenerator audioGenerator = new FrameGenerator(2, logger);
+		FrameGenerator audioGenerator = new FrameGenerator(25, logger);
 		audioGenerator.setProcessName("audioGenerator");
 		audioGenerator.startup();
 
 		// Create video capture
-		VideoCapture videoCapture = new VideoCapture(640, 480, 25);
+		final VideoCapture videoCapture = new VideoCapture(640, 480, 25);
 		videoCapture.setDevice("0");
 		videoCapture.addInput(videoGenerator);
 		videoCapture.startup();
@@ -63,18 +65,22 @@ public class H264Recorder<IProcess> extends JFrame {
 		audioPlay.addInput(audioCapture);
 		audioPlay.startup();
 
+		StatisticsGenerator statistics = new StatisticsGenerator(1, logger);
+		statistics.addInput(audioCapture);
+		statistics.addInput(audioPlay);
+		statistics.startup();
 		
 		JButton btnRecord = new JButton("Record");
 		JButton btnStop = new JButton("Stop");
 		
 		btnRecord.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (statisticsGenerators.size() == 0) {
-					StatisticsGenerator statistics = new StatisticsGenerator(1, logger);
-					statistics.addInput(audioCapture);
-					statistics.addInput(audioPlay);
-					statistics.startup();
-					statisticsGenerators.put("StatisticsGenerator", statistics);
+				if (!processContainer.containsKey("recorder")) {
+					MP4Recorder recorder = new MP4Recorder("output.mp4", 640, 480);
+					recorder.addInput(audioCapture);
+					recorder.addInput(videoCapture);
+					recorder.startup();
+					processContainer.put("recorder", (BasicProcess)recorder);
 				}
 			}
 			
@@ -82,9 +88,10 @@ public class H264Recorder<IProcess> extends JFrame {
 
 		btnStop.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (statisticsGenerators.size() == 1) {
-					statisticsGenerators.get("StatisticsGenerator").shutdown();
-					statisticsGenerators.remove("StatisticsGenerator");
+				if (processContainer.containsKey("recorder")) {
+					BasicProcess recorder = processContainer.get("recorder");
+					recorder.shutdown();
+					processContainer.remove("recorder");
 				}
 			}
 			

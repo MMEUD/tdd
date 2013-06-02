@@ -72,7 +72,10 @@ class IncomingSoundListener implements Runnable {
                 ByteArrayInputStream bais = new ByteArrayInputStream(data);
                 AudioInputStream ais = new AudioInputStream(bais,format,data.length);
                 int numBytesRead = 0;
-                if ((numBytesRead = ais.read(data)) != -1) speaker.write(data, 0, numBytesRead);
+                if ((numBytesRead = ais.read(data)) != -1) {
+                    System.out.println(numBytesRead);
+                	speaker.write(data, 0, numBytesRead);
+                }
                 ais.close();
                 bais.close();
             }
