@@ -13,6 +13,6 @@ public class Initiate {
 
     public static void main(String[] args){
         BigBang bigBang = new BigBang();
-        bigBang.ignite();
+        System.out.println(bigBang.ignite());
     }
 }
