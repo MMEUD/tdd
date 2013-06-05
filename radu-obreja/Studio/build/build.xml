@@ -2,7 +2,7 @@
 <project name="videocall" default="help" basedir="./">
 
   <property environment="env"/>
-	<property name="build.compiler" value="modern"/>
+  <property name="build.compiler" value="modern"/>
 	
   <property name="bin.videocall" value="bin/videocall"/>
   <property name="src.videocall" value="../videocall/src"/>
@@ -74,6 +74,7 @@
       </fileset>
     </copy>
 
+		<delete dir="${temp_build.dir}"/>
 	</target>
 
 	<target name="make-registrar">
@@ -110,6 +111,7 @@
 
     <war destfile="${bin.registrar}/registrar.war" basedir="${temp_build.dir}/webapp" needxmlfile="false" />  
 
+		<delete dir="${temp_build.dir}"/>
 	</target>
 
 
