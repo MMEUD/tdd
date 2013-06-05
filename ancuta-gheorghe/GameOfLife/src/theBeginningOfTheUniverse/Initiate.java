@@ -1,4 +1,4 @@
-package TheBeginingOfTheUniverse;
+package theBeginningOfTheUniverse;
 
 import universe.BigBang;
 

@@ -1,6 +1,5 @@
 package universe.laws.commandPattern;
 
-import universe.CellWorld;
 
 /**
  * Created with IntelliJ IDEA.

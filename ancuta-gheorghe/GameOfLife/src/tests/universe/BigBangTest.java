@@ -1,11 +1,10 @@
 /**
  * 
  */
-package tests.TheBeginningOfTheUniverse;
+package tests.universe;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import universe.BigBang;
@@ -14,10 +13,10 @@ import universe.BigBang;
  * @author ancuta
  *
  */
-public class InitiateTest {
+public class BigBangTest {
 
-	@Test
-	public void test() {
+	@Test public void 
+	test_ignite_output() {
 		String output = "true true true true \n" + 
 				"---\n" +
 				"false true false true \n" + 
