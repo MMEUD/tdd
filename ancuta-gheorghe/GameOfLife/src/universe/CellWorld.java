@@ -95,14 +95,14 @@ public class CellWorld extends Cell{
 
 	private void calculateNumberOfNeighbors() {
 		resetNumberOfNeighbors();
-        if (neignborIsAlive(getN())) incrementNumberOfNeighbors();
-        if (neignborIsAlive(getNe())) incrementNumberOfNeighbors();
-        if (neignborIsAlive(getE())) incrementNumberOfNeighbors();
-        if (neignborIsAlive(getSe())) incrementNumberOfNeighbors();
-        if (neignborIsAlive(getS())) incrementNumberOfNeighbors();
-        if (neignborIsAlive(getSv())) incrementNumberOfNeighbors();
-        if (neignborIsAlive(getV())) incrementNumberOfNeighbors();
-        if (neignborIsAlive(getNv())) incrementNumberOfNeighbors();
+        if (neighborIsAlive(getN())) incrementNumberOfNeighbors();
+        if (neighborIsAlive(getNe())) incrementNumberOfNeighbors();
+        if (neighborIsAlive(getE())) incrementNumberOfNeighbors();
+        if (neighborIsAlive(getSe())) incrementNumberOfNeighbors();
+        if (neighborIsAlive(getS())) incrementNumberOfNeighbors();
+        if (neighborIsAlive(getSv())) incrementNumberOfNeighbors();
+        if (neighborIsAlive(getV())) incrementNumberOfNeighbors();
+        if (neighborIsAlive(getNv())) incrementNumberOfNeighbors();
 	}
 
 	private void resetNumberOfNeighbors() {
@@ -113,7 +113,7 @@ public class CellWorld extends Cell{
 		return numberOfNeighbors++;
 	}
 
-	private boolean neignborIsAlive(Cell cell) {
+	private boolean neighborIsAlive(Cell cell) {
 		return cell != null && cell.isAlive();
 	}
 }
