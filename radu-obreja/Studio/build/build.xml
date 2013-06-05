@@ -131,7 +131,11 @@
 
 	<target name="deploy-videocall" depends="make-videocall" >
 		
-		<scp trust="true" file="${bin.dir}/${project.name}.jar" todir="${host.ssh.user}@${host.ssh.host}:${project.client}" password="${host.ssh.password}" failonerror="false" />
+		<scp trust="true" todir="${host.ssh.user}@${host.ssh.host}:${host.ssh.destination}" password="${host.ssh.password}" failonerror="false" >
+			<fileset dir="${bin.videocall}">
+				<include name="**/*.jar"/>
+			</fileset>
+		</scp>
 
   </target>
 		
