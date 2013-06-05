@@ -1,6 +1,5 @@
 package universe;
 
-import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,6 +18,7 @@ public class CellWorld extends Cell{
     private Cell sv;
     private Cell v;
     private Cell nv;
+	private int numberOfNeighbors;
 
     public CellWorld(int id) {
         super(id);
@@ -89,15 +89,31 @@ public class CellWorld extends Cell{
     }
 
     public int getNumberOfNeighbors(){
-        int numberOfNeighbors = 0;
-        if (this.getN() != null && this.getN().isAlive()) numberOfNeighbors++;
-        if (this.getNe() != null && this.getNe().isAlive()) numberOfNeighbors++;
-        if (this.getE() != null && this.getE().isAlive()) numberOfNeighbors++;
-        if (this.getSe() != null && this.getSe().isAlive()) numberOfNeighbors++;
-        if (this.getS() != null && this.getS().isAlive()) numberOfNeighbors++;
-        if (this.getSv() != null && this.getSv().isAlive()) numberOfNeighbors++;
-        if (this.getV() != null && this.getV().isAlive()) numberOfNeighbors++;
-        if (this.getNv() != null && this.getNv().isAlive()) numberOfNeighbors++;
+        calculateNumberOfNeighbors();
         return numberOfNeighbors;
     }
+
+	private void calculateNumberOfNeighbors() {
+		resetNumberOfNeighbors();
+        if (neignborIsAlive(getN())) incrementNumberOfNeighbors();
+        if (neignborIsAlive(getNe())) incrementNumberOfNeighbors();
+        if (neignborIsAlive(getE())) incrementNumberOfNeighbors();
+        if (neignborIsAlive(getSe())) incrementNumberOfNeighbors();
+        if (neignborIsAlive(getS())) incrementNumberOfNeighbors();
+        if (neignborIsAlive(getSv())) incrementNumberOfNeighbors();
+        if (neignborIsAlive(getV())) incrementNumberOfNeighbors();
+        if (neignborIsAlive(getNv())) incrementNumberOfNeighbors();
+	}
+
+	private void resetNumberOfNeighbors() {
+		numberOfNeighbors = 0;
+	}
+
+	private int incrementNumberOfNeighbors() {
+		return numberOfNeighbors++;
+	}
+
+	private boolean neignborIsAlive(Cell cell) {
+		return cell != null && cell.isAlive();
+	}
 }
