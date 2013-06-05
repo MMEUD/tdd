@@ -56,6 +56,12 @@
 			<classpath refid="class.path.videocall"/>
 		</javac>
 
+		<copy todir="${temp_build.dir}">
+			<fileset dir="${src.videocall}" casesensitive="no">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+
 		<jar destfile="${bin.videocall}/videocall.jar" >
 			<fileset dir="${temp_build.dir}" casesensitive="no">
 				<include name="**/**" />
