@@ -23,5 +23,10 @@ public class LaunchCalculatorTest {
 		Calculator calculator = new Calculator();
 		assertEquals(2, calculator.add("1,1"));
 	}
-		
+	
+	@Test public void 
+	test_add_result_for_seven_numbers_string() {
+		Calculator calculator = new Calculator();
+		assertEquals(7, calculator.add("1,1,1,1,1,1,1"));
+	}
 }
