@@ -13,7 +13,7 @@ public class Calculator {
 		String[] numbers = string.split(",");
 		int result = 0;
 		for (String number: numbers){
-			result += Integer.parseInt(number);
+			result += Integer.parseInt((number!=null&&!"".equals(number))?number:"0");
 		}
 		return result;
 	}
