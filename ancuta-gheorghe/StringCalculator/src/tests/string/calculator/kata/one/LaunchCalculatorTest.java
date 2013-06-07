@@ -29,4 +29,10 @@ public class LaunchCalculatorTest {
 		Calculator calculator = new Calculator();
 		assertEquals(7, calculator.add("1,1,1,1,1,1,1"));
 	}
+	
+	@Test public void 
+	test_add_result_for_two_different_delimiters() {
+		Calculator calculator = new Calculator();
+		assertEquals(7, calculator.add("1,1\n1,1\n1,1,1"));
+	}
 }
