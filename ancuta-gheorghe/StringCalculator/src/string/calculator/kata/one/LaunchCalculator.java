@@ -9,6 +9,6 @@ public class LaunchCalculator {
 		Calculator calculator = new Calculator();
 		System.out.println(calculator.add(""));
 		System.out.println(calculator.add("1"));
-		System.out.println(calculator.add("1,1\n1"));
+		System.out.println(calculator.add("1\n1\n1"));
 	}
 }

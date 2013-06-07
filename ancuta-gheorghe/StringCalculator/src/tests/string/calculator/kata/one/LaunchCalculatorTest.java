@@ -21,18 +21,12 @@ public class LaunchCalculatorTest {
 	@Test public void 
 	test_add_result_for_two_numbers_string() {
 		Calculator calculator = new Calculator();
-		assertEquals(2, calculator.add("1,1"));
+		assertEquals(2, calculator.add("1\n1"));
 	}
 	
 	@Test public void 
 	test_add_result_for_seven_numbers_string() {
 		Calculator calculator = new Calculator();
-		assertEquals(7, calculator.add("1,1,1,1,1,1,1"));
-	}
-	
-	@Test public void 
-	test_add_result_for_two_different_delimiters() {
-		Calculator calculator = new Calculator();
-		assertEquals(7, calculator.add("1,1\n1,1\n1,1,1"));
+		assertEquals(7, calculator.add("1\n1\n1\n1\n1\n1\n1"));
 	}
 }
