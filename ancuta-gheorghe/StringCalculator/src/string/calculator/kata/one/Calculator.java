@@ -9,6 +9,8 @@ package string.calculator.kata.one;
  */
 public class Calculator {
 
+	private static final int MIN_VALUE = 0;
+	private static final int MAX_VALUE = 1000;
 	private static final int SECOND_POSITION_IN_INPUT = 1;
 	private static final int FIRST_POSITION_IN_INPUT = 0;
 	private static final String DEFAULT_VALUE_FOR_EMTPY_INPUT = "0";
@@ -27,8 +29,11 @@ public class Calculator {
 		String negativeNumbers = "";
 		for (String number: numbers){
 			number = (number!=null&&!"".equals(number))?number:DEFAULT_VALUE_FOR_EMTPY_INPUT;
-			sum += Integer.parseInt(number);
-			if (Integer.parseInt(number) < 0) {
+			if (Integer.parseInt(number) <= MAX_VALUE) {
+				sum += Integer.parseInt(number);
+			}
+			
+			if (Integer.parseInt(number) < MIN_VALUE) {
 				negativeNumbers += " " + number;
 			}
 		}

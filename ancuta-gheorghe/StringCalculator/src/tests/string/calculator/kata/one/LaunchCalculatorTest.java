@@ -5,7 +5,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import string.calculator.kata.one.Calculator;
-import string.calculator.kata.one.NegativeNumberException;
 
 public class LaunchCalculatorTest {
 
@@ -45,4 +44,11 @@ public class LaunchCalculatorTest {
 	//	Calculator calculator = new Calculator();
 	//	assertEquals(NegativeNumberException.showMessage(" -1"), calculator.add(";\n1;-1"));
 	//}
+	
+	@Test public void 
+	test_add_result_for_numbers_greater_than_1000_numbers() throws Throwable {
+		Calculator calculator = new Calculator();
+		assertEquals(3, calculator.add(":\n1:1:1:1001"));
+		assertEquals(1003, calculator.add(":\n1:1:1:1000"));
+	}
 }
