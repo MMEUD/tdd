@@ -8,6 +8,7 @@ import string.calculator.kata.one.Calculator;
 
 public class LaunchCalculatorTest {
 
+	/*
 	@Test public void 
 	test_add_result_for_empty_string() throws Throwable {
 		Calculator calculator = new Calculator();
@@ -51,4 +52,13 @@ public class LaunchCalculatorTest {
 		assertEquals(3, calculator.add(":\n1:1:1:1001"));
 		assertEquals(1003, calculator.add(":\n1:1:1:1000"));
 	}
+	*/
+	
+	@Test public void 
+	test_add_result_for_numbers_greater_than_1000_numbers() throws Throwable {
+		Calculator calculator = new Calculator();
+		assertEquals(3, calculator.add("//[***]\n1***2***1001"));
+		assertEquals(1003, calculator.add("//[***]\n1***2***1000"));
+	}
+	
 }
