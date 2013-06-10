@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sip-app>
+	<app-name>RegistrarSipServlet</app-name>
+	<display-name>Registrar Sip Servlet</display-name>
+	<description>Registrar Sip Servlet</description>
+	
+	<servlet-selection>
+		<main-servlet>
+			RegistrarSipServlet
+		</main-servlet>
+	</servlet-selection>
+
+	<servlet>
+		<servlet-name>RegistrarSipServlet</servlet-name>
+		<display-name>RegistrarSipServlet</display-name>
+		<description>Registrar SIP servlet</description>
+		<servlet-class>
+			com.iolma.sip.RegistrarSipServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+    <listener>
+		<listener-class>
+			com.iolma.sip.RegistrarSipServlet
+		</listener-class>
+	</listener>
+</sip-app>
