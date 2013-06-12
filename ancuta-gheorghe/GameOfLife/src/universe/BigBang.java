@@ -43,13 +43,15 @@ public class BigBang {
         universe.addCellWorld(cw4);
     }
 
-    public void ignite(){
+    public String ignite(){
 
+    	String output = "";
+    	
         for (CellWorld cellWorld: universe.getUniverse()){
-            System.out.print(cellWorld.isAlive() + " ");
+            output += cellWorld.isAlive() + " ";
         }
-        System.out.println();
-        System.out.println("---");
+        output += "\n";
+        output += "---\n";
         for (int i=0; i<3; i++){
             for (CellWorld cellWorld: universe.getUniverse()){
                 Agent agent = new Agent();
@@ -60,14 +62,15 @@ public class BigBang {
                     agent.addLaw(new DieByCrowdinessLaw(lifeCycle));
                 }
 
-                System.out.print(cellWorld.isAliveForSnapshot() + " ");
+                output += cellWorld.isAliveForSnapshot() + " ";
             }
-            System.out.println();
-            System.out.println("---");
+            output += "\n";
+            output += "---\n";
             for (CellWorld cellWorld: universe.getUniverse()){
                 cellWorld.setAlive(cellWorld.isAliveForSnapshot());
 
             }
         }
+		return output;
     }
 }

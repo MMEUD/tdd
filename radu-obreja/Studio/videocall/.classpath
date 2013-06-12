@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="tests"/>
+	<classpathentry kind="lib" path="lib/bridj-0.6.3-20130316.190111-13.jar"/>
+	<classpathentry kind="lib" path="lib/dx-1.7.jar"/>
+	<classpathentry kind="lib" path="lib/ice4j.jar"/>
+	<classpathentry kind="lib" path="lib/jain-sip-sdp-1.2.118.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.8.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="at.bestsolution.efxclipse.tooling.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="lib/xuggle-xuggler-arch-x86_64-w64-mingw32.jar"/>
+	<classpathentry kind="lib" path="lib/xuggle-xuggler-noarch-5.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

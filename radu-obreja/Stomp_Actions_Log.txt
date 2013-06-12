@@ -1,0 +1,43 @@
+------------------------
+WHAT IS STOMP ?
+------------------------
+Stomp is the main server to who any player is connected. At this moment there are 2500 players that can connect.
+Without Stomp the player can't update and can't interface with third party systems.
+
+------------------------
+WHY MAKE STOMP VERSION 2
+------------------------
+There are many problems with version 1, the production version:
+	- Stomp is using only 1 connection to the database and only one thread that is reading notifications from the database.
+	- Any database notification is treated one by one.
+	- Any command received from a player is putted in a queue and processed one by one.
+	
+This architecture, without a connection pool to the database, without priority queues for commands, without multithreading produces the following problems in production:
+	- Delay in notifying the jukebox (Timo)
+	- Delay in the communication between the server and the players which make the players react abnormaly without justifications
+	
+	PS: Those delays are very obvious, friday night when there is a pick in the numbers of running players
+	
+-------------------------
+NEW FEATURES IN VERSION 2
+-------------------------
+	- using a connection pool for database
+	- using multithreaded execution of the commands and notifications.
+	
+	PS: because the actual code is not properly conceived to be multithreaded, a major refactor needs to be done.
+	
+
+-------------------------
+ACTION LOG
+-------------------------
+
+28 may 2013
+	- create an initial design for a multithreaded application
+	- add read of the configuration
+
+	- add connection pool library
+	- add initialisation of pool and aquire a connection
+	- add a layer to perform operations to database
+	- add dao who returns busines objects
+	
+	- a lot more classes that maybe will be refactored in the future

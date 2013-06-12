@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+  <classpathentry kind="var" path="M2_REPO/org/hornetq/hornetq-core/2.1.2.Final/hornetq-core-2.1.2.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/hornetq/hornetq-logging/2.1.2.Final/hornetq-logging-2.1.2.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/netty/netty/3.2.2.Final/netty-3.2.2.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/jboss/jboss-common-client/3.2.3/jboss-common-client-3.2.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/mysql/mysql-connector-java/5.1.13/mysql-connector-java-5.1.13.jar"/>
+  <classpathentry kind="var" path="M2_REPO/c3p0/c3p0/0.9.1.2/c3p0-0.9.1.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/testng/testng/5.12.1/testng-5.12.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/3.8.1/junit-3.8.1.jar"/>
+</classpath>
