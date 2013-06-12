@@ -56,5 +56,6 @@ class CustomerTest extends PHPUnit_Framework_TestCase
       $this->object->addRental(new Rental(5, new Movie(0, "Gradina uitata")));
       $this->object->addRental(new Rental(14, new Movie(1, "Cu glasul timpului")));
       echo $this->object->statement();
+     // echo $this->object->htmlStatement();
     }
 }

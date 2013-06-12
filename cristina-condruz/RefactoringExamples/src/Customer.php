@@ -33,44 +33,55 @@ class Customer {
   /**
    * @return string
    */
-public function statement() {
-  $totalAmount = 0;
-  $frequentRenterPoints = 0;
-  $rentals = $this->_rentals;
-  $result = "Rental Record for " . $this->getName() . "\n";
-  //while (list($var, $val) = each($rentals)) {
-  $each = ""; //new Movie();
-  foreach ($rentals as $key => $val) {
-    $thisAmount = 0;
-    $each = $val;
-    //determine amounts for each line
-    switch ($each->getMovie()->getPriceCode()) {
-       case Movie::$REGULAR:
-         $thisAmount += 2;
-         if ($each->getDaysRented() > 2)
-            $thisAmount += ($each->getDaysRented() - 2) * 1.5;
-         break;
-       case  Movie::$NEW_RELEASE:
-         $thisAmount += $each->getDaysRented() * 3;
-         break;
-       case Movie::$CHILDREN:
-         $thisAmount += 1.5;
-         if ($each->getDaysRented() > 3)
-          $thisAmount += ($each->getDaysRented() - 3) * 1.5;
-         break;
-     }
-    // add frequent renter points
-    $frequentRenterPoints ++;
-    if (($each->getMovie()->getPriceCode() == Movie::$NEW_RELEASE) &&  $each->getDaysRented() > 1)
-      $frequentRenterPoints ++;
-    //show figures for this rental
-     $result .= "\t" . $each->getMovie()->getTitle(). "\t" . $thisAmount . "\n";
-     $totalAmount += $thisAmount;
+  public function statement() {
+    $rentals = $this->_rentals;
+    $result = "Rental Record for " . $this->getName() . "\n";
+    foreach ($rentals as $key => $each) {
+      //show figures for this rental
+      $result .= "\t" . $each->getMovie()->getTitle(). "\t" . ($each->getCharge()) . "\n";
+    }
+     //add footer lines
+    $result .= "Amount owed is " . $this->getTotalCharge() .  "\n";
+    $result .= "You earned " . $this->getTotalFrequentRenterPoints() . " frequent renter points";
+    return $result;
   }
-   //add footer lines
-  $result .= "Amount owed is " . $totalAmount .  "\n";
-  $result .= "You earned " . $frequentRenterPoints . " frequent renter points";
-  return $result;
-}
+
+  /**
+     * @return string
+     */
+    public function htmlStatement() {
+      $rentals = $this->_rentals;
+      $result = "<H1>Rentals for <EM>" . $this->getName() . "</EM></H1><P>\n";
+      foreach ($rentals as $key => $each) {
+        //show figures for this rental
+        $result .= "\t" . $each->getMovie()->getTitle(). "\t" . ($each->getCharge()) . "<BR>\n";
+      }
+       //add footer lines
+      $result .= "<P>You owe <EM>" . $this->getTotalCharge() .  "</EM><P>\n";
+      $result .= "On this rental you earned <EM>" . $this->getTotalFrequentRenterPoints() . "</EM> frequent renter points<P>";
+      return $result;
+    }
+
+  /**
+   * @return int
+   */
+  private function getTotalCharge(){
+    $totalAmount = 0;
+    foreach ($this->_rentals as $key => $each) {
+      $totalAmount += $each->getCharge();
+    }
+    return $totalAmount;
+  }
+
+  /**
+   * @return int
+   */
+  private function getTotalFrequentRenterPoints(){
+    $frequentRenterPoints = 0;
+    foreach ($this->_rentals as $key => $each) {
+      $frequentRenterPoints += $each->getFrequentRenterPoints();
+    }
+    return $frequentRenterPoints;
+  }
 
 }

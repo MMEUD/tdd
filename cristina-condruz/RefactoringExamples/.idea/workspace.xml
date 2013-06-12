@@ -23,7 +23,7 @@
       <file leaf-file-name="Movie.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Movie.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="30" selection-start="462" selection-end="474" vertical-scroll-proportion="-8.038462">
+            <state line="67" column="46" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -32,16 +32,7 @@
       <file leaf-file-name="Rental.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Rental.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="30" selection-start="465" selection-end="465" vertical-scroll-proportion="-12.423077">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerTest.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/CustomerTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="5" selection-start="1065" selection-end="1065" vertical-scroll-proportion="-9.346154">
+            <state line="29" column="34" selection-start="573" selection-end="596" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -50,25 +41,16 @@
       <file leaf-file-name="Customer.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Customer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="19" selection-start="1788" selection-end="1788" vertical-scroll-proportion="0.7508834">
+            <state line="44" column="66" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.85658914">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RentalTest.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/RentalTest.php">
+      <file leaf-file-name="CustomerTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/CustomerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="92" selection-start="1029" selection-end="1115" vertical-scroll-proportion="-15.884615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovieTest.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/MovieTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="7" selection-start="1499" selection-end="1499" vertical-scroll-proportion="-39.423077">
+            <state line="58" column="7" selection-start="1553" selection-end="1553" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -87,10 +69,11 @@
         <option value="$PROJECT_DIR$/Movie.php" />
         <option value="$PROJECT_DIR$/Rental.php" />
         <option value="$PROJECT_DIR$/Customer.php" />
-        <option value="$PROJECT_DIR$/src/Rental.php" />
         <option value="$PROJECT_DIR$/tests/MovieTest.php" />
         <option value="$PROJECT_DIR$/tests/RentalTest.php" />
         <option value="$PROJECT_DIR$/tests/CustomerTest.php" />
+        <option value="$PROJECT_DIR$/src/Movie.php" />
+        <option value="$PROJECT_DIR$/src/Rental.php" />
         <option value="$PROJECT_DIR$/src/Customer.php" />
       </list>
     </option>
@@ -133,6 +116,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -171,7 +155,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -179,7 +162,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="reference.webide.settings.project.settings.php.phpunit.skeletonGenerator" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
@@ -204,7 +187,9 @@
     <configuration default="false" name="CustomerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="CustomerTest" file="$PROJECT_DIR$/tests/CustomerTest.php" scope="Class" />
       <RunnerSettings RunnerId="PhpRunner" />
+      <RunnerSettings RunnerId="PhpUnitDebugRunner" />
       <ConfigurationWrapper RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpUnitDebugRunner" />
       <method />
     </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -261,18 +246,18 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25506938" sideWeight="0.67065215" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26040554" sideWeight="0.61630434" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38369566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -331,6 +316,27 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Customer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="31" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/RentalTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="92" selection-start="1029" selection-end="1115" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/MovieTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="7" selection-start="1499" selection-end="1499" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Movie.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="30" selection-start="462" selection-end="474" vertical-scroll-proportion="0.0">
@@ -382,42 +388,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/MovieTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="7" selection-start="1499" selection-end="1499" vertical-scroll-proportion="-39.423077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Rental.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="30" selection-start="465" selection-end="465" vertical-scroll-proportion="-12.423077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Movie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="30" selection-start="462" selection-end="474" vertical-scroll-proportion="-8.038462">
+        <state line="63" column="7" selection-start="1499" selection-end="1499" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/RentalTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="92" selection-start="1029" selection-end="1115" vertical-scroll-proportion="-15.884615">
+        <state line="43" column="92" selection-start="1029" selection-end="1115" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Movie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="46" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Rental.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="34" selection-start="573" selection-end="596" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/CustomerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="5" selection-start="1065" selection-end="1065" vertical-scroll-proportion="-9.346154">
+        <state line="58" column="7" selection-start="1553" selection-end="1553" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Customer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="19" selection-start="1788" selection-end="1788" vertical-scroll-proportion="0.7508834">
+        <state line="44" column="66" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.85658914">
           <folding />
         </state>
       </provider>
