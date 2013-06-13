@@ -1,0 +1,33 @@
+﻿<navigation:Page x:Class="MoodWeather.Views.Admin.IndexAdmin"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 mc:Ignorable="d"
+                 xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+                 d:DesignWidth="1275" d:DesignHeight="612"
+                 Title="IndexAdmin Page" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+                 xmlns:my="clr-namespace:MoodWeather.Views.Controls"
+                 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+    <Grid x:Name="LayoutRoot">
+
+      
+
+        <sdk:TabControl Height="614" HorizontalAlignment="Left" Margin="0,0,0,0" Name="AdminTab"
+                        VerticalAlignment="Top" Width="1275">
+            <sdk:TabItem Header="UserManagement" Name="UserTab">
+                <Grid>
+                    <my:UserManagementControl HorizontalAlignment="Left" Margin="6,6,0,0"
+                                              x:Name="userManagementControl1" VerticalAlignment="Top" Width="1251" />
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="ApiManagement" Name="ApiTab">
+                <Grid>
+                    <my:ApiKeyManagement>
+                        
+                    </my:ApiKeyManagement>
+                </Grid>
+            </sdk:TabItem>
+        </sdk:TabControl>
+    </Grid>
+</navigation:Page>

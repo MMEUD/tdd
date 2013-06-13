@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>PETER-PC</Machine>
+    <WindowsUser>peter</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="G:\Solaris\MoodCamera\MoodCamera\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\bin\Debug\MoodCamera.exe">
+      <PackagePath>MoodCamera.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\bin\Debug\MoodCamera.pdb">
+      <PackagePath>MoodCamera.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\Assets\makeUp.png">
+      <PackagePath>Assets\makeUp.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\Assets\picture02.jpg">
+      <PackagePath>Assets\picture02.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\Assets\picture03.jpg">
+      <PackagePath>Assets\picture03.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\Assets\shareFacebookSmall.jpg">
+      <PackagePath>Assets\shareFacebookSmall.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\bin\Debug\CameraPage.xaml">
+      <PackagePath>CameraPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\bin\Debug\SharePage.xaml">
+      <PackagePath>SharePage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="G:\Solaris\MoodCamera\MoodCamera\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

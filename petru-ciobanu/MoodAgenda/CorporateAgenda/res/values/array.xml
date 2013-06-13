@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<resources>
+
+    <string-array name="Title">
+        <item>TitleEvents</item>
+        <item>Date</item>
+    </string-array>
+    <string-array name="Priorite">
+        <item>Urgente</item>
+        <item>Importante événements</item>
+        <item>Pour information</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CityListModelStoreContainer" CdmEntityContainer="CityListEntities">
+    <EntitySetMapping Name="CityLists">
+      <EntityTypeMapping TypeName="CityListModel.CityList">
+        <MappingFragment StoreEntitySet="CityList">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_CityList_GetAllCity" FunctionName="CityListModel.Store.sp_CityList_GetAllCity" />
+    <FunctionImportMapping FunctionImportName="sp_CityList_DeleteCity" FunctionName="CityListModel.Store.sp_CityList_DeleteCity" />
+    <FunctionImportMapping FunctionImportName="sp_CityList_GetCityByName" FunctionName="CityListModel.Store.sp_CityList_GetCityByName" />
+    <FunctionImportMapping FunctionImportName="sp_CityList_InsertCity" FunctionName="CityListModel.Store.sp_CityList_InsertCity" />
+    <FunctionImportMapping FunctionImportName="insertCity" FunctionName="CityListModel.Store.sp_CityList_InsertCity" />
+  </EntityContainerMapping>
+</Mapping>

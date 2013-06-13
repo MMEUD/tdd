@@ -1,0 +1,3 @@
+D:\MoodWeatherFinal\MoodWeather01
+Generated_Code\MoodWeather.Web.g.cs
+Generated_Code\Models\Shared\User.shared.cs
