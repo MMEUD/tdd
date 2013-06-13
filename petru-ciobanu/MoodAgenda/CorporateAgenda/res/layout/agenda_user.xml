@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/datesStartLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_brown"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_green_gradient"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:text="@string/title"
+            android:textAppearance="@style/CustomFontMediumLabel"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/header_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/empty"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_top_applogo" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btnToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
+        android:onClick="btnTodayClick"
+        android:src="@drawable/btn_today_selector" />
+
+    <ImageButton
+        android:id="@+id/bntSearchEvents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/btnAllEvents"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/btn_search_selector" />
+
+    <ImageButton
+        android:id="@+id/btnAllEvents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/btn_all_selector" />
+
+    <ImageButton
+        android:id="@+id/btnNewEvents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/btnToday"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:onClick="newEvents"
+        android:src="@drawable/btn_add_selector" />
+
+</RelativeLayout>
