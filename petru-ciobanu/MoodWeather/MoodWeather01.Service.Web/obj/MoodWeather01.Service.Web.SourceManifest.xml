@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="E:\MoodWeatherFinal\MoodWeather01.Service.Web\obj\Release\Package\PackageTmp" managedRuntimeVersion="v4.0" />
+  <setAcl path="E:\MoodWeatherFinal\MoodWeather01.Service.Web\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="E:\MoodWeatherFinal\MoodWeather01.Service.Web\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <setAcl path="E:\MoodWeatherFinal\MoodWeather01.Service.Web\obj\Release\Package\PackageTmp\App_Data" setAclResourceType="Directory" setAclAccess="Write" />
+</sitemanifest>
