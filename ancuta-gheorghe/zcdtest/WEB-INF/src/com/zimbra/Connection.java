@@ -21,7 +21,7 @@ public class Connection {
 	private static final String EMAIL = "frfsamb@lost.moodmedia.ro";
 	private static final String CREDENTIALS_SEPARATOR = ":";
 	private static final String HOST = "http://lost.moodmedia.ro:6080/home/";
-	private static final String INBOX = "/inbox.rss";
+	private static final String INBOX = "/inbox.xml";
 	
 	public static String getEncodedCredentials() {
 		String encoding = Base64.encodeBase64String((USERNAME + "" + CREDENTIALS_SEPARATOR + "" + PASSWORD).getBytes());

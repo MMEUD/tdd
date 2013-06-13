@@ -40,10 +40,11 @@ public class Content {
 			out.println("<body>");
 			out.println("Subject: " + contentForResponse + "<br>");
 			for (HashMap<String, String> mail: mails){
-				out.println("Subject: " + mail.get("title") + "<br>");
-				out.println("Content: " + mail.get("description") + "<br>");
-				out.println("Author: " + mail.get("author") + "<br>");
-				out.println("Date: " + mail.get("pubDate") + "<br>");
+				out.println("Subject: " + mail.get("su") + "<br>");
+				out.println("Content: " + mail.get("fr") + "<br>");
+				out.println("Author: " + mail.get("a") + "<br>");
+				out.println("Read: " + mail.get("f") + "<br>");
+				out.println("Date: " + mail.get("d") + "<br>");
 				out.println("<br>");
 			}
 			out.println(contentForResponse);

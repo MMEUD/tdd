@@ -12,6 +12,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
@@ -31,16 +32,21 @@ public class XmlParser {
 			InputSource is = new InputSource(); 
 			is.setCharacterStream(new StringReader(correctXml(xml))); 
 			Document document = parser.parse(is); 
-			//Document document = parser.parse("test.xml");
 			Element root = document.getDocumentElement();
-			NodeList  items = root.getElementsByTagName("item");
+			NodeList  items = root.getElementsByTagName("m");
 			for (int i=0 ; i<items.getLength() ; i++) {
-				HashMap<String, String> mail = new HashMap<String, String>();
 				Element item = (Element)items.item(i);
+				HashMap<String, String> mail = new HashMap<String, String>();
+				mail.put("f", item.hasAttribute("f")?"no":"yes");
+				mail.put("d", item.getAttribute("d"));
 				NodeList children = item.getChildNodes();
 				for (int j=0 ; j<children.getLength() ; j++) {
 					Node child = (Node)children.item(j);
-					if (child.getNodeName() != null && !"#text".equals(child.getNodeName())){
+					if ("e".equals(child.getNodeName())){
+						NamedNodeMap eChild = child.getAttributes();
+						Node sender = eChild.getNamedItem("a");
+						mail.put(sender.getNodeName(), sender.getNodeValue());
+					} else {
 						mail.put(child.getNodeName(), child.getTextContent());
 					}
 				}
@@ -52,8 +58,5 @@ public class XmlParser {
 		}
 		return mails;
 	}
-	
-	private static String correctXml(String mails){
-		return mails.replaceAll("<\\\", ", "</");
-	}
+
 }
