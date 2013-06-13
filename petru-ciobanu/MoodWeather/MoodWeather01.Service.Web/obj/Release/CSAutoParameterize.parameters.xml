@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="CityListConnectionString-Web.config Connection String" description="CityListConnectionString Connection String used in web.config by the application to access the database." defaultvalue="Data Source=192.168.26.107;Initial Catalog=CityList;Persist Security Info=True;User ID=sa;Password=K4hvdrq2d3" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="E:\\MoodWeatherFinal\\MoodWeather01\.Service\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CityListConnectionString']/@connectionString" />
-  </parameter>
-</parameters>
