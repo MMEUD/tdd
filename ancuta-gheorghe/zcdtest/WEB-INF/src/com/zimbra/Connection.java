@@ -36,8 +36,9 @@ public class Connection {
 	public static HttpURLConnection connectToUrl(URL url, String encoding)
 			throws IOException {
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+		connection.setRequestProperty("Content-Type", "application/xml");
 		connection.setRequestProperty("Accept","*/*");
-		connection.setRequestProperty ("Authorization", "Basic " + encoding);
+		connection.setRequestProperty("Authorization", "Basic " + encoding);
 		return connection;
 	}
 

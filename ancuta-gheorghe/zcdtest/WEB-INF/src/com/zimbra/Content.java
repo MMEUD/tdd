@@ -29,11 +29,12 @@ public class Content {
 		String contentForResponse = "";
 		while ((line = contentFromUrl.readLine()) != null) {
 			contentForResponse += line;
+			System.out.println(line);
 		}
 		try {
 			out.println("<!DOCTYPE html>");
 			out.println("<html><head>");
-			out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
+			out.println("<meta http-equiv='Content-Type' content='application/xml; charset=UTF-8'>");
 			out.println("<body>" + contentForResponse + "</body></html>");
 		} finally {
 		   out.close();

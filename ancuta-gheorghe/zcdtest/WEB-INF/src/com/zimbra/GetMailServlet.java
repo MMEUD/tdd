@@ -22,7 +22,8 @@ public class GetMailServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
                throws IOException, ServletException {
 		try {
-			HttpURLConnection connection = Connection.connectToUrl(Connection.getConstructedUrl(), Connection.getEncodedCredentials());
+			HttpURLConnection connection = Connection.connectToUrl(Connection.getConstructedUrl(), 
+				Connection.getEncodedCredentials());
 			BufferedReader contentFromUrl = 
                 new BufferedReader(new InputStreamReader(Content.getContentFromUrl(connection)));
             Content.printContentToResponse(response, contentFromUrl);
