@@ -30,7 +30,7 @@ public class XmlParser {
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder parser = factory.newDocumentBuilder();
 			InputSource is = new InputSource(); 
-			is.setCharacterStream(new StringReader(correctXml(xml))); 
+			is.setCharacterStream(new StringReader(xml)); 
 			Document document = parser.parse(is); 
 			Element root = document.getDocumentElement();
 			NodeList  items = root.getElementsByTagName("m");
