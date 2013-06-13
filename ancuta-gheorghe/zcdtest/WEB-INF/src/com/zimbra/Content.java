@@ -38,6 +38,7 @@ public class Content {
 			out.println("<html><head>");
 			out.println("<meta http-equiv='Content-Type' content='application/xml; charset=UTF-8'>");
 			out.println("<body>");
+			out.println("Subject: " + contentForResponse + "<br>");
 			for (HashMap<String, String> mail: mails){
 				out.println("Subject: " + mail.get("title") + "<br>");
 				out.println("Content: " + mail.get("description") + "<br>");

@@ -3,6 +3,7 @@
  */
 package com.zimbra;
 
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -13,6 +14,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 
 
 /**
@@ -26,7 +28,10 @@ public class XmlParser {
 		try{
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder parser = factory.newDocumentBuilder();
-			Document document = parser.parse("test.xml");
+			InputSource is = new InputSource(); 
+			is.setCharacterStream(new StringReader(correctXml(xml))); 
+			Document document = parser.parse(is); 
+			//Document document = parser.parse("test.xml");
 			Element root = document.getDocumentElement();
 			NodeList  items = root.getElementsByTagName("item");
 			for (int i=0 ; i<items.getLength() ; i++) {
@@ -46,5 +51,9 @@ public class XmlParser {
 			ex.printStackTrace();
 		}
 		return mails;
+	}
+	
+	private static String correctXml(String mails){
+		return mails.replaceAll("<\\\", ", "</");
 	}
 }
