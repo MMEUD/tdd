@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<project name="videocall" default="help" basedir="./">
+
+  <property environment="env"/>
+  <property name="build.compiler" value="modern"/>
+	
+  <property name="bin.videocall" value="bin/videocall"/>
+  <property name="src.videocall" value="../videocall/src"/>
+  
+  <property name="bin.registrar" value="bin/registrar"/>
+  <property name="src.registrar" value="../registrar/WEB-INF/src"/>
+  
+  <property name="temp_build.dir" value="temp_build"/>
+  
+  <path id="class.path.videocall">
+    <fileset dir="../videocall/lib">
+      <include name="*.jar"/>
+    </fileset>
+  </path>
+
+  <path id="class.path.registrar">
+    <fileset dir="../registrar/WEB-INF/lib">
+      <include name="*.jar"/>
+    </fileset>
+    <fileset dir="../registrar/WEB-INF/lib_sip">
+      <include name="*.jar"/>
+    </fileset>
+  </path>
+
+	<target name="help">
+		<echo message="ant sign-videocall-libs" />
+		<echo message="ant make-videocall" />
+		<echo message="ant make-registrar" />
+		<echo message="ant deploy-videocall" />
+		<echo message="ant deploy-registrar" />
+	</target>
+
+
+	<target name="sign-videocall-libs">
+		
+		<signjar alias="TELECAST_Certificate" storepass="nustiu" keystore=".keystore" preservelastmodified="true" lazy="true">
+			<fileset dir="../videocall/lib" casesensitive="no">
+				<include name="*.jar" />
+			</fileset>
+		</signjar>
+		
+	</target>
+
+
+	<target name="make-videocall">
+		
+		<delete dir="${temp_build.dir}"/>
+		<mkdir dir="${temp_build.dir}"/>
+
+		<javac srcdir="${src.videocall}" destdir="${temp_build.dir}"  includes="**/**" debug="on">
+			<classpath refid="class.path.videocall"/>
+		</javac>
+
+		<copy todir="${temp_build.dir}">
+			<fileset dir="${src.videocall}" casesensitive="no">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+
+		<jar destfile="${bin.videocall}/videocall.jar" >
+			<fileset dir="${temp_build.dir}" casesensitive="no">
+				<include name="**/**" />
+			</fileset>
+		</jar>
+
+		<signjar alias="TELECAST_Certificate" storepass="nustiu" keystore=".keystore" preservelastmodified="true" lazy="true">
+			<fileset dir="${bin.videocall}" casesensitive="no">
+				<include name="videocall.jar" />
+			</fileset>
+		</signjar>
+
+    <copy todir="${bin.videocall}" overwrite="true">
+      <fileset dir="../videocall/lib">
+        <include name="**/*.jar"/>
+      </fileset>
+    </copy>
+
+		<delete dir="${temp_build.dir}"/>
+	</target>
+
+	<target name="make-registrar">
+		
+		<delete dir="${temp_build.dir}"/>
+		<mkdir dir="${temp_build.dir}"/>
+		<mkdir dir="${temp_build.dir}/webapp"/>
+		<mkdir dir="${temp_build.dir}/webapp/WEB-INF"/>
+		<mkdir dir="${temp_build.dir}/webapp/WEB-INF/classes"/>
+		<mkdir dir="${temp_build.dir}/webapp/WEB-INF/conf"/>
+		<mkdir dir="${temp_build.dir}/webapp/WEB-INF/lib"/>
+
+		<javac srcdir="${src.registrar}" destdir="${temp_build.dir}/webapp/WEB-INF/classes"  includes="**/**" debug="on">
+			<classpath refid="class.path.registrar"/>
+		</javac>
+
+    <copy todir="${temp_build.dir}/webapp/WEB-INF/lib" overwrite="true">
+      <fileset dir="../registrar/WEB-INF/lib">
+        <include name="**/*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${temp_build.dir}/webapp/WEB-INF/conf" overwrite="true">
+      <fileset dir="../registrar/WEB-INF/conf">
+        <include name="**/*.properties"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${temp_build.dir}/webapp/WEB-INF" overwrite="true">
+      <fileset dir="../registrar/WEB-INF">
+        <include name="*.xml"/>
+      </fileset>
+    </copy>
+
+    <war destfile="${bin.registrar}/registrar.war" basedir="${temp_build.dir}/webapp" needxmlfile="false" />  
+
+		<delete dir="${temp_build.dir}"/>
+	</target>
+
+
+	<target name="deploy-registrar" depends="make-registrar">
+		<sshexec trust="true" host="${host.ssh.host}" username="${host.ssh.user}" password="${host.ssh.password}" failonerror="false" 
+			command=". .bash_profile;${tomcat.shutdown}"/>
+
+		<sshexec trust="true" host="${host.ssh.host}" username="${host.ssh.user}" password="${host.ssh.password}" failonerror="false" 
+			command=". .bash_profile;rm -f ${tomcat.home}/webapps/registrar;rm -f ${tomcat.home}/webapps/registrar.war"/>
+
+		<scp trust="true" file="${bin.registrar}/registrar.war" todir="${host.ssh.user}@${host.ssh.host}:${tomcat.home}/webapps" password="${host.ssh.password}" failonerror="false" />
+		
+		<sshexec trust="true" host="${host.ssh.host}" username="${host.ssh.user}" password="${host.ssh.password}" failonerror="false" 
+			command=". .bash_profile;${tomcat.startup}"/>
+  </target>
+
+
+	<target name="deploy-videocall" depends="make-videocall" >
+		
+		<scp trust="true" todir="${host.ssh.user}@${host.ssh.host}:${host.ssh.destination}" password="${host.ssh.password}" failonerror="true" >
+			<fileset dir="${bin.videocall}">
+				<include name="**/*.jar"/>
+			</fileset>
+		</scp>
+
+  </target>
+		
+</project>

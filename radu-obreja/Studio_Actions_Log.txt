@@ -1,0 +1,84 @@
+-----------------------------------------------------------------------------------------
+Very, very short specs for version 1:
+
+ - 2 sip clients, a studio and a user create a voip connection transfering audio/video who must operate succesfuly from behind firewall
+ - the user video is seen as PIP in studio video on right down corner
+ - use codecs opus/celt/g722 for audio
+ - use mp4v-es/vp8/h264 fro video
+ - the video from studio + PIP is recorded on disk in fullHD
+ - the video from studio + PIP is streamed up on youstream
+ - need of volume controls for audio
+ - need of equalizer controls for audio
+ - studio shoud operate with multiple video sources, activated by an usb foot pedal.
+ - mandatory windows/mac/linux compatible
+
+ From where we start:
+ - 1 year of experience with linphone code (c/c++) -> I modified it to receive celt codec and capturing video from a blackmagic card
+
+ Wishes:
+ - clean code
+ - use static analyse during CI
+ - use continuous integration (as usual :), because I do this from 10 years ago)
+ - integration tests for core and production code
+ 
+----------------------------------------------------------------------------------------
+ Sprint : 13 May 2013 - 19 May 2013
+----------------------------------------------------------------------------------------
+Actions:
+ - bought 2 blackmagick cards and installed them on an alienware brought by me at office, with windows 7 on it.
+ - reasearch to see on wich language to develop, how to make the achitecture.
+ 	- downloaded and analysed 1.5G of sources of different open source voip products written in C#, c, java
+ 
+Decisions:
+ - develop using Java as main language, use native code to capture video (openimaj project who is using videoInput project)
+ - use xuggler for encode/decode/resize video frames
+ - use xuggler for making the recording of mp4
+ - use linphone code architecture concept and try to replicate it in the project.
+ 
+ToDo:
+ - put in practice all above
+ - research java sip libraries
+ - research java rtp libraries
+ - research how to make rtp operate succesfuly from behind firewall
+ 
+----------------------------------------------------------------------------------------
+ Sprint : 20 May 2013 - 26 May 2013
+----------------------------------------------------------------------------------------
+Actions:
+ - create an structure of classes to implement the architecture concept of linphone
+ - succesfuly create code for capture/play of an audio/video stream and make mp4 record
+
+ToDo:
+ - research java sip libraries
+ - research java rtp libraries
+ - research how to make rtp operate succesfuly from behind firewall
+ - research how to separate gui from core code and make the separation in a lovely way
+ - find how to sync A/V frames in mp4
+ - insert celt/opus codec in xuggler
+ 
+----------------------------------------------------------------------------------------
+ Sprint : 27 May 2013 - 2 June 2013
+----------------------------------------------------------------------------------------
+Actions:
+ - research java sip libraries
+ - research java rtp libraries
+ - research how to make rtp operate succesfuly from behind firewall
+ - research how to separate gui from engine and make the separation in a lovely way
+ (all those research are done by reading documentation, running tests, writing code ...)
+ 
+Decisions:
+ - use mobicent sip servlets to make a custom sip registrar and proxy -> migrate the project to a sip project for mobicent sip servlets
+ - use ice4j for punching holes in the firewall, the info will be dumped as sdp during sip negotiation 
+ - use javafx for gui (it is integrated since jre1.7u6 in the jre ... so it has a future)
+ - use jnlp for launching the studio and the client
+ - use jenkins to deploy
+ - use e(fx)clipse instead of standard eclipse
+ - use jdk1.7 and tomcat7 insead of jdk1.6 and tomcat6 for dev and production
+ - use inCode product for suplemenary static analyse, and sonar with jenkins
+ 
+ToDo:
+ - put in practice the decisions
+ - research java rtp libraries (test if we can use the code from peers project)
+ - find how to sync A/V frames in mp4
+ - insert celt/opus codec in xuggler
+ 

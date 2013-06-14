@@ -1,0 +1,11 @@
+G:\SRP (solved)\SRP\bin\Debug\SRP.exe
+G:\SRP (solved)\SRP\bin\Debug\SRP.pdb
+G:\SRP (solved)\SRP\bin\Debug\nunit.framework.dll
+G:\SRP (solved)\SRP\bin\Debug\nunit.framework.xml
+G:\SRP (solved)\SRP\obj\Debug\SRP.Form1.resources
+G:\SRP (solved)\SRP\obj\Debug\SRP.Properties.Resources.resources
+G:\SRP (solved)\SRP\obj\Debug\SRP.csproj.GenerateResource.Cache
+G:\SRP (solved)\SRP\obj\Debug\SRP.exe
+G:\SRP (solved)\SRP\obj\Debug\SRP.pdb
+G:\SRP (solved)\SRP\bin\Debug\SRP.exe.CodeAnalysisLog.xml
+G:\SRP (solved)\SRP\bin\Debug\SRP.exe.lastcodeanalysissucceeded

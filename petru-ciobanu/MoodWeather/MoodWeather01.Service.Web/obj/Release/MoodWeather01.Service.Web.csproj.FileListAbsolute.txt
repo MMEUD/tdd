@@ -1,0 +1,15 @@
+H:\MoodWeatherJoi\MoodWeather01.Service.Web\bin\MoodWeather.Service.Web.dll
+H:\MoodWeatherJoi\MoodWeather01.Service.Web\bin\MoodWeather.Service.Web.pdb
+H:\MoodWeatherJoi\MoodWeather01.Service.Web\obj\Release\MoodWeather.Service.Web.dll
+H:\MoodWeatherJoi\MoodWeather01.Service.Web\obj\Release\MoodWeather.Service.Web.pdb
+H:\MoodWeatherJoi\MoodWeather01.Service.Web\obj\Release\MoodWeather01.Service.Web.csprojResolveAssemblyReference.cache
+E:\MoodWeather2MAI\MoodWeather01.Service.Web\bin\MoodWeather.Service.Web.dll
+E:\MoodWeather2MAI\MoodWeather01.Service.Web\bin\MoodWeather.Service.Web.pdb
+E:\MoodWeather2MAI\MoodWeather01.Service.Web\obj\Release\MoodWeather.Service.Web.dll
+E:\MoodWeather2MAI\MoodWeather01.Service.Web\obj\Release\MoodWeather.Service.Web.pdb
+E:\MoodWeatherFinal\MoodWeather01.Service.Web\bin\App_Data\testFile.txt
+E:\MoodWeatherFinal\MoodWeather01.Service.Web\bin\MoodWeather.Service.Web.dll
+E:\MoodWeatherFinal\MoodWeather01.Service.Web\bin\MoodWeather.Service.Web.pdb
+E:\MoodWeatherFinal\MoodWeather01.Service.Web\obj\Release\MoodWeather.Service.Web.dll
+E:\MoodWeatherFinal\MoodWeather01.Service.Web\obj\Release\MoodWeather.Service.Web.pdb
+E:\MoodWeatherFinal\MoodWeather01.Service.Web\obj\Release\MoodWeather01.Service.Web.csprojResolveAssemblyReference.cache

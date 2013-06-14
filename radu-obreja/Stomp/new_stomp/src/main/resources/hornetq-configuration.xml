@@ -1,0 +1,41 @@
+<configuration xmlns="urn:hornetq"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="urn:hornetq /schema/hornetq-configuration.xsd">
+
+
+   <!-- Connectors -->
+
+   <connectors>
+      <connector name="netty-connector">
+         <factory-class>org.hornetq.core.remoting.impl.netty.NettyConnectorFactory</factory-class>
+      </connector>
+   </connectors>
+   
+   <!-- Acceptors -->
+   <acceptors>
+      <!-- a regular Netty acceptor used by the JMS client -->
+      <acceptor name="netty-acceptor">
+         <factory-class>org.hornetq.core.remoting.impl.netty.NettyAcceptorFactory</factory-class> 
+      </acceptor>
+   </acceptors>
+ 
+   <!-- Security settings -->
+   
+   <security-settings>
+   </security-settings>
+
+	<!-- Address memory settings -->
+	<address-settings>
+      <address-setting match="queue.pbm.*">
+        <max-size-bytes>104857600</max-size-bytes>
+        <page-size-bytes>10485760</page-size-bytes>
+        <address-full-policy>PAGE</address-full-policy>
+      </address-setting>
+      <address-setting match="queue.pbm.server_out">
+      	<max-size-bytes>104857600</max-size-bytes>
+        <page-size-bytes>10485760</page-size-bytes>
+        <address-full-policy>DROP</address-full-policy>
+      </address-setting>
+   </address-settings>
+
+</configuration>

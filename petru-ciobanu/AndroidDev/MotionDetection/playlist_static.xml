@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<root>
+  <items type="video" src="/mnt/sdcard/data/video3.mp4" width="100" height="100" x="0" y="0" delay="0" name="static03"/>
+  <items type="video" src="/mnt/sdcard/data/video4.mp4" width="100" height="100" x="0" y="0" delay="0"  name="static04" />
+  <items type="video" src="/mnt/sdcard/data/video1.mp4" width="100" height="100" x="0" y="0" delay="0" name="static01" />
+  <items type="video" src="/mnt/sdcard/data/video2.mp4" width="100" height="100" x="0" y="0" delay="0" name="static02" />
+
+</root>
