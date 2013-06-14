@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.zimbra;
+package com.zimbra.parser;
 
 import java.io.StringReader;
 import java.util.ArrayList;
@@ -37,8 +37,11 @@ public class XmlParser {
 			for (int i=0 ; i<items.getLength() ; i++) {
 				Element item = (Element)items.item(i);
 				HashMap<String, String> mail = new HashMap<String, String>();
-				mail.put("f", item.hasAttribute("f")?"no":"yes");
+				mail.put("read", (item.hasAttribute("f")&&"u".equals(item.getAttribute("f")))?"no":"yes");
+				mail.put("hasAttachment", (item.hasAttribute("f")&&"a".equals(item.getAttribute("f")))?"yes":"no");
 				mail.put("d", item.getAttribute("d"));
+				mail.put("id", item.getAttribute("id"));
+				mail.put("cid", item.getAttribute("cid"));
 				NodeList children = item.getChildNodes();
 				for (int j=0 ; j<children.getLength() ; j++) {
 					Node child = (Node)children.item(j);

@@ -13,6 +13,8 @@ import java.util.HashMap;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.zimbra.parser.XmlParser;
+
 /**
  * @author Ancuta Gheorghe
  *
@@ -42,8 +44,11 @@ public class Content {
 				out.println("Subject: " + mail.get("su") + "<br>");
 				out.println("Content: " + mail.get("fr") + "<br>");
 				out.println("Author: " + mail.get("a") + "<br>");
-				out.println("Read: " + mail.get("f") + "<br>");
+				out.println("Read: " + mail.get("read") + "<br>");
+				out.println("Has Attachment: " + mail.get("hasAttachment") + "<br>");
 				out.println("Date: " + mail.get("d") + "<br>");
+				out.println("Id: " + mail.get("id") + "<br>");
+				out.println("Cid: " + mail.get("cid") + "<br>");
 				out.println("<br>");
 			}
 			out.println(contentForResponse);

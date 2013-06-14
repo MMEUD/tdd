@@ -1,4 +1,4 @@
-package com.zimbra;
+package com.zimbra.servlet;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,11 +10,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.zimbra.Connection;
+import com.zimbra.Content;
+
 /**
  * @author Ancuta Gheorghe
  *
  */
-public class GetMailServlet extends HttpServlet {
+public class GetInboxServlet extends HttpServlet {
    
 	private static final long serialVersionUID = 1L;
 
