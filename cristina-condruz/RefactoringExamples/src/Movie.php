@@ -6,6 +6,8 @@
  * Time: 10:53 AM
  * To change this template use File | Settings | File Templates.
  */
+require_once('Price.php');
+
 class Movie{
   public static $CHILDREN = 2;
   public static $REGULAR = 0;
@@ -13,18 +15,31 @@ class Movie{
 
   private $_title;
   private $_priceCode;
+  private $_price; //Price type
 
   function __construct($_priceCode, $_title) {
-    $this->_priceCode = $_priceCode;
+    $this->setPriceCode($_priceCode);
     $this->_title = $_title;
   }
 
   public function setPriceCode($priceCode) {
-    $this->_priceCode = $priceCode;
+    switch ($priceCode) {
+       case Movie::$REGULAR:
+         $this->_price = new RegularPrice();
+         break;
+       case  Movie::$NEW_RELEASE:
+         $this->_price = new NewReleasePrice();
+         break;
+       case Movie::$CHILDREN:
+         $this->_price = new ChildrenPrice();
+         break;
+      default:
+        throw new Exception("Incorrect Price Code.");
+     }
   }
 
   public function getPriceCode() {
-    return $this->_priceCode;
+    return $this->_price->getPriceCode();
   }
 
   public function setTitle($title) {
@@ -41,23 +56,7 @@ class Movie{
    */
 
   public function getCharge($daysRented){
-    $result = 0;
-    switch ($this->getPriceCode()) {
-      case self::$REGULAR:
-        $result += 2;
-        if ($daysRented > 2)
-          $result += ($daysRented - 2) * 1.5;
-        break;
-      case  self::$NEW_RELEASE:
-        $result += $daysRented * 3;
-        break;
-      case self::$CHILDREN:
-        $result += 1.5;
-        if ($daysRented > 3)
-          $result += ($daysRented - 3) * 1.5;
-        break;
-    }
-    return $result;
+    return $this->_price->getCharge($daysRented);
    }
 
   /**
@@ -65,9 +64,6 @@ class Movie{
    * @return int
    */
   public function getFrequentRenterPoints($daysRented) {
-     if (($this->getPriceCode() == self::$NEW_RELEASE) && $daysRented > 1)
-       return 2;
-     else
-       return 1;
+     return $this->_price->getFrequentRenterPoints($daysRented);
   }
 }
