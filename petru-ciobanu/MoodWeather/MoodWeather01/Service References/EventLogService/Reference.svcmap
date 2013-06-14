@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5e4271f6-bb72-4bad-8267-27350d87cc27" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54601/EventLogService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EventLogService.xsd" MetadataType="Schema" ID="a593bf6b-f3ec-451f-81ed-1d60288412fa" SourceId="1" SourceUrl="http://localhost:54601/EventLogService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EventLogService1.xsd" MetadataType="Schema" ID="7b4087fb-90ed-45f3-a315-7f0d4b288a15" SourceId="1" SourceUrl="http://localhost:54601/EventLogService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EventLogService.disco" MetadataType="Disco" ID="4871065f-0f06-4614-9d7d-30423edee555" SourceId="1" SourceUrl="http://localhost:54601/EventLogService.svc?disco" />
+    <MetadataFile FileName="EventLogService.wsdl" MetadataType="Wsdl" ID="55241f5f-c5eb-45a2-bdd7-f3e54c9a4d40" SourceId="1" SourceUrl="http://localhost:54601/EventLogService.svc?wsdl" />
+    <MetadataFile FileName="EventLogService2.xsd" MetadataType="Schema" ID="ff15d9c0-7e40-440a-ac1d-a91a9a349fc0" SourceId="1" SourceUrl="http://localhost:54601/EventLogService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

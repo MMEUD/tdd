@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WEATHER>
+  <ALERT></ALERT>
+  <DATE YYYYMMDD="20130516">
+    <SUNTIME>
+      <SUNRISE>6:29</SUNRISE>
+      <SUNSET>21:18</SUNSET>
+    </SUNTIME>
+    <TIME HOUR="08">
+      <GEOGRAPHY AREA="AGEN">
+        <ICON>sunclouds.png</ICON>
+        <TEMPERATURE>5</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+      <GEOGRAPHY AREA="ALG_TINDOUF">
+        <ICON>sunclouds.png</ICON>
+        <TEMPERATURE>11</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+    </TIME>
+    <TIME HOUR="14">
+      <GEOGRAPHY AREA="AGEN">
+        <ICON>sunclouds.png</ICON>
+        <TEMPERATURE>17</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+      <GEOGRAPHY AREA="ALG_TINDOUF">
+        <ICON>sunclouds.png</ICON>
+        <TEMPERATURE>28</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+    </TIME>
+    <COMMENT></COMMENT>
+  </DATE>
+  <DATE YYYYMMDD="20130517">
+    <SUNTIME>
+      <SUNRISE>6:29</SUNRISE>
+      <SUNSET>21:18</SUNSET>
+    </SUNTIME>
+    <TIME HOUR="08">
+      <GEOGRAPHY AREA="AGEN">
+        <ICON>.png</ICON>
+        <TEMPERATURE>7</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+      <GEOGRAPHY AREA="ALG_TINDOUF">
+        <ICON>sunclouds.png</ICON>
+        <TEMPERATURE>11</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+    </TIME>
+    <TIME HOUR="14">
+      <GEOGRAPHY AREA="AGEN">
+        <ICON>.png</ICON>
+        <TEMPERATURE>19</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+      <GEOGRAPHY AREA="ALG_TINDOUF">
+        <ICON>sunclouds.png</ICON>
+        <TEMPERATURE>29</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+    </TIME>
+    <COMMENT></COMMENT>
+  </DATE>
+  <DATE YYYYMMDD="20130518">
+    <SUNTIME>
+      <SUNRISE>6:29</SUNRISE>
+      <SUNSET>21:18</SUNSET>
+    </SUNTIME>
+    <TIME HOUR="08">
+      <GEOGRAPHY AREA="AGEN">
+        <ICON>.png</ICON>
+        <TEMPERATURE>7</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+      <GEOGRAPHY AREA="ALG_TINDOUF">
+        <ICON>sun.png</ICON>
+        <TEMPERATURE>11</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+    </TIME>
+    <TIME HOUR="14">
+      <GEOGRAPHY AREA="AGEN">
+        <ICON>.png</ICON>
+        <TEMPERATURE>14</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+      <GEOGRAPHY AREA="ALG_TINDOUF">
+        <ICON>sun.png</ICON>
+        <TEMPERATURE>30</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+    </TIME>
+    <COMMENT></COMMENT>
+  </DATE>
+  <DATE YYYYMMDD="20130519">
+    <SUNTIME>
+      <SUNRISE>6:29</SUNRISE>
+      <SUNSET>21:18</SUNSET>
+    </SUNTIME>
+    <TIME HOUR="08">
+      <GEOGRAPHY AREA="AGEN">
+        <ICON>.png</ICON>
+        <TEMPERATURE>8</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+      <GEOGRAPHY AREA="ALG_TINDOUF">
+        <ICON>sunclouds.png</ICON>
+        <TEMPERATURE>16</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+    </TIME>
+    <TIME HOUR="14">
+      <GEOGRAPHY AREA="AGEN">
+        <ICON>.png</ICON>
+        <TEMPERATURE>17</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+      <GEOGRAPHY AREA="ALG_TINDOUF">
+        <ICON>sunclouds.png</ICON>
+        <TEMPERATURE>32</TEMPERATURE>
+        <REMARK></REMARK>
+      </GEOGRAPHY>
+    </TIME>
+    <COMMENT></COMMENT>
+  </DATE>
+</WEATHER>
