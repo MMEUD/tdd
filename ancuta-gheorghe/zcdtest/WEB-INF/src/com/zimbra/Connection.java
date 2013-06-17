@@ -16,9 +16,9 @@ import org.apache.commons.codec.binary.Base64;
  */
 public class Connection {
 
-	private static final String USERNAME = "frfsamb";
-	private static final String PASSWORD = "admin";
-	private static final String EMAIL = "frfsamb@lost.moodmedia.ro";
+	private static final String USERNAME = "ancuta";
+	private static final String PASSWORD = "k4hvdrq2d3";
+	private static final String EMAIL = "ancuta@lost.moodmedia.ro";
 	private static final String CREDENTIALS_SEPARATOR = ":";
 	private static final String HOST = "http://lost.moodmedia.ro:6080/home/";
 	private static final String INBOX = "/inbox.xml";
