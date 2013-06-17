@@ -1,8 +1,6 @@
 package com.moodmedia.storeportal.actions.messagerie.zimbra;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 
 import javax.servlet.ServletException;
@@ -12,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.moodmedia.storeportal.zimbra.connection.CustomConnection;
 import com.moodmedia.storeportal.zimbra.connection.CustomRequest;
-import com.moodmedia.storeportal.zimbra.content.InboxContent;
 
 /**
  * @author Ancuta Gheorghe
@@ -27,13 +24,11 @@ public class MailServlet extends HttpServlet {
                throws IOException, ServletException {
 		try {
 			CustomRequest customRequest = new CustomRequest();
+			customRequest.setType(1);
 			CustomConnection customConnection = new CustomConnection(customRequest);
 			HttpURLConnection connection = customConnection.getUrl().connectToUrl(customConnection.getUrl().getConstructedUrl(), 
 					customConnection.getUrl().getEncodedCredentials());
-			InboxContent inboxContent = new InboxContent();
-			BufferedReader contentFromUrl = 
-                new BufferedReader(new InputStreamReader(inboxContent.getContentFromUrl(connection)));
-			inboxContent.printContentToResponse(response, contentFromUrl);
+			customConnection.getUrl().processRequest(response, connection);
         } catch(Exception e) {
             e.printStackTrace();
         }

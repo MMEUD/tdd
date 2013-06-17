@@ -8,6 +8,10 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.codec.binary.Base64;
+
 import com.moodmedia.storeportal.zimbra.connection.CustomRequest;
 
 /**
@@ -16,18 +20,30 @@ import com.moodmedia.storeportal.zimbra.connection.CustomRequest;
  */
 public abstract class AUrl {
 
-	CustomRequest connectionData;
+	CustomRequest customRequest;
 	
-	public AUrl(CustomRequest connectionData) {
-		this.connectionData = connectionData;
+	public AUrl(CustomRequest customRequest) {
+		this.customRequest = customRequest;
 	}
 	
-	public abstract HttpURLConnection connectToUrl(URL url, String encoding)
-			throws IOException;
+	public HttpURLConnection connectToUrl(URL url, String encoding)
+			throws IOException {
+		System.out.println("!!!! connectToUrl");
+		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+		connection.setRequestProperty("Content-Type", "application/xml");
+		connection.setRequestProperty("Accept","*/*");
+		connection.setRequestProperty("Authorization", "Basic " + encoding);
+		return connection;
+	}
 	
-	public abstract String getEncodedCredentials();
+	public String getEncodedCredentials() {
+		String encoding = Base64.encodeBase64String((customRequest.getUsername() + ":" + customRequest.getPassword()).getBytes());
+		return encoding;
+	}
 	
 	public abstract URL getConstructedUrl() 
 			throws MalformedURLException;
+
+	public abstract void processRequest(HttpServletResponse response, HttpURLConnection connection);
 	
 }
