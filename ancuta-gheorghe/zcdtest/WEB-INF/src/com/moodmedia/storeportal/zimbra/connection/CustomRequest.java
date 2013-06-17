@@ -1,24 +1,24 @@
 package com.moodmedia.storeportal.zimbra.connection;
 
 /**
- * @author ancuta
+ * @author Ancuta Gheorghe
  *
  */
 //to be updated to populate fields from properties file!
 
-public class Request {
+public class CustomRequest {
 
-	int urlType = 2;
+	int type = 1;
 
-	String username = "frfsamb";
-	String password = "admin";
-	String email = "frfsamb@lost.moodmedia.ro";
+	String username = "ancuta";
+	String password = "k4hvdrq2d3";
+	String email = "ancuta@lost.moodmedia.ro";
 	String host = "http://lost.moodmedia.ro:6080/home/";
 	String inboxLink = "/inbox.xml";
 	String emailLink = "/inbox.xml";
 	
-	public int getUrlType() {
-		return urlType;
+	public int getType() {
+		return type;
 	}
 	
 	public String getUsername() {
@@ -45,8 +45,8 @@ public class Request {
 		return emailLink;
 	}
 
-	public void setUrlType(int urlType) {
-		this.urlType = urlType;
+	public void setType(int type) {
+		this.type = type;
 	}
 	
 	public void setUsername(String username) {

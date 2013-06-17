@@ -6,48 +6,48 @@ import com.moodmedia.storeportal.zimbra.url.EmailUrl;
 import com.moodmedia.storeportal.zimbra.url.InboxUrl;
 
 /**
- * @author ancuta
+ * @author Ancuta Gheorghe
  *
  */
-public class Connection {
+public class CustomConnection {
 
 	private static final int INBOX = 1;
 	private static final int EMAIL = 2;
 	private static final int CHAINEMAIL = 3;
 	private AUrl url;
-	private Request request;
+	private CustomRequest customRequest;
 
-	public Connection(Request connectionData) {
-		setUrl(connectionData.getUrlType());
-		setConnectionData(connectionData);
+	public CustomConnection(CustomRequest customRequest) {
+		setCustomRequest(customRequest);
+		setUrl(customRequest.getType());
 	}
 	
 	public AUrl getUrl() {
 		return url;
 	}
 	
-	public void setUrl(int urlType) {
-		switch (urlType){
+	public void setUrl(int requestType) {
+		switch (requestType){
         case INBOX:
-            url = new InboxUrl(getConnectionData());
+            url = new InboxUrl(getCustomRequest());
             break;
         case EMAIL:
-            url = new EmailUrl(getConnectionData());
+            url = new EmailUrl(getCustomRequest());
             break;
         case CHAINEMAIL:
-            url = new ChainEmailUrl(getConnectionData());
+            url = new ChainEmailUrl(getCustomRequest());
             break;
         default:
             throw new IllegalArgumentException("Incorrect URL Code");
 		}
 	} 
 	
-	public Request getConnectionData() {
-		return request;
+	public CustomRequest getCustomRequest() {
+		return customRequest;
 	}
 
-	public void setConnectionData(Request connectionData) {
-		this.request = connectionData;
+	public void setCustomRequest(CustomRequest customRequest) {
+		this.customRequest = customRequest;
 	}
 	
 }
