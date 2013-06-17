@@ -26,7 +26,7 @@ public class EmailUrl extends AUrl{
 	}
 
 	public URL getConstructedUrl() throws MalformedURLException {
-		URL url = new URL (customRequest.getHost() + "" + customRequest.getEmail() + "" + customRequest.getInboxLink());
+		URL url = new URL (customRequest.getHost() + "" + customRequest.getEmail() + "/?id=263&fmt=zip");
 		return url;
 	}
 

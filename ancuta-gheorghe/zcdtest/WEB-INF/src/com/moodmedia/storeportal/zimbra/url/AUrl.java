@@ -28,9 +28,9 @@ public abstract class AUrl {
 	
 	public HttpURLConnection connectToUrl(URL url, String encoding)
 			throws IOException {
-		System.out.println("!!!! connectToUrl");
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-		connection.setRequestProperty("Content-Type", "application/xml");
+		//connection.setRequestProperty("Content-Type", "application/xml");
+		connection.setRequestProperty("Content-Type", "application/zip");
 		connection.setRequestProperty("Accept","*/*");
 		connection.setRequestProperty("Authorization", "Basic " + encoding);
 		return connection;

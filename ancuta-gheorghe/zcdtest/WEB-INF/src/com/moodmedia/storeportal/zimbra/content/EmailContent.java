@@ -10,30 +10,30 @@ import java.net.HttpURLConnection;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.moodmedia.storeportal.zimbra.archive.ZipArchive;
+
 /**
  * @author Ancuta Gheorghe
  *
  */
 public class EmailContent implements IContent {
 
-	/* (non-Javadoc)
-	 * @see com.moodmedia.storeportal.zimbra.content.IContent#getContentFromUrl(java.net.HttpURLConnection)
-	 */
-	@Override
 	public InputStream getContentFromUrl(HttpURLConnection connection)
 			throws IOException {
-		// TODO Auto-generated method stub
-		return null;
+		String saveTo = "D:\\zcs\\";
+		InputStream inputStream = null;
+		try {
+	    	inputStream = (InputStream)connection.getInputStream();
+	    	ZipArchive.saveZipToDisk(saveTo, inputStream); 
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+		return inputStream;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.moodmedia.storeportal.zimbra.content.IContent#printContentToResponse(javax.servlet.http.HttpServletResponse, java.io.BufferedReader)
-	 */
-	@Override
 	public void printContentToResponse(HttpServletResponse response,
 			BufferedReader contentFromUrl) throws IOException {
-		// TODO Auto-generated method stub
-
+		//unzip and process
 	}
 
 }

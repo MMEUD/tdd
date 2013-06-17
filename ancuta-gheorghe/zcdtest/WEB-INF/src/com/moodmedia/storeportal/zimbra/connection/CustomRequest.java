@@ -16,6 +16,7 @@ public class CustomRequest {
 	String host = "http://lost.moodmedia.ro:6080/home/";
 	String inboxLink = "/inbox.xml";
 	String emailLink = "/inbox.xml";
+	String emailDownload = "..\\..\\..\\..\\datamail\\tempzip\\";
 	
 	public int getType() {
 		return type;
