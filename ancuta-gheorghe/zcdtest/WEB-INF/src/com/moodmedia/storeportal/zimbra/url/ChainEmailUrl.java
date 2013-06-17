@@ -18,12 +18,10 @@ import com.moodmedia.storeportal.zimbra.connection.CustomRequest;
  */
 public class ChainEmailUrl extends AUrl{
 
-CustomRequest connectionData;
-	
 	public ChainEmailUrl(CustomRequest connectionData) {
-		this.connectionData = connectionData;
+		super(connectionData);
 	}
-	
+
 	public HttpURLConnection connectToUrl(URL url, String encoding)
 			throws IOException {
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();

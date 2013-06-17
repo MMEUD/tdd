@@ -17,14 +17,11 @@ import com.moodmedia.storeportal.zimbra.connection.CustomRequest;
  *
  */
 public class EmailUrl extends AUrl{
-
-CustomRequest connectionData;
 	
 	public EmailUrl(CustomRequest connectionData) {
-		System.out.println("7!!!! " + connectionData.getHost());
-		this.connectionData = connectionData;
+		super(connectionData);
 	}
-	
+
 	public HttpURLConnection connectToUrl(URL url, String encoding)
 			throws IOException {
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -40,7 +37,6 @@ CustomRequest connectionData;
 	}
 
 	public URL getConstructedUrl() throws MalformedURLException {
-		System.out.println("5!!!! " + connectionData.getHost());
 		URL url = new URL (connectionData.getHost() + "" + connectionData.getEmail() + "" + connectionData.getInboxLink());
 		return url;
 	}
