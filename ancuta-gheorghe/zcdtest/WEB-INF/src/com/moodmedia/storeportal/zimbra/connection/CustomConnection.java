@@ -11,9 +11,10 @@ import com.moodmedia.storeportal.zimbra.url.InboxUrl;
  */
 public class CustomConnection {
 
-	private static final int INBOX = 1;
-	private static final int EMAIL = 2;
-	private static final int CHAINEMAIL = 3;
+	public static final int INBOX = 1;
+	public static final int EMAIL = 2;
+	public static final int CHAINEMAIL = 3;
+	
 	private AUrl url;
 	private CustomRequest customRequest;
 
