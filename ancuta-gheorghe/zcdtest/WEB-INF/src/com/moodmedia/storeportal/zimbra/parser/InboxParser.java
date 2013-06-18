@@ -17,11 +17,17 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
+import com.moodmedia.storeportal.zimbra.connection.CustomRequest;
+
 /**
  * @author Ancuta Gheorghe
  *
  */
-public class InboxParser implements IParser {
+public class InboxParser extends AParser {
+
+	public InboxParser(CustomRequest customRequest) {
+		super(customRequest);
+	}
 
 	public ArrayList<HashMap<String, Object>> processData(String xml){
 		ArrayList<HashMap<String, Object>> mails = new ArrayList<HashMap<String, Object>>();

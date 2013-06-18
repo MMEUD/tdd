@@ -24,7 +24,13 @@ public class MailServlet extends HttpServlet {
                throws IOException, ServletException {
 		
 		CustomRequest customRequest = new CustomRequest();
-		customRequest.setType(CustomConnection.EMAIL);
+		if (request.getParameter("id") == null){
+			customRequest.setType(CustomConnection.INBOX);
+		} else {
+			customRequest.setIdMail(request.getParameter("id"));
+			customRequest.setType(CustomConnection.EMAIL);
+		}
+		
 		CustomConnection customConnection = new CustomConnection(customRequest);
 		
 		HttpURLConnection connection = customConnection.getUrl().

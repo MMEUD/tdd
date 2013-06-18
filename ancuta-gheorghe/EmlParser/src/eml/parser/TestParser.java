@@ -144,7 +144,7 @@ public class TestParser {
      */
     public static void main(String[] args) {
 
-        String eml = "C:\\Users\\ancuta\\Documents\\GitHub\\tdd\\ancuta-gheorghe\\EmlParser\\src\\Re_ test mail 1.eml";
+        String eml = "C:\\Users\\Ancuta Gheorghe\\Documents\\GitHub\\tdd\\ancuta-gheorghe\\EmlParser\\src\\267.eml";
 
         TestParser parser = new TestParser();
         parser.parseMessage(eml);

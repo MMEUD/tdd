@@ -13,6 +13,7 @@ import java.util.HashMap;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.moodmedia.storeportal.zimbra.connection.CustomRequest;
 import com.moodmedia.storeportal.zimbra.parser.InboxParser;
 
 
@@ -20,7 +21,11 @@ import com.moodmedia.storeportal.zimbra.parser.InboxParser;
  * @author Ancuta Gheorghe
  *
  */
-public class InboxContent implements IContent {
+public class InboxContent extends AContent {
+
+	public InboxContent(CustomRequest customRequest) {
+		super(customRequest);
+	}
 
 	public InputStream getContentFromUrl(HttpURLConnection connection)
 		throws IOException {
@@ -36,7 +41,7 @@ public class InboxContent implements IContent {
 			while ((line = contentFromUrl.readLine()) != null) {
 				contentForResponse += line;
 			}
-			InboxParser inboxParser = new InboxParser();
+			InboxParser inboxParser = new InboxParser(customRequest);
 			ArrayList<HashMap<String, Object>> mails = inboxParser.processData(contentForResponse);
 			try {
 				out.println("<!DOCTYPE html>");
@@ -52,6 +57,7 @@ public class InboxContent implements IContent {
 					out.println("Date: " + mail.get("d") + "<br>");
 					out.println("Id: " + mail.get("id") + "<br>");
 					out.println("Cid: " + mail.get("cid") + "<br>");
+					out.println("<a href='http://localhost:8080/zcd/mail?id=" + mail.get("id") + "'>Link</a><br>");
 					out.println("<br>");
 				}
 				out.println(contentForResponse);

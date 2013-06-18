@@ -33,7 +33,7 @@ public class InboxUrl extends AUrl{
 
 	public void processRequest(HttpServletResponse response,
 			HttpURLConnection connection) {
-		InboxContent inboxContent = new InboxContent();
+		InboxContent inboxContent = new InboxContent(customRequest);
 		BufferedReader contentFromUrl;
 		try {
 			contentFromUrl = new BufferedReader(new InputStreamReader(inboxContent.getContentFromUrl(connection)));

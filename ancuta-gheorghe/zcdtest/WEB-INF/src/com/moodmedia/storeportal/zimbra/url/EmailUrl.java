@@ -21,18 +21,18 @@ import com.moodmedia.storeportal.zimbra.content.EmailContent;
  */
 public class EmailUrl extends AUrl{
 	
-	public EmailUrl(CustomRequest connectionData) {
-		super(connectionData);
+	public EmailUrl(CustomRequest customRequest) {
+		super(customRequest);
 	}
 
 	public URL getConstructedUrl() throws MalformedURLException {
-		URL url = new URL (customRequest.getHost() + "" + customRequest.getEmail() + "/?id=263&fmt=zip");
+		URL url = new URL (customRequest.getHost() + "" + customRequest.getEmail() + "/?id=" + customRequest.getIdMail() + "&fmt=zip");
 		return url;
 	}
 
 	public void processRequest(HttpServletResponse response,
 			HttpURLConnection connection) {
-		EmailContent emailContent = new EmailContent();
+		EmailContent emailContent = new EmailContent(customRequest);
 		BufferedReader contentFromUrl;
 		try {
 			contentFromUrl = new BufferedReader(new InputStreamReader(emailContent.getContentFromUrl(connection)));

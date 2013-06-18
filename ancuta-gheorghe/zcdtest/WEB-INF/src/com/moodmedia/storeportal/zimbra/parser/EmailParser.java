@@ -6,19 +6,20 @@ package com.moodmedia.storeportal.zimbra.parser;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.moodmedia.storeportal.zimbra.connection.CustomRequest;
+
 /**
  * @author Ancuta Gheorghe
  *
  */
-public class EmailParser implements IParser {
+public class EmailParser extends AParser {
 
-	/* (non-Javadoc)
-	 * @see com.moodmedia.storeportal.zimbra.parser.IParser#processData(java.lang.String)
-	 */
-	@Override
+	public EmailParser(CustomRequest customRequest) {
+		super(customRequest);
+	}
+
 	public ArrayList<HashMap<String, Object>> processData(String data) {
-		// TODO Auto-generated method stub
-		return null;
+		return new ArrayList<HashMap<String, Object>>();
 	}
 
 }

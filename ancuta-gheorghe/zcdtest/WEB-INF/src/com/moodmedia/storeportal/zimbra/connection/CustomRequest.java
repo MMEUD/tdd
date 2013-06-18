@@ -17,6 +17,7 @@ public class CustomRequest {
 	String inboxLink = "/inbox.xml";
 	String emailLink = "/inbox.xml";
 	String emailDownload = "..\\..\\..\\..\\datamail\\tempzip\\";
+	String idMail = "";
 	
 	public int getType() {
 		return type;
@@ -44,6 +45,10 @@ public class CustomRequest {
 	
 	public String getEmailLink() {
 		return emailLink;
+	}
+	
+	public String getIdMail() {
+		return idMail;
 	}
 
 	public void setType(int type) {
@@ -74,4 +79,7 @@ public class CustomRequest {
 		this.emailLink = emailLink;
 	}
 
+	public void setIdMail(String idMail) {
+		this.idMail = idMail;
+	}
 }
