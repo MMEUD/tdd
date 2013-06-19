@@ -33,15 +33,10 @@ public class EmailContent extends AContent {
 
 	public InputStream getContentFromUrl(HttpURLConnection connection)
 			throws IOException {
-		String saveTo = "D:\\zcs\\";
 		InputStream inputStream = null;
 		try {
 	    	inputStream = (InputStream)connection.getInputStream();
-	    	ZipArchive.unZipToDisk(new File(ZipArchive.saveZipToDisk(saveTo, inputStream, customRequest)), customRequest);	
-	    	File file = new File("D:\\zcs\\ancuta_270\\Inbox\\267.eml");
-			FileInputStream fis = null;
-	    	fis = new FileInputStream(file);
-	    	inputStream = (InputStream)fis;
+	    	ZipArchive.unZipToDisk(new File(ZipArchive.saveZipToDisk(inputStream, customRequest)), customRequest);	
 	    } catch (IOException e) {
 	        e.printStackTrace();
 	    }

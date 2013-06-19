@@ -9,14 +9,13 @@ package com.moodmedia.storeportal.zimbra.connection;
 public class CustomRequest {
 
 	int type = 1;
-
 	String username = "ancuta";
 	String password = "k4hvdrq2d3";
 	String email = "ancuta@lost.moodmedia.ro";
 	String host = "http://lost.moodmedia.ro:6080/home/";
 	String inboxLink = "/inbox.xml";
-	String emailLink = "/inbox.xml";
-	String emailDownload = "..\\..\\..\\..\\datamail\\tempzip\\";
+	String downloadPath = "C:\\Users\\Ancuta Gheorghe\\Documents\\GitHub\\tdd\\ancuta-gheorghe\\zcdtest\\emails\\";
+
 	String idMail = "";
 	
 	public int getType() {
@@ -43,14 +42,14 @@ public class CustomRequest {
 		return inboxLink;
 	}
 	
-	public String getEmailLink() {
-		return emailLink;
-	}
-	
 	public String getIdMail() {
 		return idMail;
 	}
 
+	public String getDownloadPath() {
+		return downloadPath;
+	}
+	
 	public void setType(int type) {
 		this.type = type;
 	}
@@ -75,11 +74,11 @@ public class CustomRequest {
 		this.inboxLink = inboxLink;
 	}
 	
-	public void setEmailLink(String emailLink) {
-		this.emailLink = emailLink;
-	}
-
 	public void setIdMail(String idMail) {
 		this.idMail = idMail;
+	}
+	
+	public void setDownloadPath(String downloadPath) {
+		this.downloadPath = downloadPath;
 	}
 }

@@ -20,9 +20,9 @@ import com.moodmedia.storeportal.zimbra.connection.CustomRequest;
  */
 public class ZipArchive {
 	
-	public static String saveZipToDisk(String saveTo, InputStream inputStream, CustomRequest customRequest) 
+	public static String saveZipToDisk(InputStream inputStream, CustomRequest customRequest) 
 			throws FileNotFoundException, IOException {
-		String pathToZip = saveTo + customRequest.getUsername() + "_" + customRequest.getIdMail() + ".zip";
+		String pathToZip = customRequest.getDownloadPath() + customRequest.getUsername() + "_" + customRequest.getIdMail() + ".zip";
 		FileOutputStream fileOutputStream = new FileOutputStream(pathToZip);
 		byte[] b = new byte[1024];
 		int count;
@@ -35,7 +35,7 @@ public class ZipArchive {
 	}
 	
 	public static void unZipToDisk(File archive, CustomRequest customRequest) {
-		File baseFolder= new File("D:\\zcs\\" + customRequest.getUsername() + "_" + customRequest.getIdMail());
+		File baseFolder= new File(customRequest.getDownloadPath() + customRequest.getUsername() + "_" + customRequest.getIdMail());
 	    FileInputStream fileInputStream;
 	    try {
 	    	fileInputStream = new FileInputStream(archive);
@@ -75,9 +75,8 @@ public class ZipArchive {
 	  }
 	  
 	  private static void deleteZip(CustomRequest customRequest){
-		  File file= new File("D:\\zcs\\" + customRequest.getUsername() + "_" + customRequest.getIdMail() + ".zip");
+		  File file= new File(customRequest.getDownloadPath() + customRequest.getUsername() + "_" + customRequest.getIdMail() + ".zip");
 		  file.delete();
-			
 	  }
 
 }

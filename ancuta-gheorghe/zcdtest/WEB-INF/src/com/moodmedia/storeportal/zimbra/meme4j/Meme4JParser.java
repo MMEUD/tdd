@@ -17,7 +17,7 @@ import org.apache.james.mime4j.parser.Field;
 
 /**
  *
- * @author Denis Lunev <den@mozgoweb.com>
+ * @author Denis Lunev <den@mozgoweb.com> and edited by Ancuta Gheorghe
  */
 
 public class Meme4JParser {
@@ -41,6 +41,7 @@ public class Meme4JParser {
 
         try {
             //Get stream from file
+        	System.out.println("2" + fileName);
             fis = new FileInputStream(fileName);
             //Create message with stream from file
             //If you want to parse String, you can use:
@@ -49,6 +50,7 @@ public class Meme4JParser {
 
             //Get some standard headers
             mail.put("to", mimeMsg.getTo().toString());
+            System.out.println("3" + mimeMsg.getTo().toString());
             mail.put("from", mimeMsg.getFrom().toString());
             mail.put("subject", mimeMsg.getSubject());
 
@@ -146,29 +148,4 @@ public class Meme4JParser {
         return new String(baos.toByteArray());
     }
 
-    /**
-     *
-     * @param args
-     */
-    public static void main(String[] args) {
-
-        String eml = "C:\\Users\\Ancuta Gheorghe\\Documents\\GitHub\\tdd\\ancuta-gheorghe\\EmlParser\\src\\267.eml";
-        
-        Meme4JParser parser = new Meme4JParser();
-        ArrayList<HashMap<String, Object>> mails = parser.parseMessage(eml);
-        for (HashMap<String, Object> mail: mails){
-			System.out.println("To: " + mail.get("to") + "<br>");
-			System.out.println("From: " + mail.get("from") + "<br>");
-			System.out.println("Subject: " + mail.get("subject") + "<br>");
-			System.out.println("Body: " + mail.get("body").toString().replace("\\\n", "<br>") + "<br>");
-			int i = 1;
-			while (mail.get("attach" + i) != null){
-				System.out.println("Attachment" + i + ": " + mail.get("attach" + i) + "<br>");
-				i++;
-			}
-			System.out.println("<a href='http://localhost:8080/zcd/mail'>Back</a><br>");
-			System.out.println("<br>");
-		}
-        
-    }
 }
