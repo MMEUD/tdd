@@ -30,9 +30,7 @@ public class EmailContent extends AContent {
 		InputStream inputStream = null;
 		try {
 	    	inputStream = (InputStream)connection.getInputStream();
-	    	ZipArchive.unZipToDisk(new File(ZipArchive.saveZipToDisk(saveTo, inputStream, customRequest)), customRequest);
-	    	//ZipArchive.saveZipToDisk(saveTo, inputStream, customRequest);
-	    	//ZipArchive.unzip();		
+	    	ZipArchive.unZipToDisk(new File(ZipArchive.saveZipToDisk(saveTo, inputStream, customRequest)), customRequest);	
 	    } catch (IOException e) {
 	        e.printStackTrace();
 	    }

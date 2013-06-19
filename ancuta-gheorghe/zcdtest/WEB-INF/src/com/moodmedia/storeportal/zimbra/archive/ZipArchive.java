@@ -35,8 +35,6 @@ public class ZipArchive {
 	}
 	
 	public static void unZipToDisk(File archive, CustomRequest customRequest) {
-		//archive = "D:\\zcs\\ancuta_263.zip";
-		//File baseFolder= new File("D:\\zcs\\ancuta_263");
 		File baseFolder= new File("D:\\zcs\\" + customRequest.getUsername() + "_" + customRequest.getIdMail());
 	    FileInputStream fileInputStream;
 	    try {
@@ -48,6 +46,7 @@ public class ZipArchive {
 	    		unpackEntry(destinationFile, zipInputStream);
 	    	}
 	    	zipInputStream.close();
+	    	deleteZip(customRequest);
 	    } catch (FileNotFoundException e) {
 	    	e.printStackTrace();
 	    } catch (IOException e) {
@@ -73,6 +72,12 @@ public class ZipArchive {
 	  private static void createParentFolder(File destinationFile) {
 		  File parent = new File(destinationFile.getParent());
 		  parent.mkdirs();
+	  }
+	  
+	  private static void deleteZip(CustomRequest customRequest){
+		  File file= new File("D:\\zcs\\" + customRequest.getUsername() + "_" + customRequest.getIdMail() + ".zip");
+		  file.delete();
+			
 	  }
 
 }
