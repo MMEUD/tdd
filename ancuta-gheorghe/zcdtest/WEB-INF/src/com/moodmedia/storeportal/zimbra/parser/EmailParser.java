@@ -25,7 +25,7 @@ public class EmailParser extends AParser {
 		ArrayList<HashMap<String, Object>> mails = new ArrayList<HashMap<String, Object>>();
 		for (File fileEntry : new File(emlLocation).listFiles()) {
 	        Meme4JParser parser = new Meme4JParser();
-	        mails = parser.parseMessage(emlLocation + "\\" + fileEntry.getName());
+	        mails = parser.parseMessage(emlLocation, fileEntry.getName());
 	    }
 		return mails;
 	}

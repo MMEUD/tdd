@@ -30,7 +30,7 @@ public class Meme4JParser {
      *
      * @param fileName
      */
-    public ArrayList<HashMap<String, Object>> parseMessage(String fileName) {
+    public ArrayList<HashMap<String, Object>> parseMessage(String emlLocation, String fileName) {
     	ArrayList<HashMap<String, Object>> mails = new ArrayList<HashMap<String, Object>>();
     	HashMap<String, Object> mail = new HashMap<String, Object>();
         FileInputStream fis = null;
@@ -41,8 +41,7 @@ public class Meme4JParser {
 
         try {
             //Get stream from file
-        	System.out.println("2" + fileName);
-            fis = new FileInputStream(fileName);
+        	fis = new FileInputStream(emlLocation + "\\" + fileName);
             //Create message with stream from file
             //If you want to parse String, you can use:
             //Message mimeMsg = new Message(new ByteArrayInputStream(mimeSource.getBytes()));
@@ -50,7 +49,6 @@ public class Meme4JParser {
 
             //Get some standard headers
             mail.put("to", mimeMsg.getTo().toString());
-            System.out.println("3" + mimeMsg.getTo().toString());
             mail.put("from", mimeMsg.getFrom().toString());
             mail.put("subject", mimeMsg.getSubject());
 
@@ -79,11 +77,10 @@ public class Meme4JParser {
             int i = 1;
             for (BodyPart attach : attachments) {
             	String attName = attach.getFilename();
-            	System.out.println(attName);
             	mail.put("attach" + i, attName);
             	i++;
                 //Create file with specified name
-                FileOutputStream fos = new FileOutputStream(attName);
+                FileOutputStream fos = new FileOutputStream(emlLocation + "\\" + attName);
                 try {
                     //Get attach stream, write it to file
                     BinaryBody bb = (BinaryBody) attach.getBody();
