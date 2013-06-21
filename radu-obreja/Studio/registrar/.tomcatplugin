@@ -5,7 +5,7 @@
     <reloadable>true</reloadable>
     <redirectLogger>false</redirectLogger>
     <updateXml>true</updateXml>
-    <warLocation></warLocation>
+    <warLocation>C:\Program Files (x86)\apache-tomcat-7.0.40\webapps\registrar.war</warLocation>
     <extraInfo></extraInfo>
     <webPath>/registrar</webPath>
 </tomcatProjectProperties>

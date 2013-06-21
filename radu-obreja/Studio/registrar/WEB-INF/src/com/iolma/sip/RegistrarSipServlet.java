@@ -1,6 +1,8 @@
 package com.iolma.sip;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -10,84 +12,88 @@ import javax.servlet.sip.SipServlet;
 import javax.servlet.sip.SipServletRequest;
 import javax.servlet.sip.SipServletResponse;
 import javax.servlet.sip.SipSession;
+import javax.servlet.sip.SipSession.State;
 import javax.servlet.sip.SipURI;
 import javax.servlet.sip.TimerListener;
-import javax.servlet.sip.TimerService;
-import javax.servlet.sip.SipSession.State;
 
-import org.apache.log4j.Logger;
+import com.iolma.sip.config.Configuration;
+import com.iolma.sip.pool.DatabaseQuery;
+import com.iolma.sip.pool.DatabaseService;
 
-/**
- * This example shows a simple User agent that can any accept call and reply to BYE or initiate BYE 
- * depending on the sender.
- * 
- * @author Jean Deruelle
- *
- */
 public class RegistrarSipServlet extends SipServlet implements TimerListener {
-	private static Logger logger = Logger.getLogger(RegistrarSipServlet.class);
-	private static final long serialVersionUID = 1L;
-	private static final String CALLEE_SEND_BYE = "YouSendBye";
-	//60 sec
-	private static final int DEFAULT_BYE_DELAY = 60000;
+
+	private static final long serialVersionUID = 4260962358503280827L;
+	private static Logger logger = Logger.getLogger(RegistrarSipServlet.class.getSimpleName());
 	
-	private int byeDelay = DEFAULT_BYE_DELAY;
-	
+	private DatabaseQuery query = null;
+
 	/** Creates a new instance of SimpleProxyServlet */
 	public RegistrarSipServlet() {
 	}
 
-	@Override
 	public void init(ServletConfig servletConfig) throws ServletException {
-		logger.info("the simple sip servlet has been started");
 		super.init(servletConfig);
-		String byeDelayStr = getServletContext().getInitParameter("bye.delay");		
-		try{
-			byeDelay = Integer.parseInt(byeDelayStr);
-		} catch (NumberFormatException e) {
-			logger.error("Impossible to parse the bye delay : " + byeDelayStr, e);
+
+		Configuration config = new Configuration();
+		try {
+			config.configureLogger(getServletContext().getRealPath("/") + "WEB-INF" + File.separator + "conf" + File.separator + "logger.properties");
+			config.configurePool(getServletContext().getRealPath("/") + "WEB-INF" + File.separator + "conf" + File.separator + "connection.properties");
+			DatabaseService databaseService = new DatabaseService(config);
+			databaseService.startup();
+			query = new DatabaseQuery(databaseService);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		logger.info("RegistrarSipServlet: servlet has been started");
+		logger.info("Real path = " + this.getServletContext().getRealPath("/"));
+		
 	}
 
-	/**
-	 * {@inheritDoc}
-	 */
-	protected void doRegister(SipServletRequest request) throws ServletException,
-	IOException {
-		if(logger.isInfoEnabled()) {
-			logger.info("Simple Servlet: Got request:\n"
-				+ request.getMethod());
+	protected void doRegister(SipServletRequest request) throws ServletException, IOException {
+		logger.info(request.toString());
+		logger.info("RegistrarSipServlet: Got request:\n" + request.getMethod());
+		logger.info("RegistrarSipServlet: from isSipURI = " + request.getFrom().getURI().isSipURI());		
+		logger.info("RegistrarSipServlet: from username = " + ((SipURI)request.getFrom().getURI()).getUser());		
+		logger.info("RegistrarSipServlet: from password = " + ((SipURI)request.getFrom().getURI()).getUserPassword());		
+
+		String expStr = request.getHeader("Expires");
+		int expires = 0;
+		if (expStr != null) {
+			expires = Integer.parseInt(expStr);
+			logger.info("RegistrarSipServlet: expires = " + expires);		
 		}
-		logger.info("REGISTER !!!");
+
+		if (expires == 0) {
+			// unregister
+			logger.info("RegistrarSipServlet: UNREGISTER");		
+		} else {
+			// register
+			logger.info("RegistrarSipServlet: REGISTER");		
+			logger.info("RegistrarSipServlet: to isSipURI = " + request.getTo().getURI().isSipURI());		
+			logger.info("RegistrarSipServlet: to username = " + ((SipURI)request.getTo().getURI()).getUser());		
+			logger.info("RegistrarSipServlet: to password = " + ((SipURI)request.getTo().getURI()).getUserPassword());		
+
+			String contact = request.getHeader("Contact");
+	        logger.info("Register contact: " + contact);
+		}
+
 		SipServletResponse sipServletResponse = request.createResponse(SipServletResponse.SC_OK);
 		sipServletResponse.send();
 	}
 
-	protected void doInvite(SipServletRequest request) throws ServletException,
-			IOException {
-		
-		if(logger.isInfoEnabled()) {
-			logger.info("Simple Servlet: Got request:\n"
-				+ request.getMethod());
-		}
+	protected void doInvite(SipServletRequest request) throws ServletException, IOException {
+		logger.info(request.toString());
+		logger.info("RegistrarSipServlet: Got request:\n" + request.getMethod());
 		SipServletResponse sipServletResponse = request.createResponse(SipServletResponse.SC_RINGING);
 		sipServletResponse.send();
 		sipServletResponse = request.createResponse(SipServletResponse.SC_OK);
 		sipServletResponse.send();
-		if(CALLEE_SEND_BYE.equalsIgnoreCase(((SipURI)request.getTo().getURI()).getUser())) {
-			TimerService timer = (TimerService) getServletContext().getAttribute(TIMER_SERVICE);			
-			timer.createTimer(request.getApplicationSession(), byeDelay, false, request.getSession().getId());
-		}
 	}
 
-	/**
-	 * {@inheritDoc}
-	 */
-	protected void doBye(SipServletRequest request) throws ServletException,
-			IOException {
-		if(logger.isInfoEnabled()) {
-			logger.info("SimpleProxyServlet: Got BYE request:\n" + request);
-		}
+	protected void doBye(SipServletRequest request) throws ServletException, IOException {
+		logger.info(request.toString());
+		logger.info("RegistrarSipServlet: Got BYE request:\n" + request);
 		SipServletResponse sipServletResponse = request.createResponse(200);
 		sipServletResponse.send();
 		SipApplicationSession sipApplicationSession = sipServletResponse.getApplicationSession(false);
@@ -96,14 +102,9 @@ public class RegistrarSipServlet extends SipServlet implements TimerListener {
 		}		
 	}
 
-	/**
-	 * {@inheritDoc}
-	 */
-	protected void doResponse(SipServletResponse response)
-			throws ServletException, IOException {
-		if(logger.isInfoEnabled()) {
-			logger.info("SimpleProxyServlet: Got response:\n" + response);
-		}
+	protected void doResponse(SipServletResponse response) throws ServletException, IOException {
+		logger.info(response.toString());
+		logger.info("RegistrarSipServlet: Got response:\n" + response);
 		if(SipServletResponse.SC_OK == response.getStatus() && "BYE".equalsIgnoreCase(response.getMethod())) {
 			SipApplicationSession sipApplicationSession = response.getApplicationSession(false);
 			if(sipApplicationSession != null && sipApplicationSession.isValid()) {
@@ -112,18 +113,15 @@ public class RegistrarSipServlet extends SipServlet implements TimerListener {
 		}
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * @see javax.servlet.sip.TimerListener#timeout(javax.servlet.sip.ServletTimer)
-	 */
 	public void timeout(ServletTimer servletTimer) {
 		SipSession sipSession = servletTimer.getApplicationSession().getSipSession((String)servletTimer.getInfo());
 		if(!State.TERMINATED.equals(sipSession.getState())) {
 			try {
 				sipSession.createRequest("BYE").send();
 			} catch (IOException e) {
-				logger.error("An unexpected exception occured while sending the BYE", e);
+				logger.severe("RegistrarSipServlet: An unexpected exception occured while sending the BYE");
 			}				
 		}
 	}
+
 }
