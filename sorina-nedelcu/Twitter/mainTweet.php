@@ -22,7 +22,7 @@ require_once "$docRoot$appContext/testdesign/TweetRepository.php";
 if (session_id() == "") session_start();
 
 if (!isset($_SESSION['tweet'])) {
-  $_SESSION["tweet"] = TweetRepository::getInstance();
+  $_SESSION["tweet"] = new TweetRepository();
 }
 
 //$tweetTxt = isset($_REQUEST["tweetTxt"]) ? $_REQUEST["tweetTxt"] : "";

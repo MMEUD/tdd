@@ -17,22 +17,12 @@
   require_once "$docRoot$appContext/testdesign/FileWriter.php";
 
   class TweetRepository {
-    private static $instance = null;
     private $messageList = array(); // array of Message
     private $writers;
 
-    private function __construct() {
-
-
-    }
-
-    public static function getInstance() {
-      if (!self::$instance) {
-        self::$instance = new self();
-        self::$writers = new BothWriters();
-        self::$writers->add(new FileWriter());
-      }
-      return self::$instance;
+    public function __construct() {
+      $this->writers = new BothWriters();
+      $this->writers->add(new FileWriter());
     }
 
 
