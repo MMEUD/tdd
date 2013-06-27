@@ -1,0 +1,49 @@
+Return-Path: ancuta@lost.moodmedia.ro
+Received: from lost.moodmedia.ro (LHLO lost.moodmedia.ro) (193.226.133.16)
+ by lost.moodmedia.ro with LMTP; Fri, 14 Jun 2013 17:16:48 +0300 (EEST)
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by lost.moodmedia.ro (Postfix) with ESMTP id D6B06553820D
+	for <ancuta@lost.moodmedia.ro>; Fri, 14 Jun 2013 17:16:48 +0300 (EEST)
+X-Virus-Scanned: amavisd-new at lost.moodmedia.ro
+X-Spam-Flag: NO
+X-Spam-Score: -2.91
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.91 tagged_above=-10 required=6.6
+	tests=[ALL_TRUSTED=-1, BAYES_00=-1.9, T_RP_MATCHES_RCVD=-0.01]
+	autolearn=ham
+Received: from lost.moodmedia.ro ([127.0.0.1])
+	by localhost (lost.moodmedia.ro [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 78uMViW8mao3 for <ancuta@lost.moodmedia.ro>;
+	Fri, 14 Jun 2013 17:16:48 +0300 (EEST)
+Received: from lost.moodmedia.ro (lost.moodmedia.ro [193.226.133.16])
+	by lost.moodmedia.ro (Postfix) with ESMTP id ABE8F553820C
+	for <ancuta@lost.moodmedia.ro>; Fri, 14 Jun 2013 17:16:48 +0300 (EEST)
+Date: Fri, 14 Jun 2013 17:16:48 +0300 (EEST)
+From: ancuta@lost.moodmedia.ro
+To: ancuta@lost.moodmedia.ro
+Message-ID: <28932872.234.1371219408659.JavaMail.root@lost.moodmedia.ro>
+In-Reply-To: <6042082.232.1371219392109.JavaMail.root@lost.moodmedia.ro>
+Subject: Fwd: email simplu cu reply si fwd
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+X-Originating-IP: [193.226.133.1]
+X-Mailer: Zimbra 6.0.8_GA_2661 (ZimbraWebClient - SAF3 (Win)/6.0.8_GA_2661)
+
+fwd
+
+----- Forwarded Message -----
+From: ancuta@lost.moodmedia.ro
+To: ancuta@lost.moodmedia.ro
+Sent: Friday, June 14, 2013 5:16:32 PM
+Subject: Re: email simplu cu reply si fwd
+
+reply
+
+----- Original Message -----
+From: ancuta@lost.moodmedia.ro
+To: ancuta@lost.moodmedia.ro
+Sent: Friday, June 14, 2013 5:16:23 PM
+Subject: email simplu cu reply si fwd
+
+email content simplu cu reply si fwd

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.zimbra.parser;
+package com.moodmedia.storeportal.zimbra.parser;
 
 import java.io.StringReader;
 import java.util.ArrayList;
@@ -17,15 +17,20 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
+import com.moodmedia.storeportal.zimbra.connection.CustomRequest;
 
 /**
  * @author Ancuta Gheorghe
  *
  */
-public class XmlParser {
+public class InboxParser extends AParser {
 
-	public static ArrayList<HashMap<String, String>> getFormatedData(String xml){
-		ArrayList<HashMap<String, String>> mails = new ArrayList<HashMap<String, String>>();
+	public InboxParser(CustomRequest customRequest) {
+		super(customRequest);
+	}
+
+	public ArrayList<HashMap<String, Object>> processData(String xml){
+		ArrayList<HashMap<String, Object>> mails = new ArrayList<HashMap<String, Object>>();
 		try{
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder parser = factory.newDocumentBuilder();
@@ -36,7 +41,7 @@ public class XmlParser {
 			NodeList  items = root.getElementsByTagName("m");
 			for (int i=0 ; i<items.getLength() ; i++) {
 				Element item = (Element)items.item(i);
-				HashMap<String, String> mail = new HashMap<String, String>();
+				HashMap<String, Object> mail = new HashMap<String, Object>();
 				mail.put("read", (item.hasAttribute("f")&&"u".equals(item.getAttribute("f")))?"no":"yes");
 				mail.put("hasAttachment", (item.hasAttribute("f")&&"a".equals(item.getAttribute("f")))?"yes":"no");
 				mail.put("d", item.getAttribute("d"));

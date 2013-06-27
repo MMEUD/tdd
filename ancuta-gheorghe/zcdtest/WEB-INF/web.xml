@@ -5,16 +5,13 @@
   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
  
    <servlet>
-      <servlet-name>GetInboxServlet</servlet-name>
-      <servlet-class>com.zimbra.servlet.GetInboxServlet</servlet-class>
-   </servlet>
-   <servlet>
-      <servlet-name>GetMailServlet</servlet-name>
-      <servlet-class>com.zimbra.servlet.GetMailServlet</servlet-class>
+      <servlet-name>MailServlet</servlet-name>
+      <servlet-class>com.moodmedia.storeportal.actions.messagerie.zimbra.MailServlet</servlet-class>
    </servlet>
 
    <servlet-mapping>
-      <servlet-name>GetInboxServlet</servlet-name>
-      <url-pattern>/inbox</url-pattern>
+      <servlet-name>MailServlet</servlet-name>
+      <url-pattern>/mail</url-pattern>
    </servlet-mapping>
+   
 </web-app>
