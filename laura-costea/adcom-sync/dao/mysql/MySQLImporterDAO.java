@@ -17,8 +17,8 @@ import com.moodmedia.adcom.utils.TaskUtils;
 
 public class MySQLImporterDAO implements ImporterDAO {
 
-	private static final HashMap tableMetaData = new HashMap();
-	private static final HashMap sql = new HashMap();
+	private final HashMap tableMetaData = new HashMap();
+	private final HashMap sql = new HashMap();
 	private static final SimpleDateFormat sdf = new SimpleDateFormat();
 
 	public boolean importTable(Connection conn, String tableName, ISynchParser parser) throws SQLException{
