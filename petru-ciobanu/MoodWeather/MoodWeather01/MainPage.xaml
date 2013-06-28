@@ -1,0 +1,148 @@
+﻿<UserControl x:Class="MoodWeather.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+             xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
+             xmlns:dataControls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.DataForm.Toolkit"
+             xmlns:SLaB="http://www.davidpoll.com/SLaB"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BorderBrush="{x:Null}"
+             BorderThickness="4,4,4,4"
+             Background="WhiteSmoke"
+             d:DesignWidth="1280"
+             d:DesignHeight="720">
+
+    <Grid x:Name="LayoutRoot" Background="WhiteSmoke" 
+          Style="{StaticResource LayoutRootGridStyle}">
+
+        <Border x:Name="ContentBorder" 
+                Style="{StaticResource ContentBorderStyle}" BorderBrush="Black">
+            <navigation:Frame x:Name="ContentFrame"
+                              Style="{StaticResource ContentFrameStyle}"
+                              Source="/Index" Content="(/Index)" Height="615" VerticalAlignment="Top"
+                              Background="Transparent" HorizontalAlignment="Stretch"
+                              HorizontalContentAlignment="Stretch" FlowDirection="LeftToRight"
+                              VerticalContentAlignment="Stretch" Padding="0" Margin="0,0,0,0"
+                              Navigated="ContentFrame_Navigated"
+                              NavigationFailed="ContentFrame_NavigationFailed">
+                <navigation:Frame.UriMapper>
+                    <uriMapper:UriMapper>
+                        <uriMapper:UriMapping Uri=""
+                                              MappedUri="/Views/Index.xaml" />
+                        <uriMapper:UriMapping Uri="/{pageName}"
+                                              MappedUri="/Views/{pageName}.xaml" />
+                    </uriMapper:UriMapper>
+                </navigation:Frame.UriMapper>
+
+                <navigation:Frame.ContentLoader>
+                    <SLaB:ErrorPageLoader>
+                        <SLaB:ErrorPage ExceptionType="UnauthorizedAccessException"
+                                        ErrorPageUri="/Views/LoginPage.xaml" />
+                        <SLaB:ErrorPage ErrorPageUri="/Views/Error/ErrorPage.xaml" />
+                        <SLaB:ErrorPageLoader.ContentLoader>
+                            <SLaB:AuthContentLoader Principal="{Binding User, Source={StaticResource WebContext}}">
+
+                                <SLaB:NavigationAuthorizer>
+
+                                    <SLaB:NavigationAuthRule UriPattern="^/Views/About\.xaml\??.*$">
+                                     
+                                        <SLaB:Allow Users="*" />
+                                    </SLaB:NavigationAuthRule>
+
+                                    <SLaB:NavigationAuthRule UriPattern="^/Views/UserPage/Index.xaml\??.*$">
+                                        <SLaB:Deny Users="?" />
+                                        <SLaB:Allow Roles="User" />
+                                    </SLaB:NavigationAuthRule>
+
+
+                                    <SLaB:NavigationAuthRule UriPattern="^/Views/Admin/IndexAdmin.xaml\??.*$"
+                                                             IgnoreCase="True">
+                                        <SLaB:Deny Users="?" />
+                                        <SLaB:Allow Roles="Admin" />
+                                    </SLaB:NavigationAuthRule>
+
+
+                                </SLaB:NavigationAuthorizer>
+                            </SLaB:AuthContentLoader>
+                        </SLaB:ErrorPageLoader.ContentLoader>
+                    </SLaB:ErrorPageLoader>
+                </navigation:Frame.ContentLoader>
+            </navigation:Frame>
+        </Border>
+
+        <Grid Style="{StaticResource NavigationOuterGridStyle}" >
+            <Grid x:Name="NavigationGrid"
+                  Style="{StaticResource NavigationGridStyle}">
+
+                <Border x:Name="BrandingBorder"
+                        Style="{StaticResource BrandingBorderStyle}">
+                    <StackPanel x:Name="BrandingStackPanel"
+                                Style="{StaticResource BrandingStackPanelStyle}">
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="LinksBorder"
+                        Style="{StaticResource LinksBorderStyle}">
+                    <StackPanel x:Name="LinksStackPanel"
+                                Style="{StaticResource LinksStackPanelStyle}">
+
+                        <HyperlinkButton x:Name="HomeLink"
+                                         Style="{StaticResource LinkStyle}"
+                                         NavigateUri="/Index"
+                                         TargetName="ContentFrame"
+                                         Content="{Binding Path=ApplicationStrings.HomePageTitle, Source={StaticResource ResourceWrapper}}" />
+
+
+                        <Rectangle x:Name="Divider1"
+                                   Style="{StaticResource DividerStyle}" />
+
+                        <HyperlinkButton x:Name="AdminSection"
+                                         Style="{StaticResource LinkStyle}"
+                                         NavigateUri="/Admin/IndexAdmin"
+                                         Visibility="Collapsed"
+                                         TargetName="ContentFrame"
+                                         Content="Admin" />
+
+
+                        <Rectangle x:Name="Divider2"
+                                   Style="{StaticResource DividerStyle}" />
+
+                        <HyperlinkButton x:Name="UserSection"
+                                         Style="{StaticResource LinkStyle}"
+                                         NavigateUri="/UserPage/Index"
+                                         TargetName="ContentFrame"
+                                         Visibility="Collapsed"
+                                         Content="UserSection" />
+
+
+                        <Rectangle x:Name="Divider3"
+                                   Style="{StaticResource DividerStyle}" />
+
+                        <HyperlinkButton x:Name="Reports"
+                                         Style="{StaticResource LinkStyle}"
+                                         NavigateUri="/About"
+                                         TargetName="ContentFrame"
+                                         Content="Status" />
+
+                    </StackPanel>
+                </Border>
+                <Image Height="25" HorizontalAlignment="Left" Margin="6,10,0,0" Name="Logo" Stretch="Fill"
+                       VerticalAlignment="Top" Width="119" Source="/MoodWeather;component/Assets/Icons/mood_logo.png" />
+            </Grid>
+
+            <Border x:Name="loginContainer"
+                    Style="{StaticResource LoginContainerStyle}">
+                <!-- LoginStatus will be added here in code behind. This is required for the designer view to work -->
+
+            </Border>
+        </Grid>
+        <Grid Height="41" HorizontalAlignment="Stretch" Margin="0" Name="grid1" VerticalAlignment="Bottom"
+              Background="#FF484848">
+            <TextBlock Height="23" HorizontalAlignment="Right" Margin="0,12,16,6" Name="copyright"
+                       Text="Copyright © 2012 Mood Media" VerticalAlignment="Center" Foreground="White" FontSize="12" />
+        </Grid>
+    </Grid>
+
+</UserControl>

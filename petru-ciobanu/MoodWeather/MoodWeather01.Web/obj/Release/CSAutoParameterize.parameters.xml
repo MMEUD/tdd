@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ApplicationServices-Web.config Connection String" description="ApplicationServices Connection String used in web.config by the application to access the database." defaultvalue="Data Source=192.168.26.107;Initial Catalog=security;Persist Security Info=True;User ID=sa;Password=K4hvdrq2d3" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\MoodWeatherFinal\\MoodWeather01\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ApplicationServices']/@connectionString" />
+  </parameter>
+  <parameter name="CityListEntities-Web.config Connection String" description="CityListEntities Connection String used in web.config by the application to access the database." defaultvalue="metadata=res://*/SqlModel.ApiKeySettings.csdl|res://*/SqlModel.ApiKeySettings.ssdl|res://*/SqlModel.ApiKeySettings.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.26.107;initial catalog=CityList;persist security info=True;user id=sa;password=K4hvdrq2d3;multipleactiveresultsets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\MoodWeatherFinal\\MoodWeather01\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CityListEntities']/@connectionString" />
+  </parameter>
+</parameters>

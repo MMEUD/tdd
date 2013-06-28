@@ -48,6 +48,10 @@ class ListCmdInterpreter extends CmdInterpreter implements ICmdInterpreter
 
         $message = "";
 
+        /** @noinspection PhpUndefinedMethodInspection */
+        /** @noinspection PhpUndefinedMethodInspection */
+        /** @noinspection PhpUndefinedMethodInspection */
+        /** @noinspection PhpUndefinedMethodInspection */
         while($iterator->valid()) {
 
             $properties[$iterator->current()->GetKey()] = $iterator->current()->GetValue();

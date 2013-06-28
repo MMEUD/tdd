@@ -74,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Property.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Property.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/Property.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="421" selection-end="421" vertical-scroll-proportion="0.82156134">
+            <state line="26" column="0" selection-start="421" selection-end="421" vertical-scroll-proportion="-17.0">
               <folding />
             </state>
           </provider>
@@ -92,10 +92,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadAction.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="LoadAction.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/actions/LoadAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="675" selection-end="675" vertical-scroll-proportion="-15.692307">
+            <state line="5" column="0" selection-start="148" selection-end="148" vertical-scroll-proportion="0.15799257">
               <folding />
             </state>
           </provider>
@@ -219,13 +219,13 @@
         <option value="$PROJECT_DIR$/src/actions/FirstAction.php" />
         <option value="$PROJECT_DIR$/src/actions/GetParameterAction.php" />
         <option value="$PROJECT_DIR$/src/actions/ListNamespaceAction.php" />
-        <option value="$PROJECT_DIR$/src/actions/LoadAction.php" />
         <option value="$PROJECT_DIR$/src/actions/NsAction.php" />
         <option value="$PROJECT_DIR$/src/actions/SaveAction.php" />
         <option value="$PROJECT_DIR$/src/actions/SetParameterAction.php" />
         <option value="$PROJECT_DIR$/src/actions/UnknownAction.php" />
         <option value="$PROJECT_DIR$/src/util/NamespaceObject.php" />
         <option value="$PROJECT_DIR$/src/util/Property.php" />
+        <option value="$PROJECT_DIR$/src/actions/LoadAction.php" />
       </list>
     </option>
   </component>
@@ -556,20 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyApp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="32" selection-start="83" selection-end="83" vertical-scroll-proportion="-1.3333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interpreter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1470" selection-end="1470" vertical-scroll-proportion="-22.884615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ContextSingleton.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="-1.3076923">
@@ -601,13 +587,6 @@
     <entry file="file://$PROJECT_DIR$/src/actions/ListNamespaceAction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="-4.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/LoadAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="675" selection-end="675" vertical-scroll-proportion="-15.692307">
           <folding />
         </state>
       </provider>
@@ -649,7 +628,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/Property.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="421" selection-end="421" vertical-scroll-proportion="0.82156134">
+        <state line="26" column="0" selection-start="421" selection-end="421" vertical-scroll-proportion="-17.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyApp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="32" selection-start="83" selection-end="83" vertical-scroll-proportion="-1.3333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interpreter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="1470" selection-end="1470" vertical-scroll-proportion="-22.884615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/LoadAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="148" selection-end="148" vertical-scroll-proportion="0.15799257">
           <folding />
         </state>
       </provider>

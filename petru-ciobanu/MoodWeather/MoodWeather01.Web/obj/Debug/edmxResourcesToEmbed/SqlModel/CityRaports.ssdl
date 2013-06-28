@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CityListModelRaports.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="CityListModelRaportsStoreContainer" />
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'CityList.dbo.viewCityStatus' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="viewCityStatus">
+        <Property Name="CityName" Type="varchar" MaxLength="250" />
+        <Property Name="CityAlternative" Type="varchar" MaxLength="250" />
+        <Property Name="CountryCode" Type="nvarchar" MaxLength="3" />
+        <Property Name="Teamco" Type="nvarchar" MaxLength="3" />
+        <Property Name="Country" Type="nvarchar" MaxLength="50" />
+        <Property Name="LastUpdate" Type="datetime" />
+        <Property Name="Active" Type="tinyint" />
+        <Property Name="CityId" Type="int" />
+      </EntityType>-->
+</Schema>

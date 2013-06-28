@@ -43,7 +43,8 @@ public class ListExpression extends Expression{
 		return false;
 	}
 	
-	public void interpretCommand(){
+	public String interpretCommand(){
+		String output = "";
 		if (this.validateCommandParameters()){
 			for (Namespace nsTemp: this.namespaces){
 				ArrayList<Parameter> parameters = new ArrayList<Parameter>();
@@ -51,11 +52,12 @@ public class ListExpression extends Expression{
 				Context context = new Context(new OrderArraylist());
 				parameters = context.executeStrategy(parameters);
 				for (Parameter pTemp: parameters){
-					System.out.println(nsTemp.getName() + ": " + pTemp.getName() + " = " + pTemp.getValue());
+					output += nsTemp.getName() + ": " + pTemp.getName() + " = " + pTemp.getValue() + "\n";
 				}
 			}
+			return output;
 		} else {
-			System.out.println("List command is not formed properly. Correct format: list or list {namespace}");
+			return "List command is not formed properly. Correct format: list or list {namespace}";
 		}
 	}
 }

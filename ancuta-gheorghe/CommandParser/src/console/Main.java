@@ -35,7 +35,7 @@ public class Main {
 			    
 			    Evaluator sentence = new Evaluator(expression);
 				try{
-					sentence.interpretCommand();
+					System.out.println(sentence.interpretCommand());
 				} catch (Exception e){
 				}
 		 	}

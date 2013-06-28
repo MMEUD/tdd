@@ -43,13 +43,13 @@ public class NsExpression extends Expression {
 		return false;
 	}
 
-	public void interpretCommand(){
+	public String interpretCommand(){
 		Console console = Console.getInstance();
 		if (this.validateCommandParameters()){
 			console.setCurrentNamespace(this.activeNamespace);
-			System.out.println("Current namespace: " + console.getCurrentNamespace().getName());
+			return "Current namespace: " + console.getCurrentNamespace().getName();
 		} else {
-			System.out.println("Ns command is not formed properly. Correct format: ns {namespace}");
+			return "Ns command is not formed properly. Correct format: ns {namespace}";
 		}
 	}
 

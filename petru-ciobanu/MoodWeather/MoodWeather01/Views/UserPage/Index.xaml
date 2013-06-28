@@ -1,0 +1,36 @@
+﻿<navigation:Page x:Class="MoodWeather.Views.UserPage.Index"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+                 xmlns:weathercondition="clr-namespace:MoodWeather.Views.Controls"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 mc:Ignorable="d"
+                 xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+                 Title="UserSection" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+                 d:DesignHeight="612" d:DesignWidth="1275" xmlns:my="clr-namespace:MoodWeather.CityListService"
+                 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+
+    <Grid>
+        <sdk:TabControl HorizontalAlignment="Stretch" Name="TabControl" VerticalAlignment="Top" Height="612"
+                        SelectedIndex="1">
+            <sdk:TabItem Header="CityList" Name="CityList">
+                <Grid>
+                    <weathercondition:CityManagementControl HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                            Width="1250" Height="545" />
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="WeatherConditions" Name="WeatherConditions">
+                <Grid>
+                    <weathercondition:WeatherCondition HorizontalAlignment="Center" x:Name="WeatherCondition"
+                                                       VerticalAlignment="Center" Width="1250" Height="545" />
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="ServerEvents" Name="XmlSettings">
+                <Grid>
+                  <weathercondition:EventViewControl HorizontalAlignment="Center" VerticalAlignment="Center" Width="1250" Height="545" /> 
+                </Grid>
+            </sdk:TabItem>
+        </sdk:TabControl>
+    </Grid>
+</navigation:Page>

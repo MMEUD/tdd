@@ -12,6 +12,7 @@ require_once('/singleton/MySingleton.php');
 
 class SetExpression implements CommandExpression{
    private $arguments;
+   private $msg;
    public function __construct($arguments){
        $this->arguments = $arguments;
    }
@@ -31,9 +32,10 @@ class SetExpression implements CommandExpression{
         $currentNamespace->addProperties($currentProperty);
         //$nmsProperties = $currentNamespace->getProperties();
         //print_r($nmsProperties);
-        return $currentNamespace->getName()." : ". $currentProperty->getName() ." = ". $currentProperty->getValue();
+        $this->msg = $currentNamespace->getName()." : ". $currentProperty->getName() ." = ". $currentProperty->getValue();
       }else{
-        return "Parameters incorrect. The command should be set {parameter_name} {parameter_value}.";
+        $this->msg = "Parameters incorrect. The command should be set {parameter_name} {parameter_value}.";
       }
+      return $this->msg;
     }
 }

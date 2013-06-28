@@ -4,7 +4,7 @@
  * User: iulian
  * Date: 4/19/13
  * Time: 5:37 PM
- * To change this template use File | Settings | File Templates.
+ * Class to create a group ( named IniGroup) of configuration set
  */
 class IniGroup
 {
@@ -16,9 +16,11 @@ class IniGroup
     }
 
     public function SetProperty($key,$val) {
+
         $iterator = $this->ReadProperties();
 
         $found = false;
+
         while($iterator->valid()) {
 
             if($iterator->current()->GetKey() == $key) {
@@ -28,11 +30,10 @@ class IniGroup
 
             $iterator->next();
         }
+
         if ($found == false){
             $this->properties->append(new Property($key, $val));
         }
-
-
 
     }
 

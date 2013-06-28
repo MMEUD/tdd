@@ -25,7 +25,6 @@ class LoadAction implements Action {
   }
 
 
-
   public function loadFile ($fileName) {
     $msg = "";
     if (is_file('files/'.$fileName.'.properties')) {

@@ -49,7 +49,8 @@ public class LoadExpression extends Expression{
 	}
 	
 	@SuppressWarnings("rawtypes")
-	public void interpretCommand(){
+	public String interpretCommand(){
+		String output = "";
 		if (this.validateCommandParameters()) {
 			Console console = Console.getInstance();
 			if (this.commandParameters.length > 0){
@@ -67,7 +68,7 @@ public class LoadExpression extends Expression{
 				    nsTemp.setParameter(paramTemp);
 				    it.remove();
 				}				
-				System.out.println(this.commandParameters[0] + ": loaded " + size + " parameters.");
+				return this.commandParameters[0] + ": loaded " + size + " parameters.";
 			} else {
 				this.setFiles(PropertiesFile.getFiles());
 				for (String file: this.getFiles()){
@@ -84,11 +85,12 @@ public class LoadExpression extends Expression{
 					    nsTemp.setParameter(paramTemp);
 					    it.remove();
 					}		
-					System.out.println(file + ": loaded " + size + " parameters.");
+					output += file + ": loaded " + size + " parameters.\n";
 				}
+				return output;
 			}
 		} else {
-			System.out.println("Load command is not formed properly. Correct format: load or load {namespace}");
+			return "Load command is not formed properly. Correct format: load or load {namespace}";
 		}
 	}
 	

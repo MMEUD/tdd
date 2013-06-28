@@ -46,16 +46,16 @@ public class GetExpression extends Expression {
 		return false;
 	}
 	
-	public void interpretCommand(){
+	public String interpretCommand(){
 		Console console = Console.getInstance();
 		if (this.validateCommandParameters()){
 			if (this.parameter == null) {
-				System.out.println(console.getCurrentNamespace().getName() + ": this parameter does not exist.");
+				return console.getCurrentNamespace().getName() + ": this parameter does not exist.";
 			} else {
-				System.out.println(console.getCurrentNamespace().getName() + ": " + this.getParameter().getName() + " = " + this.getParameter().getValue());
+				return console.getCurrentNamespace().getName() + ": " + this.getParameter().getName() + " = " + this.getParameter().getValue();
 			}
 		} else {
-			System.out.println("Get command is not formed properly. Correct format: get {parameter_name}");
+			return "Get command is not formed properly. Correct format: get {parameter_name}";
 		}
 	}
 

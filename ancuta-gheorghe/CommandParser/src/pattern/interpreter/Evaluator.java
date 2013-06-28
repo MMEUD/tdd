@@ -50,8 +50,8 @@ public class Evaluator extends Expression{
 		return false;
 	}
 
-	public void interpretCommand() {
-        expression.interpretCommand();
+	public String interpretCommand() {
+        return expression.interpretCommand();
     }
 	
 }

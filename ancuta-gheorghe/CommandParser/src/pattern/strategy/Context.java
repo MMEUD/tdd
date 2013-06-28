@@ -4,7 +4,6 @@
 package pattern.strategy;
 
 import java.util.ArrayList;
-import java.util.Map;
 
 import pattern.utils.Parameter;
 

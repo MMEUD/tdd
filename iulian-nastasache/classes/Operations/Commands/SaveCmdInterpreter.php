@@ -11,6 +11,7 @@ class SaveCmdInterpreter extends CmdInterpreter implements ICmdInterpreter
 
     public function CommandInterpreter()
     {
+        $message  = "";
 
         if(coUnt(self::$params)== 0) {
 
@@ -18,7 +19,7 @@ class SaveCmdInterpreter extends CmdInterpreter implements ICmdInterpreter
             foreach(IniGroupsContainer::ListIniGroupsNames() as $iniGroupName){
 
                 IniGroupsContainer::SavePropertiesToFile($iniGroupName);
-                $message =  "$iniGroupName : saved " .IniGroupsContainer::GetIniGroupByName($iniGroupName)->GetPropertiesCount()." parameters \n";
+                $message .=  "$iniGroupName : saved " .IniGroupsContainer::GetIniGroupByName($iniGroupName)->GetPropertiesCount()." parameters \n";
             }
 
         } else {

@@ -11,16 +11,11 @@ abstract class CmdInterpreter
     protected static $params;
 
     // Add parameters to the command
-    // public function CmdInterpreter()
-    // {
-
-    // }
-
     public function SetCommandParams($params) {
         self::$params = $params;
     }
 
-    // Prepare parameters for children required a
+    // Read parameter for commands need it
     protected function ReadProperty($iterator, $key){
 
         while($iterator->valid()) {
@@ -34,3 +29,4 @@ abstract class CmdInterpreter
 
 
 }
+

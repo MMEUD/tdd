@@ -12,6 +12,7 @@ require_once('/singleton/MySingleton.php');
 require_once('/strategy/StrategyContext.php');
 class ListExpression implements CommandExpression{
    private $argument;
+   private $msg;
    public function __construct($argument){
        $this->argument = $argument;
    }
@@ -23,7 +24,6 @@ class ListExpression implements CommandExpression{
    }
   public function interpret(){
       //the command should be list or list {namespace_name}
-      $msg = "";
       $currentSession = MySingleton::getInstance();
       $allNamespaces = $currentSession->getNamespaces();
       if ($this->getArgument() != ""){
@@ -36,10 +36,10 @@ class ListExpression implements CommandExpression{
           $strategyContextForProp = new StrategyContext('A');
           $sortedProperties = $strategyContextForProp->getSortedArray($allPropertiesOfNamespace);
           foreach($sortedProperties as $selectedProperty){
-            $msg .= $selectedNamespace->getName()." : ".$selectedProperty->getName(). " = ". $selectedProperty->getValue()."\n";
+            $this->msg .= $selectedNamespace->getName()." : ".$selectedProperty->getName(). " = ". $selectedProperty->getValue()."\n";
           }
         }else{
-          return "There is no namespace named: ".$this->getArgument();
+          $this->msg = "There is no namespace named: ".$this->getArgument();
         }
       }else{
         //list all namespaces ordered alphabetically
@@ -54,10 +54,10 @@ class ListExpression implements CommandExpression{
           $strategyContextForProp = new StrategyContext('A');
           $sortedProperties = $strategyContextForProp->getSortedArray($allPropertiesOfNamespace);
           foreach($sortedProperties as $selectedProperty){
-            $msg .= $selectedNamespace->getName()." : ".$selectedProperty->getName(). " = ". $selectedProperty->getValue()."\n";
+            $this->msg .= $selectedNamespace->getName()." : ".$selectedProperty->getName(). " = ". $selectedProperty->getValue()."\n";
           }
         }
       }
-      return $msg;
+      return $this->msg;
     }
 }

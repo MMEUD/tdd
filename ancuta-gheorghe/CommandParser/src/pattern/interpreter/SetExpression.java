@@ -47,12 +47,12 @@ public class SetExpression extends Expression {
 		return false;
 	}
 	
-	public void interpretCommand(){
+	public String interpretCommand(){
 		Console console = Console.getInstance();
 		if (this.validateCommandParameters()){
-			System.out.println(console.getCurrentNamespace().getName() + ": " + this.getParameter().getName() + " = " + this.getParameter().getValue());
+			return console.getCurrentNamespace().getName() + ": " + this.getParameter().getName() + " = " + this.getParameter().getValue();
 		} else {
-			System.out.println("Set command is not formed properly. Correct format: set {parameter_name} {parameter_value}");
+			return "Set command is not formed properly. Correct format: set {parameter_name} {parameter_value}";
 		}
 	}
 

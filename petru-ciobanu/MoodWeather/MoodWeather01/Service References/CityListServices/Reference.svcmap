@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2bf8111e-65c3-4b2c-b73b-471f9cc26039" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54601/CityService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CityService.xsd" MetadataType="Schema" ID="e6a63d62-4ebd-4a23-bb1e-11050a0ab825" SourceId="1" SourceUrl="http://localhost:54601/CityService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CityService1.xsd" MetadataType="Schema" ID="12174bb7-a56e-4901-b3f8-aa8af2d37dce" SourceId="1" SourceUrl="http://localhost:54601/CityService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CityService.disco" MetadataType="Disco" ID="31c20dc6-239f-46cf-8db6-6100935a6050" SourceId="1" SourceUrl="http://localhost:54601/CityService.svc?disco" />
+    <MetadataFile FileName="CityService.wsdl" MetadataType="Wsdl" ID="6ed55450-b966-40d6-b463-cf81511c8d8d" SourceId="1" SourceUrl="http://localhost:54601/CityService.svc?wsdl" />
+    <MetadataFile FileName="CityService2.xsd" MetadataType="Schema" ID="b5c92c37-4109-4fa4-9172-2b2d1271ee1f" SourceId="1" SourceUrl="http://localhost:54601/CityService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
