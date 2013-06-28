@@ -1,15 +1,15 @@
 <? /* Cassiopeia project file */ ?>
 <?
-$appContext = $_SERVER['CAS_APP_CONTEXT'];
-$docRoot = $_SERVER['CAS_DOC_ROOT'];
+$appContext = $_SERVER['EX_APP_CONTEXT'];
+$docRoot = $_SERVER['EX_DOC_ROOT'];
 
-require_once "$docRoot$appContext/testdesign/Message.php";
-require_once "$docRoot$appContext/testdesign/User.php";
-require_once "$docRoot$appContext/testdesign/TweetCommand.php";
-require_once "$docRoot$appContext/testdesign/BothWriters.php";
-require_once "$docRoot$appContext/testdesign/SenderSortStrategy.php";
-require_once "$docRoot$appContext/testdesign/SortedMessagesList.php";
-require_once "$docRoot$appContext/testdesign/TimestampSortStrategy.php";
+require_once "$docRoot$appContext/Twitter/Message.php";
+require_once "$docRoot$appContext/Twitter/User.php";
+require_once "$docRoot$appContext/Twitter/TweetCommand.php";
+require_once "$docRoot$appContext/Twitter/BothWriters.php";
+require_once "$docRoot$appContext/Twitter/SenderSortStrategy.php";
+require_once "$docRoot$appContext/Twitter/SortedMessagesList.php";
+require_once "$docRoot$appContext/Twitter/TimestampSortStrategy.php";
 
 ?>
 <html>

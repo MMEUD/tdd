@@ -6,11 +6,11 @@
    * Time: 3:08 PM
    * To change this template use File | Settings | File Templates.
    */
-  $appContext = $_SERVER['CAS_APP_CONTEXT'];
-  $docRoot = $_SERVER['CAS_DOC_ROOT'];
+  $appContext = $_SERVER['EX_APP_CONTEXT'];
+  $docRoot = $_SERVER['EX_DOC_ROOT'];
 
 
-  require_once "$docRoot$appContext/testdesign/ISortStrategy.php";
+  require_once "$docRoot$appContext/Twitter/ISortStrategy.php";
 
   class SortedMessagesList implements ISortStrategy{
     private $strategy;

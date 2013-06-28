@@ -6,12 +6,12 @@
    * Time: 12:11 PM
    * To change this template use File | Settings | File Templates.
    */
-  $appContext = $_SERVER['CAS_APP_CONTEXT'];
-  $docRoot = $_SERVER['CAS_DOC_ROOT'];
+  $appContext = $_SERVER['EX_APP_CONTEXT'];
+  $docRoot = $_SERVER['EX_DOC_ROOT'];
 
-  require_once "$docRoot$appContext/testdesign/ICommand.php";
-  require_once "$docRoot$appContext/testdesign/Message.php";
-   require_once "$docRoot$appContext/testdesign/TweetRepository.php";
+  require_once "$docRoot$appContext/Twitter/ICommand.php";
+  require_once "$docRoot$appContext/Twitter/Message.php";
+   require_once "$docRoot$appContext/Twitter/TweetRepository.php";
 
   class TweetCommand implements ICommand {
 

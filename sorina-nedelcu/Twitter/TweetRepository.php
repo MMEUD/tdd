@@ -6,15 +6,15 @@
    * Time: 10:31 AM
    * To change this template use File | Settings | File Templates.
    */
-  $appContext = $_SERVER['CAS_APP_CONTEXT'];
-  $docRoot = $_SERVER['CAS_DOC_ROOT'];
+  $appContext = $_SERVER['EX_APP_CONTEXT'];
+  $docRoot = $_SERVER['EX_DOC_ROOT'];
 
-  require_once "$docRoot$appContext/testdesign/Message.php";
-  require_once "$docRoot$appContext/testdesign/SenderSortStrategy.php";
-  require_once "$docRoot$appContext/testdesign/SortedMessagesList.php";
-  require_once "$docRoot$appContext/testdesign/TimestampSortStrategy.php";
-  require_once "$docRoot$appContext/testdesign/BothWriters.php";
-  require_once "$docRoot$appContext/testdesign/FileWriter.php";
+  require_once "$docRoot$appContext/Twitter/Message.php";
+  require_once "$docRoot$appContext/Twitter/SenderSortStrategy.php";
+  require_once "$docRoot$appContext/Twitter/SortedMessagesList.php";
+  require_once "$docRoot$appContext/Twitter/TimestampSortStrategy.php";
+  require_once "$docRoot$appContext/Twitter/BothWriters.php";
+  require_once "$docRoot$appContext/Twitter/FileWriter.php";
 
   class TweetRepository {
     private $messageList = array(); // array of Message
