@@ -1,4 +1,4 @@
-package com.iolma.sip.pool;
+package com.iolma.registrar.pool;
 
 public class DatabaseException extends Exception {
 

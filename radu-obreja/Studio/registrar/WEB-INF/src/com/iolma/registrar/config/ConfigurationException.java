@@ -1,4 +1,4 @@
-package com.iolma.sip.config;
+package com.iolma.registrar.config;
 
 public class ConfigurationException extends Exception {
 

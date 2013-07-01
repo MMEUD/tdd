@@ -1,4 +1,4 @@
-package com.iolma.sip.pool;
+package com.iolma.registrar.pool;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

@@ -51,9 +51,9 @@ public class H264Recorder<IProcess> extends JFrame {
 		videoCapture.startup();
 		
 		// Create gui
-		VideoPanel videoPanel = new VideoPanel(640, 480);
-		videoPanel.addInput(videoCapture);
-		videoPanel.startup();
+		//VideoPanel videoPanel = new VideoPanel(640, 480);
+		//videoPanel.addInput(videoCapture);
+		//videoPanel.startup();
 				
 		// Create audio capture
 		final AudioCapture audioCapture = new AudioCapture();		
@@ -104,7 +104,7 @@ public class H264Recorder<IProcess> extends JFrame {
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().add(btnPanel, BorderLayout.NORTH);
-		getContentPane().add(videoPanel.getPanel(), BorderLayout.CENTER);
+		//getContentPane().add(videoPanel.getPanel(), BorderLayout.CENTER);
 		setResizable(false);
 		pack();
 		setLocationRelativeTo(null);

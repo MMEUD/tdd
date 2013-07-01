@@ -1,4 +1,4 @@
-package com.iolma.sip.config;
+package com.iolma.registrar.config;
 
 import java.io.FileInputStream;
 import java.io.IOException;

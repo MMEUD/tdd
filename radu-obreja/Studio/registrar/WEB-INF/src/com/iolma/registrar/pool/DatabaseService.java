@@ -1,4 +1,4 @@
-package com.iolma.sip.pool;
+package com.iolma.registrar.pool;
 
 import java.beans.PropertyVetoException;
 import java.sql.Connection;
@@ -7,13 +7,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Logger;
 
-import com.iolma.sip.IService;
-import com.iolma.sip.config.Configuration;
-import com.iolma.sip.config.ConfigurationException;
+import com.iolma.registrar.config.Configuration;
+import com.iolma.registrar.config.ConfigurationException;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 
-public class DatabaseService implements IService {
+public class DatabaseService {
 	
 	protected static Logger log = Logger.getLogger(DatabaseService.class.getName());
 	private ComboPooledDataSource cpds = null;
