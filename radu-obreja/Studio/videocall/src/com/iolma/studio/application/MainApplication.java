@@ -5,10 +5,17 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 import com.iolma.studio.log.ConsoleLogger;
@@ -23,6 +30,7 @@ public class MainApplication extends Application {
 		MainApplication.launch(args);
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void start(Stage stage) throws Exception {
 		
 		ILogger logger = new ConsoleLogger();
@@ -33,12 +41,39 @@ public class MainApplication extends Application {
 		Parent p = FXMLLoader.load(getFXML() , getResourceBundle());  		
 		Scene s = new Scene(p);
 		stage.setScene(s);
-		stage.setFullScreen(true);
 		stage.show();
 
 		graph = GraphFactory.makeGraph(configuration, stage, logger);
 		graph.startup();
 
+		try {
+			Button call = (Button)stage.getScene().lookup("#call");
+			//26-6sept
+			call.setOnAction(new EventHandler() {
+				@Override
+				public void handle(Event arg0) {
+	                System.out.println("Hello World call!");
+				}
+	        });
+			Button fullscreen = (Button)stage.getScene().lookup("#fullscreen");
+			//26-6sept
+			fullscreen.setOnAction(new EventHandler() {
+				@Override
+				public void handle(Event arg0) {
+	                System.out.println("Hello World fullscreen!");
+	                Button b = (Button)arg0.getSource();
+	                Stage stageTheLabelBelongs = (Stage) b.getScene().getWindow();
+	    			Rectangle vumeter = (Rectangle)stageTheLabelBelongs.getScene().lookup("#vumeter");
+	    			vumeter.setHeight(vumeter.getHeight() + 10);
+				}
+	        });
+			System.out.println(call.getId());
+			System.out.println(fullscreen.getId());
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 	public void stop() {
@@ -47,9 +82,9 @@ public class MainApplication extends Application {
 
 	private Configuration getConfiguration() {
 		Configuration configuration = new Configuration();
-		configuration.setDesign(getParameters().getNamed().get("design"));
+		configuration.setDesign("default");
 		configuration.setFromUser(getParameters().getNamed().get("fromUser"));
-		configuration.setFromMd5Password(getParameters().getNamed().get("fromMd5Password"));
+		configuration.setFromPassword(getParameters().getNamed().get("fromMd5Password"));
 		configuration.setFromName(getParameters().getNamed().get("fromName"));
 		configuration.setToUser(getParameters().getNamed().get("toUser"));
 		configuration.setToName(getParameters().getNamed().get("toName"));

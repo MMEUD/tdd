@@ -4,9 +4,9 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
-import javax.swing.JPanel;
+import javafx.embed.swing.JFXPanel;
 
-public class FramePanel extends JPanel {
+public class FramePanel extends JFXPanel {
 	
 	private static final long serialVersionUID = 1184825817268014928L;
 	private BufferedImage bufferedImage;

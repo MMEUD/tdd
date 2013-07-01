@@ -1,5 +1,7 @@
 package com.iolma.studio.application;
 
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import com.iolma.studio.gui.VideoPanel;
@@ -51,7 +53,7 @@ public class DefaultGraph implements IServer {
 		videoCapture.startup();
 		
 		// Create gui
-		videoPanel = new VideoPanel(640, 480);
+		videoPanel = new VideoPanel((ImageView)stage.getScene().lookup("#screen"));
 		videoPanel.addInput(videoCapture);
 		videoPanel.startup();
 				

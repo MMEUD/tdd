@@ -1,9 +1,10 @@
 package com.iolma.studio.gui;
 
-import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 
-import javax.swing.JPanel;
+import javafx.embed.swing.SwingFXUtils;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import com.iolma.studio.process.BasicProcess;
 import com.iolma.studio.process.IFrame;
@@ -13,24 +14,20 @@ import com.xuggle.xuggler.video.IConverter;
 
 public class VideoPanel extends BasicProcess {
 
-	private FramePanel panel = new FramePanel();	
+	private ImageView imageView = null;	
 	
-	public VideoPanel(int width, int height) {		
-		panel.setPreferredSize(new Dimension(width, height));
+	public VideoPanel(ImageView imageView) {		
+		this.imageView = imageView;
 	}
 	
-	public JPanel getPanel() {
-		return panel;
-	}
-
 	public IFrame execute(IFrame frame) {
 		IVideoPicture picture = frame.getVideoPicture();
 		if (picture != null) {
-			BufferedImage bufferedImage = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_3BYTE_BGR); 
+			BufferedImage bufferedImage = new BufferedImage(picture.getWidth(), picture.getHeight(), BufferedImage.TYPE_3BYTE_BGR); 
 		    IConverter converter = ConverterFactory.createConverter(bufferedImage, picture.getPixelType()); 
 		    bufferedImage = converter.toImage(picture);
-		    panel.setBufferedImage(bufferedImage);
-		    panel.repaint();
+		    Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+		    imageView.setImage(image);
 		}
 	    return frame;
 	}
