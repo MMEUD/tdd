@@ -2,13 +2,25 @@ package com.iolma.studio.application;
 
 public class Configuration {
 
+	// JNLP
 	private String design = "";
 	private String fromUser = "";
-	private String fromMd5Password = "";
+	private String fromPassword = "";
 	private String fromName = "";
 	private String toUser = "";
 	private String toName = "";
 
+	// SIP
+	private String sipTransport = "udp";
+	private String sipDomain = "leon.telecast.ro";
+	private int sipPort = 5060;
+	private String sipProxy = "leon.telecast.ro";
+	private int sipProxyPort = 5080;
+	
+	// RTP
+	private int rtpPort = 8000;
+	
+	
 	public String getDesign() {
 		return design;
 	}
@@ -25,12 +37,12 @@ public class Configuration {
 		this.fromUser = fromUser;
 	}
 	
-	public String getFromMd5Password() {
-		return fromMd5Password;
+	public String getFromPassword() {
+		return fromPassword;
 	}
 	
-	public void setFromMd5Password(String fromMd5Password) {
-		this.fromMd5Password = fromMd5Password;
+	public void setFromPassword(String fromPassword) {
+		this.fromPassword = fromPassword;
 	}
 	
 	public String getFromName() {
@@ -55,6 +67,54 @@ public class Configuration {
 	
 	public void setToName(String toName) {
 		this.toName = toName;
+	}
+
+	public String getSipTransport() {
+		return sipTransport;
+	}
+
+	public void setSipTransport(String sipTransport) {
+		this.sipTransport = sipTransport;
+	}
+
+	public String getSipDomain() {
+		return sipDomain;
+	}
+
+	public void setSipDomain(String sipDomain) {
+		this.sipDomain = sipDomain;
+	}
+
+	public int getSipPort() {
+		return sipPort;
+	}
+
+	public void setSipPort(int sipPort) {
+		this.sipPort = sipPort;
+	}
+
+	public String getSipProxy() {
+		return sipProxy;
+	}
+
+	public void setSipProxy(String sipProxy) {
+		this.sipProxy = sipProxy;
+	}
+
+	public int getSipProxyPort() {
+		return sipProxyPort;
+	}
+
+	public void setSipProxyPort(int sipProxyPort) {
+		this.sipProxyPort = sipProxyPort;
+	}
+
+	public int getRtpPort() {
+		return rtpPort;
+	}
+
+	public void setRtpPort(int rtpPort) {
+		this.rtpPort = rtpPort;
 	}
 
 }
