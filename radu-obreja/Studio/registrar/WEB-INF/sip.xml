@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <sip-app>
-	<app-name>RegistrationServlet</app-name>
-	<display-name>RegistrationServlet</display-name>
-	<description>RegistrationServlet</description>
+	<app-name>RegistrarServlet</app-name>
+	<display-name>RegistrarServlet</display-name>
+	<description>RegistrarServlet</description>
 	
 	<servlet-selection>
 		<main-servlet>
-			RegistrationServlet
+			RegistrarServlet
 		</main-servlet>
 	</servlet-selection>
 
 	<servlet>
-		<servlet-name>RegistrationServlet</servlet-name>
-		<display-name>RegistrationServlet</display-name>
-		<description>RegistrationServlet</description>
+		<servlet-name>RegistrarServlet</servlet-name>
+		<display-name>RegistrarServlet</display-name>
+		<description>RegistrarServlet</description>
 		<servlet-class>
-			com.iolma.registrar.RegistrationServlet
+			com.iolma.registrar.RegistrarServlet
 		</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	
     <listener>
 		<listener-class>
-			com.iolma.registrar.RegistrationServlet
+			com.iolma.registrar.RegistrarServlet
 		</listener-class>
 	</listener>
 </sip-app>

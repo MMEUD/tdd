@@ -9,10 +9,6 @@
 	<classpathentry exported="true" kind="lib" path="WEB-INF/lib/c3p0-0.9.1.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="WEB-INF/lib/mysql-connector-java-5.1.13.jar"/>
 	<classpathentry kind="src" path="WEB-INF/src"/>
-	<classpathentry kind="lib" path="WEB-INF/lib_sip/commons-logging-1.0.4.jar"/>
-	<classpathentry kind="lib" path="WEB-INF/lib_sip/jain-sip-ri-1.2.170-NIO.jar"/>
-	<classpathentry kind="lib" path="WEB-INF/lib_sip/log4j-1.2.14.jar"/>
-	<classpathentry kind="lib" path="WEB-INF/lib_sip/servlet-api.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib_sip/sip-servlets-client-2.0.0.FINAL.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib_sip/sip-servlets-spec-2.0.0.FINAL.jar"/>
 	<classpathentry kind="output" path="WEB-INF/classes"/>

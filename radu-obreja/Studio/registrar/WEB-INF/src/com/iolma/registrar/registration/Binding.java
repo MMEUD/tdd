@@ -1,4 +1,4 @@
-package com.iolma.registrar;
+package com.iolma.registrar.registration;
 
 import javax.servlet.sip.Address;
 import javax.servlet.sip.URI;
