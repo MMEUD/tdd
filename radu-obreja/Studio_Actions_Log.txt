@@ -81,4 +81,27 @@ ToDo:
  - research java rtp libraries (test if we can use the code from peers project)
  - find how to sync A/V frames in mp4
  - insert celt/opus codec in xuggler
+
+----------------------------------------------------------------------------------------
+ Sprint : 3 June 2013 - 1 July 2013
+----------------------------------------------------------------------------------------
+Actions:
+ - made a working registrar+proxy connetcted to iolma database 
+ - made a working fist version of sip agent that has to be refactored to a cleaner code. This sip agent is working well with iolma registrar and is also compatible with asterisk.
+ - play a lot with javafx controller.
+ - change the display of video frames from swing to javafx
+ - made a very usefull application for sip testing.
+
+Decisions:
+ - do not use ice4j for a lot of reasons: ice is not supported by asterisk, ice is slow (need ~3sec to test connections), is not very usful if you decide to use random ports in range of 10000-20000.
+ - send register packets every 30 sec, and after that, update packets to keep alive the sip dialog
+ - use jrtplib as first choice for rtp communication.
+ - separate sip signaling from rtp avprofiles even if they work together to have rely a reusable sip agent.
  
+ToDo:
+ - refactor sip agent
+ - create an rtp process integrated in videocall graph, and link it to the sip agent by interface .... so make a clear separation of concerns.
+ - make a test program where you can configure a graph ... (this will be trasformed in a demo of the resulted videocall library)
+ - find how to sync A/V frames in mp4
+ - insert celt/opus codec in xuggler
+
