@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WeatherSetupStoreContainer" CdmEntityContainer="CityListEntities">
+    <EntitySetMapping Name="WeatherSetups">
+      <EntityTypeMapping TypeName="WeatherSetup.WeatherSetup">
+        <MappingFragment StoreEntitySet="WeatherSetup">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="api_key" ColumnName="api_key" />
+          <ScalarProperty Name="api_calls" ColumnName="api_calls" />
+          <ScalarProperty Name="apic_call_minute" ColumnName="apic_call_minute" />
+          <ScalarProperty Name="api_url" ColumnName="api_url" />
+          <ScalarProperty Name="active" ColumnName="active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WeatherService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:54601/WeatherService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:54601/WeatherService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:54601/WeatherService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MoodWeather.Service.Web" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWeatherService_CheckCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckCity" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_CheckCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_SelectCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCity" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_SelectCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_GetCityLists_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityLists" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_GetCityLists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityListsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_GetWeatherForecast_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWeatherForecast" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_GetWeatherForecast_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWeatherForecastResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_InsertData_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertData" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_InsertData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_GetCityCondition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityCondition" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_GetCityCondition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityConditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_SelectCityCondition_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCityCondition" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_SelectCityCondition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCityConditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_StartDataCollect_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartDataCollect" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_StartDataCollect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartDataCollectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_DeleteDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_DeleteDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_WriteToLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteToLog" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_WriteToLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WriteToLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_SaveXmlFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveXmlFile" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_SaveXmlFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveXmlFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_UploadFileFtpAutomate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFileFtpAutomate" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_UploadFileFtpAutomate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFileFtpAutomateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_CreateXmlBackup_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateXmlBackup" />
+  </wsdl:message>
+  <wsdl:message name="IWeatherService_CreateXmlBackup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateXmlBackupResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWeatherService">
+    <wsdl:operation name="CheckCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeatherService/CheckCity" message="tns:IWeatherService_CheckCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeatherService/CheckCityResponse" message="tns:IWeatherService_CheckCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeatherService/SelectCity" message="tns:IWeatherService_SelectCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeatherService/SelectCityResponse" message="tns:IWeatherService_SelectCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCityLists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeatherService/GetCityLists" message="tns:IWeatherService_GetCityLists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeatherService/GetCityListsResponse" message="tns:IWeatherService_GetCityLists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeatherForecast">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeatherService/GetWeatherForecast" message="tns:IWeatherService_GetWeatherForecast_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeatherService/GetWeatherForecastResponse" message="tns:IWeatherService_GetWeatherForecast_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeatherService/InsertData" message="tns:IWeatherService_InsertData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeatherService/InsertDataResponse" message="tns:IWeatherService_InsertData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCityCondition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeatherService/GetCityCondition" message="tns:IWeatherService_GetCityCondition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeatherService/GetCityConditionResponse" message="tns:IWeatherService_GetCityCondition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectCityCondition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeatherService/SelectCityCondition" message="tns:IWeatherService_SelectCityCondition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeatherService/SelectCityConditionResponse" message="tns:IWeatherService_SelectCityCondition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartDataCollect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeatherService/StartDataCollect" message="tns:IWeatherService_StartDataCollect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeatherService/StartDataCollectResponse" message="tns:IWeatherService_StartDataCollect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeatherService/DeleteDatabase" message="tns:IWeatherService_DeleteDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeatherService/DeleteDatabaseResponse" message="tns:IWeatherService_DeleteDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteToLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeatherService/WriteToLog" message="tns:IWeatherService_WriteToLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeatherService/WriteToLogResponse" message="tns:IWeatherService_WriteToLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveXmlFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeatherService/SaveXmlFile" message="tns:IWeatherService_SaveXmlFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeatherService/SaveXmlFileResponse" message="tns:IWeatherService_SaveXmlFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileFtpAutomate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeatherService/UploadFileFtpAutomate" message="tns:IWeatherService_UploadFileFtpAutomate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeatherService/UploadFileFtpAutomateResponse" message="tns:IWeatherService_UploadFileFtpAutomate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateXmlBackup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeatherService/CreateXmlBackup" message="tns:IWeatherService_CreateXmlBackup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeatherService/CreateXmlBackupResponse" message="tns:IWeatherService_CreateXmlBackup_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWeatherService" type="tns:IWeatherService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckCity">
+      <soap:operation soapAction="http://tempuri.org/IWeatherService/CheckCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectCity">
+      <soap:operation soapAction="http://tempuri.org/IWeatherService/SelectCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityLists">
+      <soap:operation soapAction="http://tempuri.org/IWeatherService/GetCityLists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeatherForecast">
+      <soap:operation soapAction="http://tempuri.org/IWeatherService/GetWeatherForecast" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertData">
+      <soap:operation soapAction="http://tempuri.org/IWeatherService/InsertData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityCondition">
+      <soap:operation soapAction="http://tempuri.org/IWeatherService/GetCityCondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectCityCondition">
+      <soap:operation soapAction="http://tempuri.org/IWeatherService/SelectCityCondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartDataCollect">
+      <soap:operation soapAction="http://tempuri.org/IWeatherService/StartDataCollect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDatabase">
+      <soap:operation soapAction="http://tempuri.org/IWeatherService/DeleteDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteToLog">
+      <soap:operation soapAction="http://tempuri.org/IWeatherService/WriteToLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveXmlFile">
+      <soap:operation soapAction="http://tempuri.org/IWeatherService/SaveXmlFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileFtpAutomate">
+      <soap:operation soapAction="http://tempuri.org/IWeatherService/UploadFileFtpAutomate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateXmlBackup">
+      <soap:operation soapAction="http://tempuri.org/IWeatherService/CreateXmlBackup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WeatherService">
+    <wsdl:port name="BasicHttpBinding_IWeatherService" binding="tns:BasicHttpBinding_IWeatherService">
+      <soap:address location="http://localhost:54601/WeatherService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
