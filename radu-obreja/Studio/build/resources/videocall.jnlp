@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="6.0+" codebase="#URL/client" href="#STUDIO.jnlp">
+	<information>
+	  <title>IOLMA Studio</title>
+	  <vendor>Telecast Systems S.R.L.</vendor>
+	  <homepage href="#URL" />
+	  <description>Studio</description>
+	  <description kind="short">Studio Web Start</description>
+	  <offline-allowed />
+	</information>
+	<security>
+		<all-permissions />
+	</security>
+	<resources>
+	  <j2se version="1.6" java-vm-args="-Xincgc" />
+	  <jar href="academy.jar" main="true" />
+	  <jar href="jersey-core-1.14.jar" />
+	  <jar href="jersey-client-1.14.jar" />
+	  <jar href="slf4j-api-1.5.6.jar" />
+	  <jar href="slf4j-jdk14-1.5.6.jar" />	  
+	  <jar href="jetty-6.1.19.jar" />
+	  <jar href="jetty-util-6.1.19.jar" />	  
+	  <jar href="servlet-api-2.5-20081211.jar" />	  
+	</resources>
+	
+	<application-desc main-class="com.mwt.academy.common.client.StudioMain">
+		<argument>#STUDIO</argument>
+		<argument>#URL</argument>
+		<argument>admin</argument>
+	</application-desc>
+</jnlp>
