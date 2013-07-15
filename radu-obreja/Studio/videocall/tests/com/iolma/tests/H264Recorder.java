@@ -11,7 +11,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import com.iolma.studio.gui.VideoPanel;
 import com.iolma.studio.log.ConsoleLogger;
 import com.iolma.studio.log.ILogger;
 import com.iolma.studio.process.BasicProcess;
@@ -20,6 +19,7 @@ import com.iolma.studio.process.StatisticsGenerator;
 import com.iolma.studio.process.capture.AudioCapture;
 import com.iolma.studio.process.capture.VideoCapture;
 import com.iolma.studio.process.play.AudioPlay;
+import com.iolma.studio.process.play.VideoPlay;
 import com.iolma.studio.process.record.MP4Recorder;
 
 public class H264Recorder<IProcess> extends JFrame {
