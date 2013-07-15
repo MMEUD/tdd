@@ -37,6 +37,12 @@
 
 
 	<target name="sign-videocall-libs">
+		<jar destfile="../videocall/lib/xuggle-xuggler-5.4.jar" update="true">
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
+		</jar>	
 		<jar destfile="../videocall/lib/jfxrt.jar" update="true">
 			<manifest>
 				<attribute name="Permissions" value="all-permissions"/>
