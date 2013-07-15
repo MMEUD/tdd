@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <TextArea id="log" layoutX="320.0" layoutY="174.0" prefHeight="145.0" prefWidth="266.0" style="-fx-font-size:10px;&#10;" text="" wrapText="false" />
+    <Label id="vi0_label" layoutX="25.0" layoutY="13.0" text="Video Device">
+      <font>
+        <Font name="System Bold" size="9.0" fx:id="x4" />
+      </font>
+      <textFill>
+        <Color blue="0.600" green="0.000" red="0.048" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Label id="vi1_label" font="$x4" layoutX="170.0" layoutY="13.0" text="Video Device" textFill="$x2" />
+    <CheckBox id="vi0_published" layoutX="24.0" layoutY="151.0" mnemonicParsing="false" text="Video input for call &amp; rec">
+      <font>
+        <Font size="10.0" fx:id="x1" />
+      </font>
+    </CheckBox>
+    <CheckBox id="vi1_published" font="$x1" layoutX="169.0" layoutY="151.0" mnemonicParsing="false" text="Video input for call &amp; rec" />
+    <ImageView id="vr_display" cache="true" cacheHint="SPEED" depthTest="DISABLE" fitHeight="96.0" fitWidth="128.0" layoutX="25.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true" smooth="true" style="" />
+    <Button id="vc_call" font="$x1" layoutX="202.0" layoutY="232.0" mnemonicParsing="false" prefWidth="48.0" text="Call" />
+    <Button id="vc_hang" font="$x1" layoutX="252.0" layoutY="232.0" mnemonicParsing="false" prefWidth="48.0" text="Hang" />
+    <ImageView id="vc_display" cache="true" cacheHint="SPEED" depthTest="DISABLE" fitHeight="96.0" fitWidth="128.0" layoutX="25.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true" smooth="true" style="" />
+    <Label font="$x1" layoutX="165.0" layoutY="373.0" text="Path" />
+    <TextField id="vr_path" layoutX="188.0" layoutY="371.0" prefWidth="108.0" style="-fx-font-size:10px;" text="C:/" />
+    <Label font="$x1" layoutX="166.0" layoutY="398.0" text="File" />
+    <TextField id="vr_file" layoutX="188.0" layoutY="395.0" prefWidth="108.0" style="-fx-font-size:10px;" text="recording" />
+    <Slider id="vc_v" layoutX="456.0" layoutY="21.0" orientation="VERTICAL" prefHeight="112.0" value="50.0" />
+    <Label font="$x1" layoutX="456.0" layoutY="133.0" text="Vol" />
+    <Slider id="vc_eq1" layoutX="489.0" layoutY="21.0" orientation="VERTICAL" prefHeight="112.0" value="50.0" />
+    <Slider id="vc_eq2" layoutX="508.0" layoutY="21.0" orientation="VERTICAL" prefHeight="112.0" value="50.0" />
+    <Slider id="vc_eq3" layoutX="527.0" layoutY="21.0" orientation="VERTICAL" prefHeight="112.0" value="50.0" />
+    <Slider id="vc_eq4" layoutX="546.0" layoutY="21.0" orientation="VERTICAL" prefHeight="112.0" value="50.0" />
+    <Slider id="vc_eq5" layoutX="565.0" layoutY="21.0" orientation="VERTICAL" prefHeight="112.0" value="50.0" />
+    <Label font="$x1" layoutX="516.0" layoutY="133.0" text="Equalizer" />
+    <Label font="$x1" layoutX="182.0" layoutY="212.0" text="User" />
+    <Label layoutX="166.0" layoutY="354.0" text="MP4 Record Module" textFill="$x2">
+      <font>
+        <Font name="System Bold" size="10.0" fx:id="x3" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="164.0" layoutY="424.0" text="PIP size" />
+    <Slider id="vr_pip" blockIncrement="10.0" layoutX="205.0" layoutY="424.0" minorTickCount="5" prefWidth="91.0" showTickLabels="false" showTickMarks="true" snapToTicks="true" value="20.0" />
+    <CheckBox id="ai0_enable" font="$x1" layoutX="320.0" layoutY="41.0" mnemonicParsing="false" text="Audio Device" />
+    <TextField id="vc_user" layoutX="202.0" layoutY="209.0" prefWidth="99.99990000000253" style="-fx-font-size:10px;" text="" />
+    <ImageView id="vi0_display" cache="true" cacheHint="SPEED" depthTest="DISABLE" fitHeight="96.0" fitWidth="128.0" layoutX="26.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" smooth="true" style="" />
+    <ImageView id="vi1_display" cache="true" cacheHint="SPEED" depthTest="DISABLE" fitHeight="96.0" fitWidth="128.0" layoutX="173.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" smooth="true" style="" />
+    <TextArea id="statistics" layoutX="320.0" layoutY="328.0" prefHeight="145.0" prefWidth="266.0" style="-fx-font-size:10px;" wrapText="false" />
+    <ToggleButton id="vi0_enable" font="$x1" layoutX="23.0" layoutY="130.0" mnemonicParsing="false" prefWidth="48.0" text="Enable" />
+    <ToggleButton id="vi0_visible" font="$x1" layoutX="73.0" layoutY="130.0" mnemonicParsing="false" prefWidth="48.0" text="Visible" />
+    <ToggleButton id="vi0_fullscreen" font="$x1" layoutX="123.0" layoutY="130.0" minWidth="20.0" mnemonicParsing="false" prefWidth="34.0" text="FS" />
+    <ToggleButton id="vi1_enable" font="$x1" layoutX="168.0" layoutY="130.0" mnemonicParsing="false" prefWidth="48.0" text="Enable" />
+    <ToggleButton id="vi1_visible" font="$x1" layoutX="218.0" layoutY="130.0" mnemonicParsing="false" prefWidth="48.0" text="Visible" />
+    <ToggleButton id="vi1_fullscreen" font="$x1" layoutX="268.0" layoutY="130.0" minWidth="20.0" mnemonicParsing="false" prefWidth="34.0" text="FS" />
+    <ToggleButton id="vc_enable" font="$x1" layoutX="23.0" layoutY="294.0" mnemonicParsing="false" prefWidth="48.0" text="Enable" />
+    <ToggleButton id="vc_visible" font="$x1" layoutX="73.0" layoutY="294.0" mnemonicParsing="false" prefWidth="48.0" text="Visible" />
+    <ToggleButton id="vc_fullscreen" font="$x1" layoutX="123.0" layoutY="294.0" minWidth="20.0" mnemonicParsing="false" prefWidth="34.0" text="FS" />
+    <Label id="vi1_label" font="$x3" layoutX="320.0" layoutY="14.0" text="Audio Input Mixer" textFill="$x2" />
+    <CheckBox id="ai1_enable" font="$x1" layoutX="320.0" layoutY="59.0" mnemonicParsing="false" text="Audio Device" />
+    <CheckBox id="ai2_enable" font="$x1" layoutX="320.0" layoutY="78.0" mnemonicParsing="false" text="Audio Device" />
+    <Label font="$x3" layoutX="182.0" layoutY="189.0" text="Videocall Module" textFill="$x2" />
+    <ToggleButton id="vr_enable" font="$x1" layoutX="24.0" layoutY="457.0" mnemonicParsing="false" prefWidth="48.0" text="Enable" />
+    <ToggleButton id="vr_visible" font="$x1" layoutX="74.0" layoutY="457.0" mnemonicParsing="false" prefWidth="48.0" text="Visible" />
+    <ToggleButton id="vr_fullscreen" font="$x1" layoutX="124.0" layoutY="457.0" minWidth="20.0" mnemonicParsing="false" prefWidth="34.0" text="FS" />
+    <CheckBox id="ai3_enable" font="$x1" layoutX="320.0" layoutY="98.0" mnemonicParsing="false" text="Audio Device" />
+    <CheckBox id="ai4_enable" font="$x1" layoutX="320.0" layoutY="118.0" mnemonicParsing="false" text="Audio Device" />
+    <CheckBox id="vi0_published" font="$x1" layoutX="24.0" layoutY="315.0" mnemonicParsing="false" text="Video input for rec" />
+    <CheckBox id="vi0_published" font="$x1" layoutX="170.0" layoutY="315.0" mnemonicParsing="false" text="Audio input for rec" />
+    <CheckBox id="vi1_published" font="$x1" layoutX="320.0" layoutY="151.0" mnemonicParsing="false" text="Audio input for call &amp; rec" />
+    <ToggleButton id="vr_enable" font="$x1" layoutX="248.0" layoutY="455.0" mnemonicParsing="false" prefWidth="48.0" text="Record" />
+    <Slider id="vc_v" layoutX="159.0" layoutY="192.0" orientation="VERTICAL" prefHeight="102.0" value="50.0" />
+  </children>
+</AnchorPane>
