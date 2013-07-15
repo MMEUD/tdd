@@ -7,7 +7,7 @@ import java.util.concurrent.locks.LockSupport;
 import com.iolma.studio.log.ILogger;
 
 
-public abstract class AbstractClock extends Thread implements IProcess, IServer {
+public abstract class AbstractClock extends Thread implements IProcess {
 	
 	protected ILogger logger = null;
 	private String processName = this.getClass().getSimpleName();
@@ -41,7 +41,7 @@ public abstract class AbstractClock extends Thread implements IProcess, IServer 
 	public synchronized void startup() {
 		start();
 		setPriority(MAX_PRIORITY);
-		getLogger().info("Clock [" + ticksPerSecond + "] started.");
+		getLogger().info(processName + " Clock [" + ticksPerSecond + "] started.");
 	}
 
 	public synchronized void shutdown() {
@@ -60,6 +60,10 @@ public abstract class AbstractClock extends Thread implements IProcess, IServer 
 			}
 		}
 		getLogger().info("Clock [" + ticksPerSecond + "] killed.");
+	}
+	
+	public boolean isStarted() {
+		return alive;
 	}
 
 	public long getFPS() {

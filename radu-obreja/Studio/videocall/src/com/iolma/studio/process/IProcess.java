@@ -5,7 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import com.iolma.studio.log.ILogger;
 
 
-public interface IProcess {
+public interface IProcess extends IServer {
 	
 	public String getProcessName();
 
@@ -21,6 +21,8 @@ public interface IProcess {
 	
 	public IFrame execute(IFrame frame);
 	
+	public boolean isStarted();
+
 	public long getQueueSize();
 	
 	public long getFPS();

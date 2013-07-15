@@ -16,13 +16,14 @@ public class StatisticsGenerator extends AbstractClock {
 	
 	protected void fireOutputs() {
 		StringBuffer sb = new StringBuffer();
-		sb.append("Statistics -> ");
+		sb.append("Statistics ->\n");
 		Iterator<String> it = inputs.keySet().iterator();
 		while(it.hasNext()) {
 			String name = it.next();
-			sb.append(name + " : " + inputs.get(name).getFPS() + "fps/" + inputs.get(name).getQueueSize() + "q   ");
+			sb.append(name + " : " + inputs.get(name).getQueueSize() + "\n");
 			inputs.get(name).clearFPS();
 		}
+		logger.clear();
 		logger.info(sb.toString());
 	}
 

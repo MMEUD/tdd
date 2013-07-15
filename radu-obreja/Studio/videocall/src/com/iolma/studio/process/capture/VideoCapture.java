@@ -64,7 +64,7 @@ public class VideoCapture extends BasicProcess {
 		return result;
 	}
 	
-	public void startup() {
+	public synchronized void startup() {
 		super.startup();
 		if (selectedDevice != null) {
 			grabber.startSession(width, height, fps, Pointer.pointerTo(selectedDevice));
@@ -73,22 +73,27 @@ public class VideoCapture extends BasicProcess {
 		}
 	}
 
-	public void shutdown() {
+	public synchronized void shutdown() {
 		super.shutdown();
 		if (selectedDevice != null) {
-			grabber.stopSession();
+			try {
+				grabber.stopSession();
+			} catch (Exception e) {				
+			}
 		}
 	}
 	
 	public IFrame execute(IFrame frame) {
 		try {
-			grabber.nextFrame();
-			final Pointer<Byte> data = grabber.getImage();
-			if (data != null) {
-				IVideoPicture picture = IVideoPicture.make(IPixelFormat.Type.RGB24, width, height);
-				picture.put(data.getBytes(width * height * 3), 0, 0, width * height * 3);
-				picture.setComplete(true, picture.getPixelType(), width, height, System.nanoTime()/1000);
-				frame.setVideoPicture(picture);
+			if (grabber != null) {
+				grabber.nextFrame();
+				final Pointer<Byte> data = grabber.getImage();
+				if (data != null) {
+					IVideoPicture picture = IVideoPicture.make(IPixelFormat.Type.RGB24, width, height);
+					picture.put(data.getBytes(width * height * 3), 0, 0, width * height * 3);
+					picture.setComplete(true, picture.getPixelType(), width, height, System.nanoTime()/1000);
+					frame.setVideoPicture(picture);
+				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

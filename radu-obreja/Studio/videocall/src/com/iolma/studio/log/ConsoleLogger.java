@@ -2,6 +2,9 @@ package com.iolma.studio.log;
 
 public class ConsoleLogger implements ILogger {
 
+	public void clear() {
+	}
+
 	public void info(String message) {
 		System.out.println(message);
 	}

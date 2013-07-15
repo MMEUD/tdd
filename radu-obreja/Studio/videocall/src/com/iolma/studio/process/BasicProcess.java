@@ -3,16 +3,18 @@ package com.iolma.studio.process;
 import java.util.Iterator;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 
 import com.iolma.studio.log.ConsoleLogger;
 import com.iolma.studio.log.ILogger;
 
-public abstract class BasicProcess extends Thread implements  IProcess, IServer {
+public abstract class BasicProcess extends Thread implements  IProcess {
 	
 	protected ILogger logger = new ConsoleLogger();
 	protected String processName = this.getClass().getSimpleName();
 	private AtomicLong fps = new AtomicLong(0);
+	private AtomicBoolean started = new AtomicBoolean(false);
 
 	private ConcurrentHashMap<String, IProcess> inputs  = new ConcurrentHashMap<String, IProcess>();
 	private ConcurrentHashMap<String, IProcess> outputs  = new ConcurrentHashMap<String, IProcess>();
@@ -49,7 +51,7 @@ public abstract class BasicProcess extends Thread implements  IProcess, IServer 
 		input.getOutputs().remove(this.getName());
 	}
 
-	public void push(IFrame frame) {
+	public synchronized void push(IFrame frame) {
 		try {
 			queue.put(frame);
 		} catch (InterruptedException e) {
@@ -57,6 +59,10 @@ public abstract class BasicProcess extends Thread implements  IProcess, IServer 
 		}
 	}
 	
+	public boolean isStarted() {
+		return started.get();
+	}
+
 	public long getQueueSize() {
 		return queue.size();
 	}
@@ -71,10 +77,13 @@ public abstract class BasicProcess extends Thread implements  IProcess, IServer 
 	
 	public synchronized void startup() {
 		start();
+		setPriority(MAX_PRIORITY);
+		started.set(true);
 		logger.info(processName + " started.");
 	}
 
 	public synchronized void shutdown() {
+		started.set(false);
 		if (isAlive()) {
 			interrupt();
 		}
