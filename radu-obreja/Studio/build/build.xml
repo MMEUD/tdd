@@ -63,6 +63,10 @@
 		</copy>
 
 		<jar destfile="${bin.videocall}/videocall.jar" >
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
 			<fileset dir="${temp_build.dir}" casesensitive="no">
 				<include name="**/**" />
 			</fileset>
