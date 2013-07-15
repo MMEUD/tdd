@@ -37,8 +37,91 @@
 
 
 	<target name="sign-videocall-libs">
-		
-		<signjar alias="TELECAST_Certificate" storepass="nustiu" keystore=".keystore" preservelastmodified="true" lazy="true">
+		<jar destfile="../videocall/lib/jfxrt.jar" update="true">
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
+		</jar>	
+		<jar destfile="../videocall/lib/bridj-0.6.3-20130316.190111-13.jar" update="true">
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
+		</jar>	
+		<jar destfile="../videocall/lib/dx-1.7.jar" update="true">
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
+		</jar>	
+		<jar destfile="../videocall/lib/jain-sip-sdp-1.2.118.jar" update="true">
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
+		</jar>	
+		<jar destfile="../videocall/lib/jfxrt.jar" update="true">
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
+		</jar>	
+		<jar destfile="../videocall/lib/log4j-1.2.8.jar" update="true">
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
+		</jar>	
+		<jar destfile="../videocall/lib/slf4j-api-1.7.2.jar" update="true">
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
+		</jar>	
+		<jar destfile="../videocall/lib/xuggle-xuggler-arch-i386-xuggle-darwin11.jar" update="true">
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
+		</jar>	
+		<jar destfile="../videocall/lib/xuggle-xuggler-arch-i686-pc-linux-gnu.jar" update="true">
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
+		</jar>	
+		<jar destfile="../videocall/lib/xuggle-xuggler-arch-i686-w64-mingw32.jar" update="true">
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
+		</jar>	
+		<jar destfile="../videocall/lib/xuggle-xuggler-arch-x86_64-pc-linux-gnu.jar" update="true">
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
+		</jar>	
+		<jar destfile="../videocall/lib/xuggle-xuggler-arch-x86_64-w64-mingw32.jar" update="true">
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
+		</jar>	
+		<jar destfile="../videocall/lib/xuggle-xuggler-arch-x86_64-xuggle-darwin11.jar" update="true">
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
+		</jar>	
+		<jar destfile="../videocall/lib/xuggle-xuggler-noarch-5.4.jar" update="true">			
+			<manifest>
+				<attribute name="Permissions" value="all-permissions"/>
+				<attribute name="Codebase" value="*"/>
+			</manifest>
+		</jar>	
+		<signjar alias="TELECAST_Certificate" storepass="nustiu" keystore=".keystore" preservelastmodified="true" lazy="true" executable="C:/Program Files/Java/jdk1.7.0_25/bin/jarsigner.exe">
 			<fileset dir="../videocall/lib" casesensitive="no">
 				<include name="*.jar" />
 			</fileset>
