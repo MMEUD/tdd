@@ -101,7 +101,7 @@ public class CallContext implements SipListener {
 		
 		Properties properties = new Properties();
 		// set stack name
-		properties.setProperty("javax.sip.STACK_NAME", ((SipURI)config.getLocalAddress().getURI()).getUser());
+		properties.setProperty("javax.sip.STACK_NAME", "iolma");
 		// set proxy
 		properties.setProperty("javax.sip.OUTBOUND_PROXY", config.getSipProxyHost() + ":" + config.getSipProxyPort() + "/"+ SIP_TRANSPORT);
 		// guard against denial of service attack if transport = tcp.
